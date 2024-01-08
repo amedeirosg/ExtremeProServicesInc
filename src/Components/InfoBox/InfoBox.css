@@ -1,0 +1,92 @@
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0
+        ;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.containerBoxesContent{
+    animation:fadeInAnimation ease 2s;
+}
+
+.containerInfoBox{
+    background-color: #e8e8e8;
+    height:33.3vh;
+    width:17.4vw;
+    border-radius: 10px;
+}
+
+.containerTitleBox{
+    height:5vh;
+    margin-top:2vh;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerTitleBox span{
+    font-family: roboto;
+    font-size:20px;
+}
+
+.containerResults{
+    margin-top:2vh;
+    display:flex;
+    justify-content: center;
+}
+
+.containerBeforeAndAfter{
+    width: 75%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.containerBefore, .containerAfter{
+    background-color: white;
+    width: 5vw;
+    text-align: center;
+}
+
+.containerImgsResults{
+    margin-top:2vh;
+    height:18vh;
+    display:flex;
+    justify-content: center;
+}
+
+.containerImgBeforeAndAfter{
+    width: 97%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.containerFirstImg, .containerSecondImg{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:7.3vw;
+    height: 17vh;
+    border-radius:10px;
+}
+
+.containerFirstImg img, .containerSecondImg  img{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    object-fit: cover;
+}
+
+.containerDescResClean{
+    height: 40vh;
+    display:flex;
+    flex-direction: column;
+    line-height: 2.6vw;
+    font-weight:600;
+    color:gray;
+    margin-top:2vh;
+}
+
