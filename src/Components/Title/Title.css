@@ -1,6 +1,7 @@
 .containerTitle{
     height: 46.25vh;
     position: relative;
+    animation:fadeInAnimation ease 2s;
 }
 
 .containerImg{
@@ -31,10 +32,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 4.5em;
+    font-size: 3.5em;
     line-height: 80px;
     font-weight: 800;
-    color:white;
+    color:black;
 }
 
 .txtTitle span{
@@ -43,5 +44,5 @@
 
 .spanSubTitlte{
     font-weight: 300;
-    font-size:36px;
+    font-size:32px;
 }

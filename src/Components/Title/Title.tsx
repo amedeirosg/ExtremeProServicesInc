@@ -1,6 +1,7 @@
 import './Title.css'
 //@ts-ignore
-import BGT from '../../assets/CleaningBackground.png'
+import BGT from '../../assets/Background.jpg'
+
 export default () => {
     return (
     <div className="containerTitle">

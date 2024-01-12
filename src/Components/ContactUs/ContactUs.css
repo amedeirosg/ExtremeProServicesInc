@@ -1,0 +1,166 @@
+.containerContactService{
+    width: 100%;
+    height: 60vh;
+    margin-top:3vw;
+    display:flex;
+    align-items: center;
+    position: relative;
+    background:  linear-gradient(to bottom, rgba(10, 163, 214),  60%, #ffffff );
+
+}
+
+.containerContactTitle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top:13vh;
+}
+
+.containerContactTitle span{
+    font-weight: 800;
+    font-size:32px;
+}
+
+.containerContactArea{
+    width: 50%;
+    margin-top: 2vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerContactName, .containerContactPhone, .containerContactEmail, .containerContactTxtService{
+    font-weight: 600;
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom:0.5vw;
+}
+
+.containerContactName span, .containerContactPhone span, .containerContactEmail span, .containerContactTxtService span{
+    font-size:18px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.containerContactName input, .containerContactPhone .inputMask, .containerContactEmail input{
+    height:2vh;
+    margin-top:0.5vw;
+    font-weight: normal;
+    padding:10px;
+    font-size:14px;
+    text-align: center;
+    font-weight: normal;
+}
+
+input::placeholder, textarea::placeholder{
+    color:rgb(122, 122, 122);
+}
+
+input:focus{
+    border:1px solid rgb(11, 146, 190);
+    transition: ease-in-out .5s;
+}
+
+textarea:focus{
+    border:1px solid rgb(11, 146, 190);
+    transition: ease-in-out .5s;
+}
+
+.containerInputMask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerContactTxtService textarea{
+    all:unset;
+    height:6vw;
+    font-size:14px;
+    padding:0.5vw;
+    border:1px solid gray;
+    border-radius:5px;
+    margin-top:0.5vw;
+    font-weight: normal;
+}
+
+
+.containerAllDivs{
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:60vh;
+    border-radius: 2vw;
+    padding:2vw;
+}
+
+.containerShowImg{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerImgLeft{
+    width: 30vw;
+    height: 35vh;
+    top:7vh;
+    position: absolute;
+    border-radius: 0vw 10vw 10vw 0vw;
+    left:0;
+}
+
+.containerImgLeft img {
+    border-radius: 0vw 10vw 10vw 0vw;
+    width: 100%;
+    height: 100%;
+}
+
+
+.containerBtnSend{
+    position: relative;
+    background-color: rgba(10, 163, 214);
+    border-radius: 3vw;
+    margin-top:1vw;
+    width: 8vw;
+    height:4vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.containerBtnSend:hover{
+    animation: animar ;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 20px 5px rgba(10, 163, 214, 0.5);;
+}
+
+
+.containerBtnSend button{
+    all:unset;
+}
+
+@keyframes animar {
+
+    0% {
+        transform: scale(1);
+        
+    }
+    100%{
+        transform: scale(1.1);
+    } 
+}

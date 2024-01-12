@@ -1,22 +1,9 @@
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0
-        ;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
-.containerBoxesContent{
-    animation:fadeInAnimation ease 2s;
-}
-
 .containerInfoBox{
-    background-color: #e8e8e8;
+    background-color:rgb(10, 163, 214);
     height:33.3vh;
-    width:17.4vw;
-    border-radius: 10px;
+    width:30vw;
+    border-radius:5px;
+    box-shadow: -10px 10px 10px 10px rgb(180, 180, 180);;
 }
 
 .containerTitleBox{
@@ -31,6 +18,7 @@
 .containerTitleBox span{
     font-family: roboto;
     font-size:20px;
+    font-weight: bold;
 }
 
 .containerResults{
@@ -40,7 +28,7 @@
 }
 
 .containerBeforeAndAfter{
-    width: 75%;
+    width: 61%;
     display:flex;
     justify-content: space-between;
 }
@@ -49,6 +37,9 @@
     background-color: white;
     width: 5vw;
     text-align: center;
+    border-radius:10px;
+    font-weight: 800;
+    font-size:14px;
 }
 
 .containerImgsResults{
@@ -68,8 +59,8 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    width:7.3vw;
-    height: 17vh;
+    width:10.3vw;
+    height: 20vh;
     border-radius:10px;
 }
 

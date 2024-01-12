@@ -1,10 +1,25 @@
 .containerHeader{
     height:11.5vh;
     display:flex;
+    top:0;
+    position: sticky;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
 }
 
-.containerNavLeft,.containerNavRight{
-    width:50%;
+.containerHeaderScrolled {
+    height:12.5vh;
+    display:flex;
+    top:0;
+    position: sticky;
+    z-index: 1;
+    background: rgb(10, 163, 214) ;
+    transition: ease-in-out 0.5s;
+}
+
+
+.containerNavLeft{
+    width:100%;
     height:inherit;
     display:flex;
     justify-content: center;
@@ -15,22 +30,68 @@
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    width:50%;
+    width:70%;
     height:inherit;
-    font-size:14px;
+    font-size:12px;
 }
 
+.containerSocialMediaH{
+    height: inherit;
+    width: 40%;
+}
 .navLeftTxt h3, .navRightTxt h3{
     transition: ease-in-out 0.2s;
     cursor: pointer;
 
 }
 .navLeftTxt h3:hover, .navRightTxt h3:hover{
-    color:rgba(10,164,214,255);
+    color:rgb(0, 77, 102);
     transition: ease-in-out 0.2s;
 }
 
 .containerNavRight{
-    width:50%;
+    width:25%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerSocialMediaH{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:2vw;
+}
+
+
+.containerMedias{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left:1vw;
+   cursor:pointer;
+}
+
+.containerMedias span{
+    margin-left:0.4vw;
+}
+
+#fb {
+    margin-left:1vw;
+}
+
+.imgTiktok{
+    width: 1vw;
+    height: 1vw;
+}
+
+.imgTiktok img {
+    width: 100%;
+    height: 100%;
+}
+
+.navRightTxt .containerMedias{
+    color:black;
 }
 
