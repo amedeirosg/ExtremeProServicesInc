@@ -1,11 +1,13 @@
 import "./Header.css";
-import Instagram from "@mui/icons-material/Instagram";
 import { useNavigate, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import Contexts from "../../Contexts/Context";
-
+import Menu from "@mui/icons-material/Menu";
 //@ts-ignore
-import Tiktok from "../../assets/Tiktok.png";
+import Instagram from "@mui/icons-material/Instagram";
+//@ts-ignore
+import TikTokIcon from "../../assets/TiktokIcon";
+
 export default () => {
   //@ts-ignore
 
@@ -60,22 +62,37 @@ export default () => {
             CONTACT US
           </h3>
         </div>
+        <div className="containerNavRight">
+          <div className="navRightTxt">
+            <Link target="_blank" to={instagramLink}>
+              <div className="containerMedias">
+                <div className="containerInstagramIcon">
+                  <Instagram className="instIcon" />
+                </div>
+                <span>Instagram</span>
+              </div>
+            </Link>
+            <Link target="_blank" to={tiktokLink}>
+              <div className="containerMedias">
+                <div className="imgTiktok">
+                  <TikTokIcon />
+                </div>
+                <span>Tiktok</span>
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="containerNavRight">
-        <div className="navRightTxt">
+      <div className="containerHeaderSmall">
+        <div className="containerSocialMediaSmlHeader">
           <Link target="_blank" to={instagramLink}>
-            <div className="containerMedias">
-              <Instagram />
-              <span>Instagram</span>
+            <div className="containerHInst">
+              <Instagram style={{ width: "30px", height: "20px" }} />
             </div>
           </Link>
-
           <Link target="_blank" to={tiktokLink}>
-            <div className="containerMedias">
-              <div className="imgTiktok">
-                <img src={Tiktok} />
-              </div>
-              <span>Tiktok</span>
+            <div className="containerHTiktok">
+              <TikTokIcon />
             </div>
           </Link>
         </div>

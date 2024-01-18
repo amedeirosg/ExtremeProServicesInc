@@ -1,5 +1,4 @@
 import "./InfoBox.css";
-import { useEffect, useState } from "react";
 export default (props: {
   sourceImg: any;
   sourceImgT: any;

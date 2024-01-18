@@ -18,6 +18,7 @@
 
 .containerContent{
     animation:fadeInAnimation ease 2s;
+    border:1px solid red;
 }
 
 
@@ -92,12 +93,11 @@
     width: 50%;
     height:30vh;
     display:flex;
-    margin-top:-5vw;
+    margin-top:-3vw;
 }
 
 .containerLeftSAbout{
     width:60%;
-
     height:30vh;
     text-align: center;
 }
@@ -122,7 +122,6 @@
     height: 28vh;
     width: 85%;
     margin-left:9vw;
-
 }
 
 .containerContact{
@@ -178,3 +177,230 @@
 .containerInstagram:hover, .containerFacebook:hover,.containerTiktok:hover{
     animation: jumpAnimation ease 1s;
 }
+
+.socialMedia2{
+    display:none;
+}
+
+@media (max-width:1515px){
+
+    .socialMedia2{
+        display:none;
+        border:1px solid red;
+    }
+
+   
+
+     .containerTiktok2{
+        width: 100px;
+        height:45px;
+        display:flex;
+        align-items: center;
+
+    }
+
+
+    .containerTiktok2 span{
+        color:black;
+    }
+
+    .containerTktokImg{
+        width: 20px;
+        height:20px;
+    }
+
+
+    .containerTktokImg img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .containerInst2{
+        width: 100px;
+        height:45px;
+        display:flex;
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width:950px){
+
+    .containerDescAbout{
+        margin-top:0vh;
+        height:50vh;
+    }
+
+    .containerTxtAbout{
+        width: 100%;
+    }
+
+    .containerContact{
+        width: 230px;
+    }
+
+    .containerContact span{
+        word-wrap: break-word;
+    }
+
+}
+
+
+@media (max-width: 775px){
+    .containerContact{
+        width: 180px;
+    }
+
+    .socialMedia2{
+        width: 160px;
+     }
+
+     .containerTiktok2, .containerInst2{
+        width:80px;
+    }
+
+    .containerTitleAbout {
+        width: 300px;
+    }
+
+}
+
+@media (max-width:667px){
+    .containerTxtAbout{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerContactUs{
+        position: absolute;
+        left:0;
+        display:flex;
+        margin-top:2vw;
+        width:80%;
+        height: 15vh;
+    }
+    .socialMedia2{
+        margin-top:-50vw;
+        margin-left:-56.5vw;
+    }
+
+}
+
+@media (max-width:590px){
+    .containerTitleAbout {
+        width: 50vw;
+        margin-left:-40vw;
+    }
+
+    .containerContact{
+        width: 30vw;
+        word-wrap: break-word;
+    }
+
+    .containerDescAbout{
+        width: 100vw;
+        font-size:12px;
+    }
+    .containerAboutUs {
+        display:flex;
+        flex-direction: column;   
+        align-items: center;
+     }
+
+     .socialMedia2{
+        width: 30vw;
+     }
+
+     .containerLeftSAbout #title{        
+        font-size:15px;
+
+     }
+
+     .containerSubtitle{
+        font-size:12px;
+     }
+
+     .containerInst2 {
+        font-size:3vw;
+     }
+}
+
+@media (max-width:517px){
+    .containerInfoBoxes{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width:375px){
+    .containerTitleContent span{
+        font-size:15px;
+    }
+
+    .containerTitleAbout span{
+        font-size:15px;
+    }
+
+    .socialMedia2{
+        display:flex;
+        width: 15vw;
+        height:5vh;
+        align-items: center;
+     }
+ 
+      .containerTiktok2{
+        width: 20vw;
+        height:45px;
+        display:flex;
+        align-items: center;
+        margin-left:-2vw;
+ 
+     }
+ 
+ 
+     .containerTiktok2 span{
+         color:black;
+         font-size:3vw;
+     }
+ 
+     .containerTktokImg{
+         width: 15px;
+         height:15px;
+     }
+ 
+ 
+     .containerTktokImg img{
+         width: 100%;
+         height: 100%;
+     }
+ 
+ 
+     .containerInst2{
+         width: 20vw;
+         height:8vw;
+         margin-left:-5.5vw;
+         display:flex;
+         align-items: center;
+     }
+
+     .containerInst2 span{
+        color:black;
+     }
+    
+     .instIcon2{
+        max-width: 5vw;
+     }
+
+     .containerLeftSAbout #title{
+        line-height: normal;
+     }
+
+}
+
+
+

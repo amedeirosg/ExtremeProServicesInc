@@ -1,0 +1,37 @@
+.containerWho{
+    border:1px solid red;
+    height:25vw;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.containerWhoTitle{
+    border:1px solid red;
+    height:4vw;
+    width: 80vw;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.containerWhoTitle span{
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+.containerDescription{
+    border:1px solid red;
+    width: 60vw;
+    height:20vw;
+    line-height: 1.5vw;
+}
+
+.containerFirstTxt{
+    text-align: center;
+    border:1px solid red;
+}

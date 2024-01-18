@@ -3,7 +3,7 @@
     height:33.3vh;
     width:30vw;
     border-radius:5px;
-    box-shadow: -10px 10px 10px 10px rgb(180, 180, 180);;
+    box-shadow: -10px 10px 10px 10px rgb(180, 180, 180);
 }
 
 .containerTitleBox{
@@ -44,13 +44,13 @@
 
 .containerImgsResults{
     margin-top:2vh;
-    height:18vh;
+    height:22vh;
     display:flex;
     justify-content: center;
 }
 
 .containerImgBeforeAndAfter{
-    width: 97%;
+    width: 100vw;
     display:flex;
     justify-content: space-evenly;
 }
@@ -59,7 +59,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    width:10.3vw;
+    width:12.3vw;
     height: 20vh;
     border-radius:10px;
 }
@@ -80,4 +80,147 @@
     color:gray;
     margin-top:2vh;
 }
+
+
+
+@media (max-width:1510px){
+    .containerFirstImg, .containerSecondImg{
+        width:12.3vw;
+        height: 17vh;
+    }
+
+    .containerInfoBox{
+        height:30.3vh;
+    }
+
+}
+
+
+@media (max-width:1270px){
+    .containerFirstImg, .containerSecondImg{
+        width:12.3vw;
+        height: 10vh;
+      
+    }
+    .containerInfoBox{
+        height:22.3vh;
+    }
+
+}
+
+
+
+@media (max-width:1043px){
+    .containerBeforeAndAfter{
+        margin-top:-2vw;
+    }
+
+    .containerBefore, .containerAfter{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 7vw;
+    }
+
+}
+
+@media (max-width:810px){
+    .containerBeforeAndAfter{
+        margin-top:-2vw;
+    }
+
+    .containerBefore, .containerAfter{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 7vw;
+    }
+
+    .containerFirstImg, .containerSecondImg{
+        width:12.3vw;
+        height: 8vh;
+    }
+
+    .containerInfoBox{
+        height:19.3vh;
+    }
+
+    .containerDescResClean{
+        height: 40vh;
+        line-height: 6vw;
+    }
+
+    .containerTitleBox span{
+        font-size: 2vw;
+    }
+}
+
+
+
+@media (max-width:561px){
+    .containerBeforeAndAfter{
+        margin-top:-2vw;
+        width: 75%;
+    }
+
+    .containerBefore, .containerAfter{
+        font-size:8px;
+    }
+}
+
+
+@media (max-width:529px){
+    .containerBeforeAndAfter{
+        margin-top:-2vw;
+        width: 75%;
+    }
+
+    .containerBefore, .containerAfter{
+        font-size:8px;
+    }
+}
+
+@media (max-width:517px){
+
+    .containerBoxesContent{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+   .containerInfoBox{
+        width: 40vw;
+        height: 23vh;
+    }
+
+    .containerTitleBox span{
+        font-size: 3vw;
+    }
+    .containerBefore, .containerAfter{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 10vw;
+    }
+
+    .containerFirstImg, .containerSecondImg{
+        width:17.3vw;
+        height: 10vh;
+    }
+
+    .containerDescResClean{
+        height: 40vh;
+        line-height: 5vw;
+        font-size:2.3vw;
+    }
+
+    .containerInfoBox{
+        box-shadow: -10px 10px 10px 2px rgb(180, 180, 180);
+    }
+
+
+}
+
 

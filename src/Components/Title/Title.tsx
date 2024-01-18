@@ -10,8 +10,8 @@ export default () => {
         </div>
         <div className="containerTitleTxt">
             <div className="txtTitle">
-                <span>EXTREME PRO SERVICES INC</span>
-                <text className="spanSubTitlte">Residential and Commercial<br></br>Cleaning</text>
+                <span className="title">EXTREME PRO SERVICES INC</span>
+                <span className="spanSubTitlte">Residential and Commercial <br></br>Cleaning & Painting</span>
             </div>
         </div>
     </div>
