@@ -11,7 +11,7 @@ export default () => {
         <div className="containerTitleTxt">
             <div className="txtTitle">
                 <span className="title">EXTREME PRO SERVICES INC</span>
-                <span className="spanSubTitlte">Residential and Commercial <br></br>Cleaning & Painting</span>
+                <span className="spanSubTitlte">Residential and Commercial <br></br> Painting & Cleaning</span>
             </div>
         </div>
     </div>

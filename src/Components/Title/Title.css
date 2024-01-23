@@ -132,26 +132,25 @@
         font-size:17px;
     }
     .containerTitle{
-        border:1px solid red;
         height:15vh;
     }
 
 }
 
-
 @media (max-width:487px){
 
     .txtTitle .title{
         line-height: normal;
-        font-size:15px;
+        font-size:5vw;
+        width: 60vw;
     }
 
     .spanSubTitlte{
         line-height: 6vw;
         font-size:13px;
+        font-size:3vw;
     }
     .containerTitle{
-        border:1px solid red;
         height:15vh;
     }
 

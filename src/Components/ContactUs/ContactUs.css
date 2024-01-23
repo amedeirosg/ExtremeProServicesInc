@@ -48,7 +48,6 @@
 }
 
 
-
 .containerContactName input, .containerContactPhone .inputMask, .containerContactEmail input{
     height:2vh;
     margin-top:0.5vw;
@@ -215,6 +214,14 @@ textarea:focus{
 
 }
 
+
+@media(max-width:801px){
+    .containerContactService{
+        margin-top:20vw;
+    }
+}
+
+
 @media (max-width:669px){
    
     .containerBtnSend{
@@ -223,13 +230,20 @@ textarea:focus{
         font-size:12px;
      }
 
-}
+    }   
+
+
 
 
 @media (max-width:375px){
+
+    .containerContactTitle{
+        margin-top:-5vw;
+    }
+
     .containerContactTitle span{
         font-weight: 800;
-        font-size:15px;
+        font-size:18px;
     }
 
     
@@ -266,6 +280,14 @@ textarea:focus{
        font-size:12px;
     }
 
+    .containerContactArea{
+        margin-top:0;
+        height: 80vw;
+    }
 
+    .containerContactService{
+        margin-top:-10vw;
+        
+    }
 
 }

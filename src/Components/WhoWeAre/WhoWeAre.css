@@ -1,17 +1,16 @@
 .containerWho{
-    border:1px solid red;
     height:25vw;
     display:flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 2vw;
+    animation:fadeInAnimation ease 2s;
 }
 
 .containerWhoTitle{
-    border:1px solid red;
-    height:4vw;
     width: 80vw;
+    height:7vw;
     display:flex;
     justify-content: center;
     text-align: center;
@@ -21,17 +20,138 @@
 .containerWhoTitle span{
     font-size: 32px;
     font-weight: 800;
-
 }
 
 .containerDescription{
-    border:1px solid red;
-    width: 60vw;
+    width: 80vw;
+    margin-top:4vw;
     height:20vw;
-    line-height: 1.5vw;
+    line-height: 1.8vw;
+    font-size: 18px;
 }
 
-.containerFirstTxt{
-    text-align: center;
-    border:1px solid red;
+@media(max-width:1357px){
+    .containerWho{
+        height:30vw;
+    }
+}
+
+@media(max-width:1103px){
+
+    .containerWho{
+        height:35vw;
+    }
+
+    .containerWhoTitle{
+        width: 100vw;
+    }
+
+    .containerDescription{
+        width: 80vw;
+        line-height: 1.8vw;
+    }
+
+}
+
+@media(max-width:1003px){
+
+    .containerWho{
+        height:10vw;
+        margin-top:5vw;
+    }
+
+    .containerWhoTitle{
+        width: 100vw;
+    }
+
+    .containerDescription{
+        width: 80vw;
+        line-height: 1.8vw;
+    }
+
+}
+
+
+
+@media(max-width:873px){
+    .containerWhoTitle span{
+        font-size: 28px;
+    }
+    .containerDescription{
+        width: 90vw;
+        height: 30vw;
+        line-height: 3vw;
+    }
+    .containerWho{
+        height: 45vw;
+    }
+}
+
+
+@media(max-width:765px){
+    .containerWhoTitle span{
+        font-size: 24px;
+    }
+
+    .containerDescription{
+        line-height: 3.5vw;
+    }
+
+    .containerWho{
+        height: 70vw;
+    }
+
+    .containerDescription{
+        height: 55vw;
+    }
+
+}
+
+
+
+@media(max-width:673px){
+    .containerWhoTitle span{
+        font-size: 20px;
+    }
+
+    .containerDescription{
+        font-size:15px;
+    }
+}
+
+
+@media(max-width:571px){
+
+    .containerWho{
+        margin-top:8vw;
+    }
+    
+    .containerWhoTitle{
+        width: 96vw;
+    }
+
+    .containerWhoTitle span{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:493px){
+    .containerWho {
+        margin-top: 8vw;
+        height: 80vw;
+    }
+
+    .containerWhoTitle{
+        height:15vw;
+    }
+
+    .containerDescription{
+        height: 155vw;
+        line-height: 5.5vw;
+    }
+
+    .containerDescription{
+        font-size:15px;
+    }
+
 }

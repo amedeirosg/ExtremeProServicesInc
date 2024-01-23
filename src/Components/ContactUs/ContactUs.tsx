@@ -4,26 +4,47 @@ import { useState } from "react";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import emailjs from "@emailjs/browser";
 import "primeflex/primeflex.css";
+import { Button } from "primereact/button";
+import { Dialog } from "primereact/dialog";
+
 //@ts-ignore
 import LeftImgContact from "../../assets/BackgroundContact2.png";
 
 export default () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [successEmail, setSuccessEmail] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState<string | undefined>();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const errDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setErrorEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
+
+  const successDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setSuccessEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
+
   const handleEmailChange = (e: any) => {
     e.preventDefault();
     //@ts-ignore
     const isValid = emailRegex.test(email);
-    if (isValid) {
-      console.log("send");
-    } else {
-      console.log("errorMail");
-    }
 
     if (
       //@ts-ignore
@@ -34,7 +55,7 @@ export default () => {
       message == "" ||
       phone == ""
     ) {
-      alert("Fill all the gaps");
+      setErrorEmail(true);
       return;
     }
 
@@ -69,13 +90,15 @@ export default () => {
           console.log("ERROR:", err);
         }
       );
+
+    setSuccessEmail(true);
   };
 
   return (
     <div className="containerContactService">
       <div className="containerShowImg">
         <div className="containerImgLeft">
-          <img src={LeftImgContact} alt="leftImg"/>
+          <img src={LeftImgContact} alt="leftImg" />
         </div>
         <div className="containerAllDivs">
           <div className="containerContactTitle">
@@ -136,6 +159,30 @@ export default () => {
           </div>
         </div>
       </div>
+      <Dialog
+        header="Warning"
+        visible={errorEmail}
+        style={{ width: "50vw" }}
+        onHide={() => setErrorEmail(false)}
+        footer={errDialog}
+      >
+        <p className="m-0">
+          Kindly complete all the required fields to submit your inquiry to the
+          company.
+        </p>
+      </Dialog>
+      <Dialog
+        header="Success"
+        visible={successEmail}
+        style={{ width: "50vw" }}
+        onHide={() => setSuccessEmail(false)}
+        footer={successDialog}
+      >
+        <p className="m-0">
+          Your inquiry has been forwarded to the company. We will be in touch
+          with you shortly.
+        </p>
+      </Dialog>
     </div>
   );
 };

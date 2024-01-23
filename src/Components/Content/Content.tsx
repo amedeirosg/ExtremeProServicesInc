@@ -12,6 +12,10 @@ import Tiktok from "../../assets/Tiktok.png";
 import Cleaning1 from "../../assets/Cleaning.jpg";
 //@ts-ignore
 import Cleaning2 from "../../assets/Cleaning2.jpg";
+//@ts-ignore
+import PaintingAfter from "../../assets/after.jpg";
+//@ts-ignore
+import PaingintBefore from "../../assets/before.jpg";
 export default () => {
   //@ts-ignore
   const { tiktokLink, instagramLink } = useContext(Contexts);
@@ -34,14 +38,14 @@ export default () => {
             desc4={"- Windows cleaning "}
             desc5={"- Spring cleaning "}
             desc6={"- Housekeeping "}
-            desc7={"- Laundry "}
+            desc7={" "}
             desc8={"- Closet organization"}
           />
 
           <InfoBox
             serviceTitle="Painting Service"
-            sourceImg={Cleaning1}
-            sourceImgT={Cleaning2}
+            sourceImg={PaintingAfter}
+            sourceImgT={PaingintBefore}
             desc1={"- Paint Services"}
             desc2={"- Interior and exterior "}
             desc3={"- Pressure washing "}
@@ -55,47 +59,39 @@ export default () => {
 
         <ContactUs />
         <div className="containerAboutUs">
-          <div className="containerTitleAbout">
-            <span>About Us</span>
-            <div className="sectionLine">
-              <hr></hr>
-            </div>
+          <div className="containerAboutUsTitle">
+            <span>About us</span>
           </div>
-          <div className="containerDescAbout">
-            <div className="containerTxtAbout">
-              <div className="containerLeftSAbout">
-                <span id="title">
-                  Extreme Pro Services Inc is a Cleaning Company
-                </span>
-                <br></br>
-                <div className="containerSubtitle">
-                  <span id="subtitle">
-                    We pride ourselves on being honest and competitive with our
-                    pricing. Customer satisfaction is our number one priority.
-                    <br></br>
-                    <br></br>
-                    <b>Call today for your free estimate!</b>
-                    <br></br>
-                    <br></br>
-                  </span>
-                </div>
+          <div className="containerDesc">
+            <div className="containerLeftDesc">
+              <div className="containerLeftTitle">
+                <span>Extreme Pro Services Inc is a Cleaning Company</span>
               </div>
-              <div className="containerRightSAbout">
-                <div className="containerContactUs">
-                  <div className="containerContact">
-                    <div className="icons">
-                      <Phone className="Phone" />
-                      <b>PHONE</b>
-                    </div>
-                    <span>+1 (978) 328-8859</span>
+              <div className="containerLeftDescTxt">
+                <span>
+                  We pride ourselves on being honest and competitive with our
+                  prioring Customer satisfaction is our number one priority
+                  <br></br>
+                  <br></br>
+                  <b>Call today for you free estimate!</b>
+                </span>
+              </div>
+            </div>
+            <div className="containerRightDesc">
+              <div className="containerPhoneAndLoc">
+                <div className="containerPhone">
+                  <div className="containerIconP">
+                    <Phone />
+                    <span>Phone</span>
                   </div>
-                  <div className="containerContact">
-                    <div className="icons">
-                      <Location />
-                      <b>LOCATION</b>
-                    </div>
-                    <span>Massachusetts and New Hampshire</span>
+                  <span id="number">+1 (978) 328-8859</span>
+                </div>
+                <div className="containerLoc">
+                  <div className="containerIconL">
+                    <Location />
+                    <span>Location</span>
                   </div>
+                  <span id="location">Massachusetts and New Hampshire</span>
                 </div>
               </div>
             </div>

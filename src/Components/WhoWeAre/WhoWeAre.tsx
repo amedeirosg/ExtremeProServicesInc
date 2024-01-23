@@ -6,17 +6,16 @@ export default () => {
       <div className="containerWhoTitle">
         <span>
           Welcome to Extreme Pro Services Inc <br></br> Elevating Spaces with
-          Cleaning and Painting since 2018!
+          Painting and Cleaning Services since 2018!
         </span>
       </div>
       <div className="containerDescription">
         <div className="containerFirstTxt">
           <span>
-            Established in 2018, <b>Extreme Pro Services Inc</b> has been a
-            leading provider of cleaning services. In 2024, we expanded our
-            expertise by
-            <b> introducing painting services</b> to make your spaces even more
-            special.
+            Since our founding in 2018, <b>Extreme Pro Services Inc</b> has
+            established itself as a leading provider of both cleaning and
+            painting services. Our mission is to make your spaces more special
+            and welcoming.
           </span>
         </div>
         <br></br>
@@ -25,9 +24,25 @@ export default () => {
           impeccable cleaning but also transform spaces with high-quality
           interior and exterior painting. <br></br>
           <br></br>
-          <b>Commitment to Quality and Safety: </b>With 5 years of independent
-          operation, we maintain a standard of excellence. We are proud to hold
-          <b> the OSHA 30 certification</b>, ensuring safety in every project.
+          <b>Our Commitment to Quality and Safety: </b>With over 5 years in the
+          industry, we maintain a standard of excellence in every project. Our
+          pride in holding the OSHA 30 certification is a testament to our
+          dedication to safety and quality.
+        </span>
+        <br></br>
+        <br></br>
+        <span>
+          <b>Why Choose Extreme Pro Services Inc:</b>
+          <br></br>
+          <b>1. Expertise & Experience:</b> Over 9 years in the industry, 5 as
+          an independent company. <br></br>
+          <b>2. Qualified Team:</b>
+          Committed and skilled professionals ready to serve. <br></br>
+          <b>3. Diverse Solutions:</b>
+          Offering a wide array of maintenance and enhancement services.{" "}
+          <br></br>
+          <b>4. Guaranteed Safety:</b>
+          Ensuring a safe environment, backed by OSHA 30 certification.
         </span>
       </div>
     </div>

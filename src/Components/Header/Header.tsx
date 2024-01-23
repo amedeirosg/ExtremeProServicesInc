@@ -1,8 +1,7 @@
 import "./Header.css";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import Contexts from "../../Contexts/Context";
-import Menu from "@mui/icons-material/Menu";
 //@ts-ignore
 import Instagram from "@mui/icons-material/Instagram";
 //@ts-ignore
@@ -16,7 +15,7 @@ export default () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    const scrolled = window.scrollY > 100;
+    const scrolled = window.scrollY > 0;
     setIsScrolled(scrolled);
   };
 
@@ -26,6 +25,10 @@ export default () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    window.scroll({ top: 0, left: 0 });
   }, []);
 
   return (
@@ -41,22 +44,21 @@ export default () => {
           </h3>
           <h3
             onClick={() => {
-              window.scroll({ top: 480, left: 0, behavior: "smooth" });
+              window.scroll({ top: 1000, left: 0, behavior: "smooth" });
             }}
           >
             SERVICES
           </h3>
           <h3
             onClick={() => {
-              window.scroll({ top: 2300, left: 0, behavior: "smooth" });
+              window.scroll({ top: 3200, left: 0, behavior: "smooth" });
             }}
           >
             ABOUT
           </h3>
-          <h3>REVIEWS</h3>
           <h3
             onClick={() => {
-              window.scroll({ top: 1380, left: 0, behavior: "smooth" });
+              window.scroll({ top: 1920, left: 0, behavior: "smooth" });
             }}
           >
             CONTACT US
