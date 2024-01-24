@@ -13,9 +13,9 @@ import Cleaning1 from "../../assets/Cleaning.jpg";
 //@ts-ignore
 import Cleaning2 from "../../assets/Cleaning2.jpg";
 //@ts-ignore
-import PaintingAfter from "../../assets/after.jpg";
+import PaintingAfter from "../../assets/before.png";
 //@ts-ignore
-import PaingintBefore from "../../assets/before.jpg";
+import PaingintBefore from "../../assets/after.png";
 export default () => {
   //@ts-ignore
   const { tiktokLink, instagramLink } = useContext(Contexts);
@@ -32,14 +32,14 @@ export default () => {
             serviceTitle="Residential & Commercial Cleaning"
             sourceImg={Cleaning1}
             sourceImgT={Cleaning2}
-            desc1={"- House & Office Cleaning "}
-            desc2={"- Deep cleaning (weekly cleaning)"}
+            desc1={"- Commercial and Residential Cleaning Services"}
+            desc2={"- Pressure Washing"}
             desc3={"- Move-in and move-out "}
             desc4={"- Windows cleaning "}
             desc5={"- Spring cleaning "}
-            desc6={"- Housekeeping "}
-            desc7={" "}
-            desc8={"- Closet organization"}
+            desc6={"- Customized Services "}
+            desc7={"- Drywall Repair "}
+            desc8={"- Move in/out Cleaning Services "}
           />
 
           <InfoBox
@@ -47,10 +47,10 @@ export default () => {
             sourceImg={PaintingAfter}
             sourceImgT={PaingintBefore}
             desc1={"- Paint Services"}
-            desc2={"- Interior and exterior "}
-            desc3={"- Pressure washing "}
-            desc4={"- Deck "}
-            desc5={"- Stain "}
+            desc2={"- Commercial and Residential Painting"}
+            desc3={"- Exterior Painting"}
+            desc4={""}
+            desc5={""}
             desc6={""}
             desc7={""}
             desc8={""}

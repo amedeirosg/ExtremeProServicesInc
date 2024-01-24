@@ -14,33 +14,25 @@ export default (props: {
 }) => {
   return (
     <div className="containerBoxesContent">
-      <div className="containerInfoBox">
+      <div className="containerBoxContent">
         <div className="containerTitleBox">
           <span>{props.serviceTitle}</span>
         </div>
-        <div className="containerResults">
-          <div className="containerBeforeAndAfter">
-            <div className="containerBefore">
-              <span>Before</span>
-            </div>
-            <div className="containerAfter">
-              <span>After</span>
-            </div>
-          </div>
+        <div className="containerBeforeAndAfter">
+          <span id="before">Before</span>
+          <span id="after">After</span>
         </div>
-        <div className="containerImgsResults">
-          <div className="containerImgBeforeAndAfter">
-            <div className="containerFirstImg">
-              <img src={props.sourceImg} />
-            </div>
-            <div className="containerSecondImg">
-              <img src={props.sourceImgT} />
-            </div>
+        <div className="containerImgBeforeAndAfter">
+          <div className="containerImgBefore">
+            <img src={props.sourceImg} alt="srcimg" />
+          </div>
+          <div className="containerImgAfter">
+          <img src={props.sourceImgT} alt="srcimg" />
           </div>
         </div>
       </div>
-      <div className="containerDescResClean">
-        <span>{props.desc1}</span>
+      <div className="containerDescAboutJob">
+      <span>{props.desc1}</span>
         <span>{props.desc2}</span>
         <span>{props.desc3}</span>
         <span>{props.desc4}</span>

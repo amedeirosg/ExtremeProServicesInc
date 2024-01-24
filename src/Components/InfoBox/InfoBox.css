@@ -1,415 +1,202 @@
-.containerInfoBox{
-    background-color:rgb(10, 163, 214);
-    height:33.3vh;
-    width:30vw;
-    border-radius:5px;
-    box-shadow: -10px 10px 10px 10px rgb(180, 180, 180);
+.containerBoxesContent{
+    width: 30vw;
+    height: inherit;
 }
 
-.containerTitleBox{
-    height:5vh;
-    margin-top:2vh;
-    text-align: center;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerTitleBox span{
-    font-family: roboto;
-    font-size:20px;
-    font-weight: bold;
-}
-
-.containerResults{
-    margin-top:2vh;
-    display:flex;
-    justify-content: center;
-}
-
-.containerBeforeAndAfter{
-    width: 61%;
-    display:flex;
-    justify-content: space-between;
-}
-
-.containerBefore, .containerAfter{
-    background-color: white;
-    width: 5vw;
-    text-align: center;
+.containerBoxContent{
+    background-color: #0AA3D6;
     border-radius:10px;
-    font-weight: 800;
-    font-size:14px;
-}
-
-.containerImgsResults{
-    margin-top:2vh;
-    height:22vh;
-    display:flex;
-    justify-content: center;
-}
-
-.containerImgBeforeAndAfter{
-    width: 100vw;
-    display:flex;
-    justify-content: space-evenly;
-}
-
-.containerFirstImg, .containerSecondImg{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:12.3vw;
-    height: 20vh;
-    border-radius:10px;
-}
-
-.containerFirstImg img, .containerSecondImg  img{
-    width: 100%;
-    height: 100%;
-    border-radius:10px;
-    object-fit: cover;
-}
-
-.containerDescResClean{
+    box-shadow: -10px 10px 20px 5px rgb(128, 126, 126);
     height: 40vh;
     display:flex;
     flex-direction: column;
-    line-height: 2.6vw;
-    font-weight:600;
-    color:gray;
+    align-items: center;
+}
+
+.containerTitleBox{
+    height: 7vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.containerBeforeAndAfter{
+    width: 20vw;
+    height:5vh;
     margin-top:2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+#before, #after{
+    background-color: white;
+    padding: 0.7vh;
+    width: 10vh;
+    text-align: center;
+    border-radius: 1vh;
+}
+
+.containerImgBeforeAndAfter{
+    margin-top:2vh;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerImgBefore,.containerImgAfter{
+    width: 40%;
+}
+
+
+.containerImgBefore img,.containerImgAfter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5vh;
+}
+
+.containerDescAboutJob{
+    height: 45.7vh;
+    margin-top:4vh;
+    display:flex;
+    flex-direction: column;
+    line-height: 4vh;
+    font-size:18px;
+    color:gray;
+    font-weight: 600;
+    opacity: 0.8;
 }
 
 
 
-@media (max-width:1510px){
-    .containerFirstImg, .containerSecondImg{
-        width:12.3vw;
-        height: 17vh;
-    }
-
-    .containerInfoBox{
-        height:30.3vh;
-    }
-
-}
-
-
-@media (max-width:1270px){
-    .containerFirstImg, .containerSecondImg{
-        width:12.3vw;
-        height: 10vh;
-      
-    }
-    .containerInfoBox{
-        height:22.3vh;
-    }
-
-}
-
-
-
-@media (max-width:1043px){
-    .containerBeforeAndAfter{
-        margin-top:-2vw;
-    }
-
-    .containerBefore, .containerAfter{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        width: 7vw;
-    }
-
-}
-
-
-@media(max-width:1024px){
-    .containerInfoBox{
-        height: 28vw;
-    }
-
-    .containerImgsResults{
-        height:14vw;
-        margin-top:3vw;
-    }
+@media(max-width:1215px){
+    .containerBoxesContent {
+        width: 35vw;
     
-    .containerFirstImg,.containerSecondImg{
-        height: 13vw ;
     }
 
-    .containerBeforeAndAfter{
-        margin-top:3vw;
-
-    }
-
-    .containerTitleBox span{
-        margin-top:4vw;
+    .containerBeforeAndAfter {
+        width: 25vw;
+       
     }
 }
 
 
-@media (max-width:858px){
+@media(max-width:1215px){
+    .containerBoxesContent {
+        width: 40vw;
     
-   .containerInfoBox{
-        height:33vw;
-        width: 38vw;
-   }
-
-    .containerFirstImg, .containerSecondImg{
-        width: 15vw;
-        height:15vw;
-   }
-}
-
-
-@media (max-width:810px){
-    .containerBeforeAndAfter{
-        margin-top:-0.6vw;
-    }
-
-    .containerBefore, .containerAfter{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        width: 7vw;
-    }
-
-    .containerFirstImg, .containerSecondImg{
-        width:15.3vw;
-        height: 16vw;
-    }
-
-    .containerInfoBox{
-        height:30vw;
-        width:40vw ;
-    }
-
-    .containerDescResClean{
-        height: 45vh;
-        margin-top:5vw;
-        line-height: 6vw;
-    }
-
-    .containerTitleBox span{
-        font-size: 2vw;
-    }
-
-    .containerBoxesContent{
-        height: 87vw;
     }
 }
 
-@media(max-width:638px){
-    .containerInfoBox{
-        height: 37vw;
-        width: 38vw;
-    }
-
-    .containerImgsResults{
-        height:17vw;
-        margin-top:4vw;
-    }
+@media(max-width:927px){
+    .containerBoxesContent {
+        width: 45vw;
     
-    .containerFirstImg,.containerSecondImg{
-        height: 16vw ;
-        width: 15vw;
     }
-
-    .containerBeforeAndAfter{
-        margin-top:0vw;
-        width: 75%;
-    }
-
-    .containerBefore, .containerAfter{
-        width: 10vw;
-    }
-
-    .containerTitleBox {
-        margin-top:1vw;
-     
-        padding:10px;
-    }
-
-    .containerTitleBox span{
-        font-size:15px;
-    }
-}
-
-@media (max-width:561px){
-    .containerBeforeAndAfter{
-        margin-top:-2vw;
-        width: 75%;
-    }
-
-    .containerBefore, .containerAfter{
-        font-size:8px;
+    .containerBeforeAndAfter {
+        width: 30vw;
     }
 }
 
 
-@media (max-width:529px){
-    .containerBeforeAndAfter{
-        margin-top:-2vw;
-        width: 75%;
-    }
-
-    .containerBefore, .containerAfter{
-        font-size:8px;
-    }
-}
-
-@media (max-width:517px){
-
-    .containerBoxesContent{
-        width: 100%;
-        display:flex;
+@media(max-width:813px){
+    .containerInfoBoxes {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 55vw;
+        height: 180vh;
     }
 
-   .containerInfoBox{
-        width: 44vw;
-        height: 60vw;
+    .containerBoxesContent {
+        width: 40vw;
+        height: 100vh;
     }
 
-    .containerTitleBox span{
-        font-size: 3vw;
+    .containerBoxesContent {
+        width: 55vw;
+    
     }
-    .containerBefore, .containerAfter{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        width: 10vw;
-        margin-top:3vw;
+    .containerBeforeAndAfter {
+        width: 35vw;
+    }
+}
+
+@media(max-width:813px){
+    .containerInfoBoxes {
+        width: 65vw;
     }
 
-    .containerFirstImg, .containerSecondImg{
-        width:17.3vw;
-        height: 10vh;
+    .containerBoxesContent {
+        width: 65vw;
+    }
+   
+}
+
+@media(max-width:737px){
+    .containerBeforeAndAfter {
+        width: 40vw;
+    }
+}
+
+
+
+@media(max-width:645px){
+    .containerInfoBoxes {
+        width: 75vw;
     }
 
-    .containerDescResClean{
-        height: 40vh;
-        line-height: 5vw;
-        font-size:2.3vw;
+    .containerBoxesContent {
+        width: 75vw;
     }
-
-    .containerInfoBox{
-        box-shadow: -10px 10px 10px 2px rgb(180, 180, 180);
+   
+    .containerBeforeAndAfter {
+        width: 50vw;
     }
-
 
 }
 
 
-@media (max-width: 510px){
-
-   
-    .containerInfoBox{
-        width: 44vw;
-        height: 75vw;
+@media(max-width:645px){
+    .containerInfoBoxes {
+        width: 85vw;
     }
 
-}
-
-
-@media (max-width: 458px){
-   
-    .containerInfoBox{
-        width: 44vw;
-        height: 80vw;
+    .containerBoxesContent {
+        width: 85vw;
     }
-
-}
-
-@media (max-width: 458px){
    
-   .containerBoxesContent{
-        display:flex;
-        flex-direction: column;
-        margin-top:3vw;
-        height: 110vw;
-   }
-
-   .containerFirstImg, .containerSecondImg{
-        width: 33vw;
-        height:34vw;
-   }
-
-   .containerImgBeforeAndAfter{
-
-        height:35vw;
-   }
-
-   .containerInfoBox{
-        width: 80vw;
-        height: 110vw;
-    }
-
-    .containerDescResClean{
-        width: 80vw;
-    }
-
-   
-    .containerBeforeAndAfter{
+    .containerBeforeAndAfter {
         width: 60vw;
     }
 
-    .containerBefore,.containerAfter{
-        width: 20vw;
-        font-size:3.4vw;
-    }
+}
 
-    .containerTitleBox span{
-        font-size:4.5vw;
-        width: 60vw;
+@media(max-width:555px){
+    .containerBoxesContent{
     }
-
-    .containerDescResClean{
-        font-size:3vw;
-    }
-
 
 }
 
 
-@media (max-width: 458px){
-   
-    .containerBoxesContent{
-         display:flex;
-         flex-direction: column;
-         margin-top:3vw;
-         height: 115vw;
+@media(max-width:375px){
+    .containerTitleBox{
+        font-size:18px;
     }
- 
+
+    .containerBeforeAndAfter{
+        font-size:12px;
+    }
+
+    .containerDescAboutJob{
+        font-size: 12px;
+    }
     
-     .containerDescResClean{
-         font-size:3.3vw;
-     }
- 
- 
- }
-
-
- @media (max-width: 386px){
-    .containerBoxesContent{
-         height: 120vw;
-    }
- }
-
-
- 
- @media (max-width: 370px){
-    .containerBoxesContent{
-         height: 125vw;
-    }
- }
-
-
-
-
-
-
+}
