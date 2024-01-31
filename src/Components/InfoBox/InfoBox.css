@@ -179,12 +179,21 @@
 
 }
 
-@media(max-width:555px){
-    .containerBoxesContent{
+
+@media(max-width:414px){
+    .containerTitleBox{
+        font-size:18px;
     }
 
-}
+    .containerBeforeAndAfter{
+        font-size:12px;
+    }
 
+    .containerDescAboutJob{
+        font-size: 12px;
+    }
+    
+}
 
 @media(max-width:375px){
     .containerTitleBox{

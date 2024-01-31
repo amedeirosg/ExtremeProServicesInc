@@ -9,7 +9,8 @@ import { Dialog } from "primereact/dialog";
 
 //@ts-ignore
 import LeftImgContact from "../../assets/BackgroundContact2.png";
-
+//@ts-ignore
+import RightImgContact from "../../assets/PaintingService.jpg";
 export default () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const [errorEmail, setErrorEmail] = useState(false);
@@ -100,6 +101,9 @@ export default () => {
         <div className="containerImgLeft">
           <img src={LeftImgContact} alt="leftImg" />
         </div>
+        <div className="containerImgRight">
+          <img src={RightImgContact} alt="rightImg" />
+        </div>
         <div className="containerAllDivs">
           <div className="containerContactTitle">
             <span>Contact us</span>
@@ -162,7 +166,7 @@ export default () => {
       <Dialog
         header="Warning"
         visible={errorEmail}
-        style={{ width: "50vw" }}
+        className="dialogWarn"
         onHide={() => setErrorEmail(false)}
         footer={errDialog}
       >
@@ -174,7 +178,7 @@ export default () => {
       <Dialog
         header="Success"
         visible={successEmail}
-        style={{ width: "50vw" }}
+        className="dialogSuccess"
         onHide={() => setSuccessEmail(false)}
         footer={successDialog}
       >

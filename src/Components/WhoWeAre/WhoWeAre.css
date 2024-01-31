@@ -155,3 +155,80 @@
     }
 
 }
+
+@media (max-width:428px) {
+    .containerWho {
+        margin-top:8vw;
+        height: 80vw;
+    }
+
+    .containerWhoTitle span{
+        height:15vw;
+        font-size:20px;
+    }
+
+    .containerDescription{
+        height: 155vw;
+        line-height: 5.5vw;
+    }
+
+    .containerDescription{
+        font-size:18px;
+    }
+
+}
+
+
+@media (max-width:414px) {
+   
+    .containerDescription{
+        margin-top:5vh;
+    }
+
+}
+
+
+@media (max-width:375px) {
+    .containerWho {
+        margin-top:8vw;
+        height: 80vw;
+    }
+
+    .containerWhoTitle span{
+        height:15vw;
+        font-size:15px;
+    }
+
+    .containerDescription{
+        height: 155vw;
+        line-height: 5.5vw;
+    }
+
+    .containerDescription{
+        font-size:12px;
+    }
+
+}
+
+
+@media (max-width:360px) {
+    .containerWho {
+        margin-top:8vw;
+        height: 80vw;
+    }
+
+    .containerWhoTitle span{
+        height:15vw;
+        font-size:15px;
+    }
+
+    .containerDescription{
+        height: 155vw;
+        line-height: 5.5vw;
+    }
+
+    .containerDescription{
+        font-size:12px;
+    }
+
+}

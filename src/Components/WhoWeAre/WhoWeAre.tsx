@@ -36,12 +36,12 @@ export default () => {
           <br></br>
           <b>1. Expertise & Experience:</b> Over 9 years in the industry, 5 as
           an independent company. <br></br>
-          <b>2. Qualified Team:</b>
+          <b>2. Qualified Team: </b>
           Committed and skilled professionals ready to serve. <br></br>
-          <b>3. Diverse Solutions:</b>
+          <b>3. Diverse Solutions: </b>
           Offering a wide array of maintenance and enhancement services.{" "}
           <br></br>
-          <b>4. Guaranteed Safety:</b>
+          <b>4. Guaranteed Safety: </b>
           Ensuring a safe environment, backed by OSHA 30 certification.
         </span>
       </div>

@@ -33,13 +33,13 @@ export default () => {
             sourceImg={Cleaning1}
             sourceImgT={Cleaning2}
             desc1={"- Commercial and Residential Cleaning Services"}
-            desc2={"- Pressure Washing"}
-            desc3={"- Move-in and move-out "}
-            desc4={"- Windows cleaning "}
-            desc5={"- Spring cleaning "}
-            desc6={"- Customized Services "}
-            desc7={"- Drywall Repair "}
-            desc8={"- Move in/out Cleaning Services "}
+            desc2={"- Move-in and move-out"}
+            desc3={" - Windows cleaning "}
+            desc4={"- Spring cleaning "}
+            desc5={"- Customized Services"}
+            desc6={"- Move in/out Cleaning Services "}
+            desc7={" "}
+            desc8={""}
           />
 
           <InfoBox
@@ -49,8 +49,8 @@ export default () => {
             desc1={"- Paint Services"}
             desc2={"- Commercial and Residential Painting"}
             desc3={"- Exterior Painting"}
-            desc4={""}
-            desc5={""}
+            desc4={"- Drywall Repair "}
+            desc5={"- Pressure Washing"}
             desc6={""}
             desc7={""}
             desc8={""}

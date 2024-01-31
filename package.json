@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.3",
     "@mui/material": "^5.15.3",
+    "gsap": "^3.12.5",
     "nodemailer": "^6.9.8",
     "primeflex": "^3.3.1",
     "primereact": "^10.3.1",
@@ -22,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-floating-whatsapp": "^5.0.8",
     "react-router": "^6.21.1",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.3",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

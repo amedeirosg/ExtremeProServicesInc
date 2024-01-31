@@ -1,0 +1,351 @@
+.containerServicesPage{
+    height: 700vh;
+}
+
+.containerSubHeader{
+    height: 55vh;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.containerSubHeaderImg{
+    height: inherit;
+    width: 100vw;
+}
+
+.containerSubHeaderImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerTitleSH{
+    position: absolute;
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.containerPaintingService{
+    height: 313vh;
+    margin-top:2vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    color: #0aa3d6;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.containerTitlePaintingService{
+    font-size:36px;
+    font-weight: 600;
+}
+
+.containerInteriorPainting, .containerExteriorPainting,.containerDryWall{
+    margin-top:4vh;
+    font-size:28px;
+    font-weight: 600;
+    color:#02263B;
+}
+
+
+.containerTxtAboutInterior, .containerTxtAboutExterior, .containerTxtPressureW{
+    margin-top:6vh;
+    width: 150vh;
+    font-size:22px;
+    line-height: 5vh;
+    color:#02263B;
+    font-weight:600;
+}
+
+.containerDrywallTxt{
+    font-size:22px;
+    line-height: 5vh;
+    color:#02263B;
+    font-weight: 600;
+}
+
+ .containerTxtPressureW{
+    font-weight:normal;
+}
+
+
+.containerImgBaA{
+    margin-top:4vh;
+    width: 120vh;
+    height: 30vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.containerExtBandA{
+    margin-top:4vh;
+    width: 120vh;
+    height: 35vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+.containerInteriorAfter,.containerInteriorBefore,.containerExtBefore,.containerExtAfter{
+    height: inherit;
+    width: 55vh;
+    box-shadow: -10px -10px 0px 5px ;
+    border-radius:5vh;
+    transition: ease-in-out 0.3s;
+
+}
+
+.containerInteriorAfter:hover,.containerInteriorBefore:hover, .containerExtBefore:hover, .containerExtAfter:hover, .containerSideImgFirst:hover, .containerSideImgTwo:hover, .containerImgDrywall:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+}
+
+
+.containerExtBefore,.containerExtAfter{
+    height: inherit;
+    width: 55vh;
+    transition: ease-in-out 0.3s;
+}
+
+.containerInteriorAfter img,.containerInteriorBefore img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+    border-radius:5vh;
+}
+
+.containerExtBefore img,.containerExtAfter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+    border-radius:5vh;
+}
+
+.containerPressureWashing{
+    margin-top:-15vh;
+    left:0;
+    height: 85vh;
+    width: 170vh;
+    display:flex;
+}
+
+.containerImgStyle{
+    height: 130vh;
+    width: 100%;
+}
+
+.containerImgSlice{
+    z-index:-1;
+    height:50vh;
+}
+
+.containerImgSlice img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerImgPW{
+    width: 78.2vh;
+}
+
+.containerImgPW img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.containerRightSideImg{
+    width: 50vh;
+    height: 55vh;
+    margin-left:20vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerSideImgFirst{
+    height:25vh;
+    transition: ease-in-out 0.3s;
+}
+
+.containerSideImgTwo{
+    height:25vh;
+    transition: ease-in-out 0.3s;
+}
+
+.containerSideImgFirst img, .containerSideImgTwo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+}
+
+.containerTxtPressureW{
+    width: 150vh;
+    margin-top:-20vh;
+}
+
+.containerDryWall{
+    margin-top:15vh;
+}
+
+.containerDryWallContent{
+    width: 150vh;
+    margin-top:5vh;
+    height: 40vh;
+    display:flex;
+    justify-content: space-between;
+
+}
+.containerImgDrywall{
+    width: 50vh;
+    transition: ease-in-out 0.3s;
+}
+
+.containerImgDrywall img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+}
+
+.containerDrywallTxt{
+    width: 90vh;
+
+}
+
+.containerDividArea{
+    margin-top:10vh;
+    width: 197vh;
+    height: 30vh;
+}
+
+.containerImgDivideArea{
+    height: 130;
+
+}
+
+.containerImgDivideArea img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.containerCleaningServices{
+    height: 150vh;
+    margin-top:10vh;
+}
+
+.containerCleaningTitle{
+    font-weight: 800;
+    font-size:32px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerSubTitleCleaning{
+    height: 10vh;
+    margin-top:5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:22px;
+    font-weight: 600;
+}
+
+.containerCleaningMakeShine{
+    margin-top: 3vh;
+    height: 10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:32px;
+    font-weight: 800;
+}
+
+.containerServicesCleaningImg{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImgServices{
+    width: 80%;
+    height: 70%;
+}
+
+.containerImgServices img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerCommercialCleaning{
+    border:1px solid red;
+    height:70vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerTitleCommCleaning{
+    display:flex;
+    align-items: center;
+    align-items: center;
+    height:20vh;
+}
+
+.containerTxtCommCleaning{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerLeftContentCleaning{
+    width: 60vh;
+    height: 40vh;
+    margin-top:5vh;
+}
+
+.containerRightContentCleaning{
+    width: 65vh;
+    height: inherit;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLeftContentCleaning img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerTitleRight{
+    height: 10vh;
+    font-size:32px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0aa3d6;
+    
+}
+
+
+.containerRightDesc{
+    height: 40vh;
+    width: 80%;
+    margin-left:13vh;
+    font-size:22px;
+    line-height: 5vh;
+    font-weight: 600;
+}

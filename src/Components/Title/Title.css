@@ -156,3 +156,42 @@
 
 }
 
+@media (max-width:428px){
+    .containerTitle{
+        height: 25vh;
+    }
+
+}
+
+@media (max-width:414px){
+    
+    .containerTitle{
+        height: 25vh;
+    }
+
+   
+
+}
+
+@media (max-width:375px){
+    
+    .containerTitle{
+        height: 25vh;
+    }
+
+   
+
+}
+
+
+
+@media (max-width:360px){
+    
+    .containerTitle{
+        height: 25vh;
+    }
+
+   
+
+}
+
