@@ -1,5 +1,5 @@
 import "./Header.css";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
@@ -8,7 +8,7 @@ import Instagram from "@mui/icons-material/Instagram";
 import TikTokIcon from "../../assets/TiktokIcon";
 
 export default () => {
-  const goTo = useNavigate()
+  const goTo = useNavigate();
   //@ts-ignore
   const { instagramLink, tiktokLink } = useContext(Contexts);
 
@@ -38,14 +38,15 @@ export default () => {
           <h3
             onClick={() => {
               window.scroll({ top: 0, left: 0, behavior: "smooth" });
+              goTo("/");
             }}
           >
             HOME
           </h3>
-          
+
           <h3
             onClick={() => {
-              goTo("/services")
+              goTo("/services");
             }}
           >
             SERVICES

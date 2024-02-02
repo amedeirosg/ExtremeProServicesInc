@@ -1,5 +1,5 @@
 .containerServicesPage{
-    height: 700vh;
+    height: 850vh;
 }
 
 .containerSubHeader{
@@ -28,7 +28,7 @@
 }
 
 .containerPaintingService{
-    height: 313vh;
+    height: 380vh;
     margin-top:2vh;
     display:flex;
     align-items: center;
@@ -38,27 +38,73 @@
     opacity: 0;
 }
 
+.resume-interior-painting, .resume-exterior-painting{
+    border:1px solid red;
+    height: 60vh;
+    width: 140vh;
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-painting{
+    color:black;
+    font-size: 28px;
+    border:1px solid red;
+    text-align: center;
+}
+
+.title-interior-painting, .title-exterior-painting{
+    font-size:24px;
+    margin-top:3vh;
+}
+
+.subtitle-interior-painting,.subtitle-exterior-painting{
+    font-weight: 600;
+    border:1px solid red;
+    width: 100vh;
+    font-size:22px;
+    margin-top:5vh;
+    color:black;
+}
+
+.interior-img-painting, .exterior-img-painting{
+    border:1px solid red;
+    margin-top:5vh;
+    width: 100vh;
+    height: 30vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+.interior-left-img,.interior-right-img, .exterior-left-img, .exterior-right-img{
+    border:1px solid red;
+    width: 45vh;
+    border-radius:2vh;
+    box-shadow: -10px -10px 0px 10px;
+}
+
+.interior-left-img img,.interior-right-img img ,.exterior-left-img img, .exterior-right-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:2vh;
+}
+
 .containerTitlePaintingService{
     font-size:36px;
     font-weight: 600;
 }
 
-.containerInteriorPainting, .containerExteriorPainting,.containerDryWall{
-    margin-top:4vh;
+.containerDryWall{
     font-size:28px;
     font-weight: 600;
     color:#02263B;
+    text-align: center;
 }
 
 
-.containerTxtAboutInterior, .containerTxtAboutExterior, .containerTxtPressureW{
-    margin-top:6vh;
-    width: 150vh;
-    font-size:22px;
-    line-height: 5vh;
-    color:#02263B;
-    font-weight:600;
-}
 
 .containerDrywallTxt{
     font-size:22px;
@@ -72,85 +118,42 @@
 }
 
 
-.containerImgBaA{
-    margin-top:4vh;
-    width: 120vh;
-    height: 30vh;
-    display:flex;
-    justify-content: space-between;
-}
-
-
-.containerExtBandA{
-    margin-top:4vh;
-    width: 120vh;
-    height: 35vh;
-    display:flex;
-    justify-content: space-between;
-}
-
-.containerInteriorAfter,.containerInteriorBefore,.containerExtBefore,.containerExtAfter{
-    height: inherit;
-    width: 55vh;
-    box-shadow: -10px -10px 0px 5px ;
-    border-radius:5vh;
-    transition: ease-in-out 0.3s;
-
-}
-
 .containerInteriorAfter:hover,.containerInteriorBefore:hover, .containerExtBefore:hover, .containerExtAfter:hover, .containerSideImgFirst:hover, .containerSideImgTwo:hover, .containerImgDrywall:hover{
     cursor:pointer;
     transform: scale(1.1);
 }
 
 
-.containerExtBefore,.containerExtAfter{
-    height: inherit;
-    width: 55vh;
-    transition: ease-in-out 0.3s;
-}
-
-.containerInteriorAfter img,.containerInteriorBefore img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: ease-in-out 0.3s;
-    border-radius:5vh;
-}
-
-.containerExtBefore img,.containerExtAfter img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: ease-in-out 0.3s;
-    border-radius:5vh;
-}
-
 .containerPressureWashing{
-    margin-top:-15vh;
+    border:1px solid red;
     left:0;
     height: 85vh;
     width: 170vh;
     display:flex;
+    margin-top:-80vh;
 }
 
 .containerImgStyle{
     height: 130vh;
     width: 100%;
+    margin-top:55vh;
 }
 
 .containerImgSlice{
     z-index:-1;
     height:50vh;
+    margin-top:10vh;
 }
 
 .containerImgSlice img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .containerImgPW{
-    width: 78.2vh;
+    width: 70vh;
+    height: 39vh;
 }
 
 .containerImgPW img{
@@ -186,8 +189,11 @@
 }
 
 .containerTxtPressureW{
-    width: 150vh;
+    width: 90%;
     margin-top:-20vh;
+    text-align: center;
+    font-size:22px;
+    color:black;
 }
 
 .containerDryWall{
@@ -226,7 +232,8 @@
 }
 
 .containerImgDivideArea{
-    height: 130;
+    width: 100vw;
+    height: 80vh;
 
 }
 
@@ -238,7 +245,7 @@
 
 .containerCleaningServices{
     height: 150vh;
-    margin-top:10vh;
+    margin-top:-30vh;
 }
 
 .containerCleaningTitle{
@@ -278,8 +285,8 @@
 }
 
 .containerImgServices{
-    width: 80%;
-    height: 70%;
+    width: 80vw;
+    height: 70vh;
 }
 
 .containerImgServices img{
@@ -288,8 +295,7 @@
 }
 
 .containerCommercialCleaning{
-    border:1px solid red;
-    height:70vh;
+    height:190vh;
     display:flex;
     align-items: center;
     flex-direction: column;
@@ -304,7 +310,7 @@
 
 .containerTxtCommCleaning{
     width: 70%;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -349,3 +355,442 @@
     line-height: 5vh;
     font-weight: 600;
 }
+
+.type-cleaning{
+    width: 100%;
+    height: 100vh;
+    margin-top:5vh;
+    background-image: url('../../assets/wave.png');
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-img{
+    height: 80vh;
+    width: 140vh;
+}
+
+.first-line,.second-line{
+    height:40vh;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.img-left,.img-right{
+    height: 40vh;
+    width: 60vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-title, .right-title{
+    font-size:22px;
+    font-weight: 800;
+    position: absolute;
+    margin-top:15vh;
+    z-index:1;
+    color: #ffffff;
+}
+
+.img-first-line{
+    height: 30vh;
+    margin-top:3vh;
+    width: 100%;
+    filter:brightness(50%);
+    transition: ease-in-out 0.3s;
+}
+
+.img-first-line:hover{
+    filter:brightness(80%);
+    transform:scale(1.05);
+    cursor:pointer;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.img-first-line img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.contact-area{
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.callus-today{
+    width: 20%;
+    font-size: 22px;
+    font-weight: 800;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-service{
+    border:1px solid rgb(0, 0, 0);
+    margin-top: 5vh;
+    padding:2vh;
+    font-size:22px;
+    font-weight: bold;
+}
+
+.contact-form{
+    border:1px solid #0a83ac;
+    width: 50%;
+    margin-top:3vh;
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form, .contact-questions{
+    border-radius:1vh;
+}
+
+.contact-form-title{
+    font-size:28px;
+    font-weight: 800;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-questions{
+    border:1px solid #0a83ac;
+    margin-top:2vh;
+    height: 55vh;
+    width: 95%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-square{
+    width: 90%;
+    height:13vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.first-square #name{
+    all:unset;
+    background:rgba(10,163,214, 0.3);
+    width: 97.8%;
+    padding:1vh  1vh 1vh 1vh ;
+    border-radius:0.6vh;
+    
+}
+
+.email-phone{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.email-phone #email, #phone {
+    all:unset;
+    background:rgba(10,163,214, 0.3);
+    width: 46%;
+    padding:1vh  1vh 1vh 1vh ;
+    border-radius:0.6vh;
+}
+
+.second-square{
+    margin-top:4vh;
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-square textarea{
+    width: 100%;
+    height:30vh;
+    resize:none;
+    background:rgba(10,163,214, 0.3);
+    border:none;
+    border-radius:1vh;
+    outline: none;
+    padding:1vh  1vh 1vh 1vh ;
+}
+
+.btn-send button{
+    padding:1vh 3vh 1vh 3vh;
+    border-radius:1vh;
+    font-weight: 800;
+    margin-top:2vh;
+    border:none;
+    cursor:pointer;
+    background-color:rgb(10, 163, 214);
+    transition:ease-in-out 0.3s;
+}
+
+.btn-send button:hover{
+    background-color:rgb(48, 193, 241);
+    transition:ease-in-out 0.3s;
+}
+
+.certified{
+    height: 10vh;
+    margin-top: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-certified{
+    width: 20%;
+}
+
+.img-certified img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+@media(max-width:1530px){
+    .containerImgServices{
+        border:1px solid red;
+        width: 100%;
+        height: 70vh;
+    }
+}
+
+@media(max-width:1490px){
+    .containerImgPW{
+        border:1px solid red;
+    }
+    .containerPressureWashing{
+        border:1px solid red;
+        justify-content: center;    
+    }
+}
+
+@media(max-width:1310px){
+    .containerDryWallContent{
+        width: 100vw;
+        border:1px solid red;
+        justify-content: space-evenly;
+    }
+
+    .containerDrywallTxt{
+        width: 50vw;
+        border:1px solid red;
+    }
+}
+
+@media (max-width:1290px){
+    .containerRightSideImg{
+        margin-left:0;
+    }
+}
+
+
+@media(max-width:1100px){
+    .containerSubHeaderImg{
+        height: 50vh;
+    }
+    .containerTitleSH{
+        font-size:40px;
+    }
+}
+
+@media(max-width:1055px){
+    .containerPressureWashing{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerSideImgFirst{
+        margin-bottom: 6vh;
+    }
+
+    #firstimgside{
+        margin-top:6vh;
+    }
+    .containerTxtPressureW{
+        margin-top:20vh;
+        text-align: center;
+        width: 100vw;
+        font-size:22px;
+        color:black;
+        border:1px solid red;
+    }
+
+    .containerImgServices{
+        height: 60vh;
+    }
+}
+
+@media(max-width:1000px){
+    .containerDryWallContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerDrywallTxt{
+        width: 90%;
+    }
+    .containerCleaningServices{
+        margin-top:0;
+    }
+}
+
+@media(max-width:910px){
+
+    .containerImgServices{
+        height: 47vh;
+    }
+    .resume-interior-painting, .resume-exterior-painting{
+        height: 95vh;
+    }
+    .subtitle-interior-painting,.subtitle-exterior-painting{
+        width: 90vh;
+    }
+    .interior-img-painting, .exterior-img-painting{
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+    }
+
+    .interior-left-img, .interior-right-img, .exterior-left-img, .exterior-right-img{
+        border:1px solid red;
+        width: 40vh;
+        height: 25vh;
+        margin-bottom: 10vh;
+    }
+
+    .containerImgSlice{
+        margin-top:40vh;
+    }
+
+    .containerPressureWashing{
+        margin-top:-15vh;
+    }
+    
+    .containerTxtPressureW{
+        margin-top:20vh;
+        text-align: center;
+        width: 100vw;
+        font-size:16px;
+        color:black;
+        border:1px solid red;
+    }
+
+    .containerCleaningServices{
+        margin-top:50vh;
+    }
+    .containerImgDrywall{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .containerDrywallTxt{
+        font-size:16px;
+        
+    }
+    .containerDryWallContent{
+        height: 400vh;
+    }
+
+}
+
+@media(max-width:810px){
+    .subtitle-interior-painting,.subtitle-exterior-painting{
+        width: 80vh;
+    }
+    .containerImgSlice{
+        border:1px solid red;
+        height: 45vw;
+        margin-top:50vh;
+    }
+}
+
+
+@media(max-width: 745px){
+    .containerSubHeaderImg{
+        height: 30vh;
+        margin-top:-15vh;
+    }
+    .containerTitleSH{
+        margin-top:-25vh;
+        font-size:30px;
+    }
+    .containerPaintingService{
+        margin-top:-15vh;
+    }
+}
+
+@media(max-width:717px){
+    .containerSubHeaderImg{
+        position: absolute;
+        top: 130px;
+    }
+    .containerTitleSH{
+        margin-top:-35vh;
+    }
+}
+
+@media(max-width: 700px){
+    .subtitle-interior-painting,.subtitle-exterior-painting{
+        width: 70vh;
+        font-size:16px;
+    }
+
+  
+}
+
+@media(max-width:635px){
+    .containerImgPW{
+        width:80vw;
+        height: 45vw;
+    }
+.containerRightSideImg{
+    border:1px solid red;
+    align-items: center;
+}
+
+    .containerSideImgFirst, .containerSideImgTwo{
+        border:1px solid red;
+        width: 60vw;
+    }
+}
+
+@media(max-width: 610px){
+    .subtitle-interior-painting,.subtitle-exterior-painting{
+        width: 80vw;
+    }
+}
+
+@media(max-width:440px){
+    .containerTitleSH{
+        margin-top:-25vh;
+    }
+    .containerImgDrywall{
+        width: 40vh;
+        height: 25vh;
+    }
+
+    .containerDrywallTxt{
+        margin-top:5vh;
+    }
+
+    .containerImgServices{
+        height: 70vh;
+    }
+
+}
+

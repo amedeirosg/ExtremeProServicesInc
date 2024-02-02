@@ -26,10 +26,15 @@ import ImgServices from "../../assets/ServicesCleaning.png";
 import LeftClean from "../../assets/commercialCleaning2.png";
 import SliceImg from "../../assets/AnotherStyle.png";
 import CleaningTitle from "../../assets/commCleaning.png";
+import Carpet from "../../assets/carpetcleaning.png";
+import Desk from "../../assets/deskcleaning.png";
+import Trash from "../../assets/trash.png";
+import Window from "../../assets/windowcleaning.png";
+import Certified from "../../assets/Certified.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-
+import Footer from "../Footer/Footer.tsx";
 export default () => {
   //tl = Time line
   //el = Element
@@ -46,90 +51,6 @@ export default () => {
     gsap.to(".containerPaintingService", {
       opacity: 1,
     });
-  }, []);
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.context(() => {
-      tl.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".containerImgBaA",
-            scrub: true,
-            start: "top 900px",
-            end: "bottom 700px",
-          },
-        })
-        .fromTo(
-          ".containerInteriorAfter",
-          {
-            opacity: 0,
-            x: -260,
-          },
-          {
-            opacity: 1,
-            x: 0,
-          }
-        )
-        .fromTo(
-          ".containerInteriorBefore",
-          {
-            opacity: 0,
-            x: 260,
-          },
-          {
-            opacity: 1,
-            x: 0,
-          }
-        );
-    }, el);
-
-    return () => {
-      gsap.killTweensOf(".containerImgBaA");
-    };
-  }, []);
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.context(() => {
-      tl.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".containerExtBandA",
-            scrub: true,
-            start: "top 900px",
-            end: "bottom 700px",
-          },
-        })
-        .fromTo(
-          ".containerExtBefore",
-          {
-            opacity: 0,
-            y: 160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          }
-        )
-        .fromTo(
-          ".containerExtAfter",
-          {
-            opacity: 0,
-            y: 160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          }
-        );
-    }, el);
-
-    return () => {
-      gsap.killTweensOf(".containerExtBandA");
-    };
   }, []);
 
   useLayoutEffect(() => {
@@ -175,10 +96,10 @@ export default () => {
       tlc.current = gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".containerCommercialCleaning",
+            trigger: ".containerTxtCommCleaning",
             scrub: true,
-            start: "top 500px",
-            end: "bottom 900px",
+            start: "top 600px",
+            end: "bottom 800px",
           },
         })
         .fromTo(
@@ -205,45 +126,49 @@ export default () => {
         </div>
       </div>
       <div className="containerPaintingService" ref={el}>
-        <div className="containerTitlePaintingService">
-          <span>Painting Service</span>
-        </div>
-        <div className="containerInteriorPainting">
-          <span>Interior Painting</span>
-        </div>
-        <div className="containerTxtAboutInterior">
-          <span>
-            If you want your walls to look fantastic, it is best to hire a
-            professional painter. The Painting Pros always does proper surface
-            prep, including repairing drywall before we apply any paint.
-          </span>
-        </div>
-        <div className="containerImgBaA">
-          <div className="containerInteriorAfter">
-            <img src={BeforeIntImg} alt="imgBefore" />
+        <div className="resume-interior-painting">
+          <div className="title-painting">
+            <span>Painting Services</span>
           </div>
-          <div className="containerInteriorBefore">
-            <img src={AfterIntImg} alt="imgAfter" />
+          <div className="title-interior-painting">
+            <span>Interior Painting</span>
           </div>
-        </div>
-        <div className="containerExteriorPainting">
-          <span>Exterior Painting</span>
-        </div>
-        <div className="containerTxtAboutExterior">
-          <span>
-            Quality exeterior paint and the right exterior painting services
-            work as an added layer of protection from the elements, helping to
-            keep your home safe from weather damage, insects and dust. The paint
-            can even prevent exterior wood from rotting. Certain types of paint
-            can protect from specific element.
-          </span>
-        </div>
-        <div className="containerExtBandA">
-          <div className="containerExtBefore">
-            <img src={BeforeExtImg} alt="imgBefore" />
+          <div className="subtitle-interior-painting">
+            <span>
+              If you want your walls to look fantastic, it is best to hire a
+              professional painter. The Painting Pros always does proper surface
+              prep, including repairing drywall before we apply any paint.
+            </span>
           </div>
-          <div className="containerExtAfter">
-            <img src={AfterExtImg} alt="imgAfter" />
+          <div className="interior-img-painting">
+            <div className="interior-left-img">
+              <img src={BeforeIntImg} alt="painting-image" />
+            </div>
+            <div className="interior-right-img">
+              <img src={AfterIntImg} alt="painting-image" />
+            </div>
+          </div>
+          <div className="resume-exterior-painting">
+            <div className="title-exterior-painting">
+              <span>Exterior Painting</span>
+            </div>
+            <div className="subtitle-exterior-painting">
+              <span>
+                Quality exeterior paint and the right exterior painting services
+                work as an added layer of protection from the elements, helping
+                to keep your home safe from weather damage, insects and dust.
+                The paint can even prevent exterior wood from rotting. Certain
+                types of paint can protect from specific element.
+              </span>
+            </div>
+            <div className="exterior-img-painting">
+              <div className="exterior-left-img">
+                <img src={BeforeExtImg} alt="painting-image" />
+              </div>
+              <div className="exterior-right-img">
+                <img src={AfterExtImg} alt="painting-image" />
+              </div>
+            </div>
           </div>
         </div>
         <div className="containerImgStyle">
@@ -256,7 +181,7 @@ export default () => {
             <img src={PressureImg} alt="PressureImg.png" />
           </div>
           <div className="containerRightSideImg">
-            <div className="containerSideImgFirst">
+            <div id="firstimgside"className="containerSideImgFirst">
               <img src={ExamplePressure} alt="PressureImg" />
             </div>
             <div className="containerSideImgTwo">
@@ -266,9 +191,9 @@ export default () => {
         </div>
         <div className="containerTxtPressureW">
           <span>
-            Pressure washing or power washing is
+            Pressure washing or power washing is 
             <b>
-              the use of high-pressure water spray to remove loose paint, mold,
+               the use of high-pressure water spray to remove loose paint, mold,
               grime, dust, mud, and dirt from surfaces and objects such as
               buildings, vehicles and concrete surfaces
             </b>
@@ -339,7 +264,86 @@ export default () => {
               </div>
             </div>
           </div>
+          <div className="type-cleaning">
+            <div className="area-img">
+              <div className="first-line">
+                <div className="img-left">
+                  <div className="left-title">
+                    <span>Carpet Cleaning/Vacuum</span>
+                  </div>
+                  <div className="img-first-line">
+                    <img src={Carpet} alt="carpet" />
+                  </div>
+                </div>
+                <div className="img-right">
+                  <div className="right-title">
+                    <span>Cleaning desks and sreens</span>
+                  </div>
+                  <div className="img-first-line">
+                    <img src={Desk} alt="desk" />
+                  </div>
+                </div>
+              </div>
+              <div className="second-line">
+                <div className="img-left">
+                  <div className="left-title">
+                    <span>Carpet Cleaning/Vacuum</span>
+                  </div>
+                  <div className="img-first-line">
+                    <img src={Trash} alt="trash" />
+                  </div>
+                </div>
+                <div className="img-right">
+                  <div className="right-title">
+                    <span>Cleaning desks and sreens</span>
+                  </div>
+                  <div className="img-first-line">
+                    <img src={Window} alt="window" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div className="contact-area">
+          <div className="callus-today">
+            <span>Call us today to get started</span>
+          </div>
+          <div className="request-service">
+            <span>REQUEST A SERVICE</span>
+          </div>
+          <div className="contact-form">
+            <div className="contact-form-title">
+              <span>CONTACT US</span>
+            </div>
+            <div className="contact-questions">
+              <div className="first-square">
+                <input placeholder="Name..." id="name" type="text"></input>
+                <div className="email-phone">
+                  <input placeholder="E-mail..." id="email" type="text"></input>
+
+                  <input
+                    placeholder="Phone number..."
+                    id="phone"
+                    type="text"
+                  ></input>
+                </div>
+              </div>
+              <div className="second-square">
+                <textarea placeholder="Message..."></textarea>
+              </div>
+              <div className="btn-send">
+                <button>Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="certified">
+          <div className="img-certified">
+            <img src={Certified} alt="certified" />
+          </div>
+        </div>
+        <Footer />
       </div>
     </div>
   );

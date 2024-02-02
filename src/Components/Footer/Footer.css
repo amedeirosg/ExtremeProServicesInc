@@ -1,0 +1,45 @@
+.container-footer{
+    height: 30vh;
+    margin-top:5.7vh;
+    background-color: #0aa3d6;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 50%;
+    height: 30vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.social-media{
+    height: 13vh;
+    width: 20%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.created-by{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tiktok{
+    width: 3vh;
+    height: 3vh;
+}
+.tiktok img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
