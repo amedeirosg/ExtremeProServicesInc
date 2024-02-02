@@ -39,7 +39,6 @@
 }
 
 .resume-interior-painting, .resume-exterior-painting{
-    border:1px solid red;
     height: 60vh;
     width: 140vh;
     
@@ -51,7 +50,6 @@
 .title-painting{
     color:black;
     font-size: 28px;
-    border:1px solid red;
     text-align: center;
 }
 
@@ -62,7 +60,6 @@
 
 .subtitle-interior-painting,.subtitle-exterior-painting{
     font-weight: 600;
-    border:1px solid red;
     width: 100vh;
     font-size:22px;
     margin-top:5vh;
@@ -70,7 +67,6 @@
 }
 
 .interior-img-painting, .exterior-img-painting{
-    border:1px solid red;
     margin-top:5vh;
     width: 100vh;
     height: 30vh;
@@ -79,7 +75,6 @@
 }
 
 .interior-left-img,.interior-right-img, .exterior-left-img, .exterior-right-img{
-    border:1px solid red;
     width: 45vh;
     border-radius:2vh;
     box-shadow: -10px -10px 0px 10px;
@@ -125,7 +120,6 @@
 
 
 .containerPressureWashing{
-    border:1px solid red;
     left:0;
     height: 85vh;
     width: 170vh;
@@ -564,7 +558,6 @@
 
 @media(max-width:1530px){
     .containerImgServices{
-        border:1px solid red;
         width: 100%;
         height: 70vh;
     }
@@ -572,10 +565,8 @@
 
 @media(max-width:1490px){
     .containerImgPW{
-        border:1px solid red;
     }
     .containerPressureWashing{
-        border:1px solid red;
         justify-content: center;    
     }
 }
@@ -583,13 +574,11 @@
 @media(max-width:1310px){
     .containerDryWallContent{
         width: 100vw;
-        border:1px solid red;
         justify-content: space-evenly;
     }
 
     .containerDrywallTxt{
         width: 50vw;
-        border:1px solid red;
     }
 }
 
@@ -628,7 +617,6 @@
         width: 100vw;
         font-size:22px;
         color:black;
-        border:1px solid red;
     }
 
     .containerImgServices{
@@ -667,7 +655,6 @@
     }
 
     .interior-left-img, .interior-right-img, .exterior-left-img, .exterior-right-img{
-        border:1px solid red;
         width: 40vh;
         height: 25vh;
         margin-bottom: 10vh;
@@ -687,7 +674,6 @@
         width: 100vw;
         font-size:16px;
         color:black;
-        border:1px solid red;
     }
 
     .containerCleaningServices{
@@ -713,7 +699,6 @@
         width: 80vh;
     }
     .containerImgSlice{
-        border:1px solid red;
         height: 45vw;
         margin-top:50vh;
     }
@@ -759,12 +744,10 @@
         height: 45vw;
     }
 .containerRightSideImg{
-    border:1px solid red;
     align-items: center;
 }
 
     .containerSideImgFirst, .containerSideImgTwo{
-        border:1px solid red;
         width: 60vw;
     }
 }
@@ -772,6 +755,9 @@
 @media(max-width: 610px){
     .subtitle-interior-painting,.subtitle-exterior-painting{
         width: 80vw;
+    }
+    .containerTxtPressureW{
+        margin-top:10vh;
     }
 }
 
@@ -791,6 +777,8 @@
     .containerImgServices{
         height: 70vh;
     }
-
+    .containerTxtPressureW{
+        margin-top:5vh;
+    }
 }
 

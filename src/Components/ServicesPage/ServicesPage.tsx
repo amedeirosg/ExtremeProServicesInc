@@ -161,7 +161,6 @@ export default () => {
           scrollTrigger: {
             trigger: ".exterior-img-painting",
             scrub: true,
-            markers: true,
             start: "top 820px",
             end: "bottom 850px",
           },
