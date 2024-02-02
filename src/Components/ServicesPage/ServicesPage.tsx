@@ -42,6 +42,8 @@ export default () => {
   const el = useRef();
   const tlc = useRef();
   const elc = useRef();
+  const elp = useRef();
+  const tlp = useRef();
 
   useLayoutEffect(() => {
     gsap.to(".containerSubHeader", {
@@ -114,6 +116,79 @@ export default () => {
     };
   }, []);
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.context(() => {
+      tlp.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".interior-img-painting",
+            scrub: true,
+            start: "top 920px",
+            end: "bottom 850px",
+          },
+        })
+        .fromTo(
+          ".interior-left-img",
+          {
+            opacity: 0,
+            x: -260,
+          },
+          { opacity: 1, x: 0 }
+        )
+        .fromTo(
+          ".interior-right-img",
+          {
+            opacity: 0,
+            x: 260,
+          },
+          { opacity: 1, x: 0 }
+        );
+    }, elp);
+
+    return () => {
+      gsap.killTweensOf(".resume-interior-painting");
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.context(() => {
+      tlp.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".exterior-img-painting",
+            scrub: true,
+            markers: true,
+            start: "top 820px",
+            end: "bottom 850px",
+          },
+        })
+        .fromTo(
+          ".exterior-left-img",
+          {
+            opacity: 0,
+            y: 260,
+          },
+          { opacity: 1, y: 0 }
+        )
+        .fromTo(
+          ".exterior-right-img",
+          {
+            opacity: 0,
+            x: 260,
+          },
+          { opacity: 1, x: 0 }
+        );
+    }, elp);
+
+    return () => {
+      gsap.killTweensOf(".resume-exterior-painting");
+    };
+  }, []);
+
   return (
     <div className="containerServicesPage">
       <Header />
@@ -126,7 +201,7 @@ export default () => {
         </div>
       </div>
       <div className="containerPaintingService" ref={el}>
-        <div className="resume-interior-painting">
+        <div className="resume-interior-painting" ref={elp}>
           <div className="title-painting">
             <span>Painting Services</span>
           </div>
@@ -181,7 +256,7 @@ export default () => {
             <img src={PressureImg} alt="PressureImg.png" />
           </div>
           <div className="containerRightSideImg">
-            <div id="firstimgside"className="containerSideImgFirst">
+            <div id="firstimgside" className="containerSideImgFirst">
               <img src={ExamplePressure} alt="PressureImg" />
             </div>
             <div className="containerSideImgTwo">
@@ -191,9 +266,9 @@ export default () => {
         </div>
         <div className="containerTxtPressureW">
           <span>
-            Pressure washing or power washing is 
+            Pressure washing or power washing is
             <b>
-               the use of high-pressure water spray to remove loose paint, mold,
+              the use of high-pressure water spray to remove loose paint, mold,
               grime, dust, mud, and dirt from surfaces and objects such as
               buildings, vehicles and concrete surfaces
             </b>
