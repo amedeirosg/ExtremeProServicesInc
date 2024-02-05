@@ -552,8 +552,9 @@
     object-fit: cover;
 }
 
-
-
+#phoneServices,#phoneServices2{
+    visibility: hidden;
+}
 
 
 @media(max-width:1530px){
@@ -570,6 +571,7 @@
         justify-content: center;    
     }
 }
+
 
 @media(max-width:1310px){
     .containerDryWallContent{
@@ -635,13 +637,23 @@
     .containerCleaningServices{
         margin-top:0;
     }
+    #phoneServices{
+        visibility: visible;
+    }
+    #pc{
+        display: none;
+    }
+    .containerImgServices{
+        text-align: center;
+        width: 70vh;
+        height: 75vh;
+        margin-top:-10vh;
+    }
 }
 
 @media(max-width:910px){
 
-    .containerImgServices{
-        height: 47vh;
-    }
+
     .resume-interior-painting, .resume-exterior-painting{
         height: 95vh;
     }
@@ -690,6 +702,11 @@
     }
     .containerDryWallContent{
         height: 400vh;
+    }
+
+    .containerImgServices{
+        width: 60vh;
+        height: 70vh;
     }
 
 }
@@ -743,12 +760,19 @@
         width:80vw;
         height: 45vw;
     }
-.containerRightSideImg{
-    align-items: center;
-}
+    .containerRightSideImg{
+        align-items: center;
+    }
 
     .containerSideImgFirst, .containerSideImgTwo{
         width: 60vw;
+    }
+
+    #phoneServices{
+        display:none;
+    }
+    #phoneServices2{
+        visibility: visible;
     }
 }
 
@@ -758,6 +782,11 @@
     }
     .containerTxtPressureW{
         margin-top:10vh;
+    }
+
+    .containerImgServices{
+        width: 55vh;
+        height: 65vh;
     }
 }
 

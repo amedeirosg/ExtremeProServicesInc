@@ -23,6 +23,10 @@ import ImgDivide from "../../assets/water.png";
 //@ts-ignore
 import ImgServices from "../../assets/ServicesCleaning.png";
 //@ts-ignore
+import ImgServicesPhone from "../../assets/infophone.png";
+//@ts-ignore
+import ImgServicesPhone2 from "../../assets/infophone2.png";
+//@ts-ignore
 import LeftClean from "../../assets/commercialCleaning2.png";
 import SliceImg from "../../assets/AnotherStyle.png";
 import CleaningTitle from "../../assets/commCleaning.png";
@@ -126,7 +130,7 @@ export default () => {
             trigger: ".interior-img-painting",
             scrub: true,
             start: "top 920px",
-            end: "bottom 850px",
+            end: "bottom 700px",
           },
         })
         .fromTo(
@@ -161,8 +165,8 @@ export default () => {
           scrollTrigger: {
             trigger: ".exterior-img-painting",
             scrub: true,
-            start: "top 820px",
-            end: "bottom 850px",
+            start: "top 920px",
+            end: "bottom 700px",
           },
         })
         .fromTo(
@@ -310,7 +314,9 @@ export default () => {
         </div>
         <div className="containerServicesCleaningImg">
           <div className="containerImgServices">
-            <img src={ImgServices} alt="imgServicesTxt" />
+            <img id="pc"src={ImgServices} alt="imgServicesTxt" />
+            <img id="phoneServices" src={ImgServicesPhone} alt="imgServicesTxt"/>
+            <img id="phoneServices2" src={ImgServicesPhone2} alt="imgServicesTxt"/>
           </div>
         </div>
         <div className="containerCommercialCleaning">
