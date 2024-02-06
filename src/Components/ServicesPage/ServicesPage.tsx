@@ -27,13 +27,22 @@ import ImgServicesPhone from "../../assets/infophone.png";
 //@ts-ignore
 import ImgServicesPhone2 from "../../assets/infophone2.png";
 //@ts-ignore
+import ImgServicesPhone3 from "../../assets/littlephone.png";
+//@ts-ignore
 import LeftClean from "../../assets/commercialCleaning2.png";
+//@ts-ignore
 import SliceImg from "../../assets/AnotherStyle.png";
+//@ts-ignore
 import CleaningTitle from "../../assets/commCleaning.png";
+//@ts-ignore
 import Carpet from "../../assets/carpetcleaning.png";
+//@ts-ignore
 import Desk from "../../assets/deskcleaning.png";
+//@ts-ignore
 import Trash from "../../assets/trash.png";
+//@ts-ignore
 import Window from "../../assets/windowcleaning.png";
+//@ts-ignore
 import Certified from "../../assets/Certified.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -63,6 +72,7 @@ export default () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.context(() => {
+//@ts-ignore
       tl.current = gsap
         .timeline({
           scrollTrigger: {
@@ -99,6 +109,7 @@ export default () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.context(() => {
+      //@ts-ignore
       tlc.current = gsap
         .timeline({
           scrollTrigger: {
@@ -124,6 +135,7 @@ export default () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.context(() => {
+      //@ts-ignore
       tlp.current = gsap
         .timeline({
           scrollTrigger: {
@@ -160,6 +172,7 @@ export default () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.context(() => {
+      //@ts-ignore
       tlp.current = gsap
         .timeline({
           scrollTrigger: {
@@ -203,7 +216,9 @@ export default () => {
           <span>Services</span>
         </div>
       </div>
+      {/* @ts-ignore */}
       <div className="containerPaintingService" ref={el}>
+      {/* @ts-ignore */}
         <div className="resume-interior-painting" ref={elp}>
           <div className="title-painting">
             <span>Painting Services</span>
@@ -302,6 +317,7 @@ export default () => {
           </div>
         </div>
       </div>
+      {/* @ts-ignore */}
       <div className="containerCleaningServices" ref={elc}>
         <div className="containerCleaningTitle">
           <span>Cleaning Services</span>
@@ -314,9 +330,23 @@ export default () => {
         </div>
         <div className="containerServicesCleaningImg">
           <div className="containerImgServices">
-            <img id="pc"src={ImgServices} alt="imgServicesTxt" />
-            <img id="phoneServices" src={ImgServicesPhone} alt="imgServicesTxt"/>
-            <img id="phoneServices2" src={ImgServicesPhone2} alt="imgServicesTxt"/>
+            <img id="pc" src={ImgServices} alt="imgServicesTxt" />
+            <img
+              id="phoneServices"
+              src={ImgServicesPhone}
+              alt="imgServicesTxt"
+            />
+            <img
+              id="phoneServices2"
+              src={ImgServicesPhone2}
+              alt="imgServicesTxt"
+            />
+
+            <img
+              id="phoneServices3"
+              src={ImgServicesPhone3}
+              alt="imgServicesTxt"
+            />
           </div>
         </div>
         <div className="containerCommercialCleaning">
@@ -390,7 +420,7 @@ export default () => {
             <span>Call us today to get started</span>
           </div>
           <div className="request-service">
-            <span>REQUEST A SERVICE</span>
+            <span id="desktop">REQUEST A SERVICE</span>
           </div>
           <div className="contact-form">
             <div className="contact-form-title">
@@ -418,11 +448,24 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="certified">
+        <div className="contact-form-device">
+          <div className="request-service">
+            <span id="mobilerequest">REQUEST A SERVICE</span>
+          </div>
+          <span>Get a Quote</span>
+          <div className="form-device">
+            <input placeholder="Name..." type="text" />
+            <input placeholder="E-mail..." type="text" />
+            <input placeholder="Phone..." type="text" />
+            <textarea placeholder="Message..."></textarea>
+          </div>
+          <button>Send</button>
+        </div>
+        {/* <div className="certified">
           <div className="img-certified">
             <img src={Certified} alt="certified" />
           </div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </div>

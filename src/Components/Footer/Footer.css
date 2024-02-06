@@ -43,3 +43,32 @@
     height: 100%;
     object-fit: cover;
 }
+
+#device-created{
+    display:none;
+}
+
+@media (max-width: 700px){
+    .container-footer{
+        margin-top:40vh;
+    }
+
+    #device-created{
+        display:flex;
+    }
+
+    #desktop-created{
+        display:none;
+    }
+
+    .created-by{
+        font-size:15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    .container-footer{
+        margin-top:0;
+    }
+}
