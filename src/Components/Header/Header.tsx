@@ -1,12 +1,14 @@
 import "./Header.css";
 import { useNavigate, Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
+
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
 import Instagram from "@mui/icons-material/Instagram";
 //@ts-ignore
 import TikTokIcon from "../../assets/TiktokIcon";
-
+//@ts-ignore
+import { slide as Menu } from "react-burger-menu";
 export default () => {
   const goTo = useNavigate();
   //@ts-ignore
@@ -30,6 +32,25 @@ export default () => {
   useEffect(() => {
     window.scroll({ top: 0, left: 0 });
   }, []);
+
+  var x = false;
+
+  useEffect(() => {}, [x]);
+
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  const [menu_class, setMenuClass] = useState("menu unclicked");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu clicked");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu unclicked");
+    }
+    setIsMenuClicked(!isMenuClicked);
+  };
 
   return (
     <div className={isScrolled ? "containerHeaderScrolled" : "containerHeader"}>
@@ -87,8 +108,37 @@ export default () => {
           </div>
         </div>
       </div>
+
       <div className="containerHeaderSmall">
-        <div className="containerSocialMediaSmlHeader">
+        <div>
+          <nav>
+            <div className="burger-menu" onClick={updateMenu}>
+              <div className={burger_class}></div>
+              <div className={burger_class}></div>
+              <div className={burger_class}></div>
+            </div>
+          </nav>
+          <div className={menu_class}>
+            <div className="navSite">
+              <span>
+                <a href="/">HOME</a>
+              </span>
+              <span>
+                <a href="/services">SERVICES</a>
+              </span>
+              <span>
+                <a href="/services">CONTACT</a>
+              </span>
+              <span>
+                <a href="/services">REVIEWS</a>
+              </span>
+              <span>
+                <a href="/services">ABOUT</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* <div className="containerSocialMediaSmlHeader">
           <Link target="_blank" to={instagramLink}>
             <div className="containerHInst">
               <Instagram style={{ width: "30px", height: "20px" }} />
@@ -99,7 +149,7 @@ export default () => {
               <TikTokIcon />
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

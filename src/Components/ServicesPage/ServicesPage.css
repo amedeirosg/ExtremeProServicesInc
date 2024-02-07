@@ -1081,7 +1081,6 @@
         visibility: visible;
     }
     .containerImgServices{
-        border:1px solid red;
         height: 100vh;
         display:flex;
         align-items: center;
@@ -1097,5 +1096,40 @@
        width: 44.5vh;
        height: 100vh;
     }
+
+    .containerRightDesc{
+        justify-content: center;
+        align-items: center;
+        width: 30vh;
+    }
+
+    .containerRightDesc span{
+        margin-top:10vh;
+
+    }
     
+}
+
+
+
+@media(max-width:375px){
+    .containerRightDesc span{
+        margin-top:20vh;
+
+    }
+
+    .area-img{
+        margin-top:13vh;
+    }
+}
+
+@media(max-width:360px){
+    .containerRightDesc span{
+        margin-top:20vh;
+
+    }
+
+    .area-img{
+        margin-top:13vh;
+    }
 }

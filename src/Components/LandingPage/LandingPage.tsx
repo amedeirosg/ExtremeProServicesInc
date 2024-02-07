@@ -8,7 +8,6 @@ export default () => {
       <Header />
       <Title />
       <Content />
-    
     </div>
   );
 };
