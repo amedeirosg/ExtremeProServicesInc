@@ -8,7 +8,14 @@ import Instagram from "@mui/icons-material/Instagram";
 //@ts-ignore
 import TikTokIcon from "../../assets/TiktokIcon";
 //@ts-ignore
+import HomeIcon from "@mui/icons-material/Home";
+import CleaningIcon from "@mui/icons-material/CleaningServices";
+import Contact from "@mui/icons-material/RecentActors";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import InfoIcon from "@mui/icons-material/Info";
+//@ts-ignore
 import { slide as Menu } from "react-burger-menu";
+
 export default () => {
   const goTo = useNavigate();
   //@ts-ignore
@@ -37,21 +44,6 @@ export default () => {
 
   useEffect(() => {}, [x]);
 
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [menu_class, setMenuClass] = useState("menu unclicked");
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
-
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu clicked");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu unclicked");
-    }
-    setIsMenuClicked(!isMenuClicked);
-  };
-
   return (
     <div className={isScrolled ? "containerHeaderScrolled" : "containerHeader"}>
       <div className="containerNavLeft">
@@ -78,6 +70,13 @@ export default () => {
             }}
           >
             CONTACT US
+          </h3>
+          <h3
+            onClick={() => {
+              goTo('/reviews')
+            }}
+          >
+            REVIEWS
           </h3>
           <h3
             onClick={() => {
@@ -110,7 +109,69 @@ export default () => {
       </div>
 
       <div className="containerHeaderSmall">
-        <div>
+        <Menu className="menuBurger">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <HomeIcon className="material-icons" />
+            <a href="/">
+              <span>Home</span>
+            </a>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <CleaningIcon className="material-icons" />
+            <a id="services" href="/services">
+              Services
+            </a>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Contact className="material-icons" />
+            <a id="contact" href="/">
+              Contact
+            </a>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <ReviewsIcon className="material-icons" />
+            <a id="reviews" href="/reviews">
+              Reviews
+            </a>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <InfoIcon className="material-icons" />
+            <a id="reviews" href="/">
+              About
+            </a>
+          </div>
+        </Menu>
+        {/* <div>
           <nav>
             <div className="burger-menu" onClick={updateMenu}>
               <div className={burger_class}></div>
@@ -137,7 +198,7 @@ export default () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="containerSocialMediaSmlHeader">
           <Link target="_blank" to={instagramLink}>
             <div className="containerHInst">

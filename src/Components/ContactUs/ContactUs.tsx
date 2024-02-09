@@ -129,7 +129,6 @@ export default () => {
                     setPhone(e.target.value)
                   }
                   mask="(999) 999-9999"
-                  unmask
                   placeholder="(999) 999-9999"
                   className="inputMask"
                   //@ts-ignore

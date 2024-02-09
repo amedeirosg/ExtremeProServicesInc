@@ -379,7 +379,6 @@ textarea:focus{
     .dialogWarn, .dialogSuccess{
         width: 120vw;
         font-size:5vw;
-        border:1px solid red;
     }
 
     #pr_id_473_header{

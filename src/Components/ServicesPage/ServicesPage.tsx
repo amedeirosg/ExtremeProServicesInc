@@ -21,6 +21,9 @@ import Drywall from "../../assets/DRYWALLREPAIR.jpg";
 //@ts-ignore
 import ImgDivide from "../../assets/water.png";
 //@ts-ignore
+import ImgDivide2 from "../../assets/cleaning-phone-img.png";
+
+//@ts-ignore
 import ImgServices from "../../assets/ServicesCleaning.png";
 //@ts-ignore
 import ImgServicesPhone from "../../assets/infophone.png";
@@ -48,15 +51,53 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import Footer from "../Footer/Footer.tsx";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
+import { Button } from "primereact/button";
+import { Dialog } from "primereact/dialog";
+
 export default () => {
   //tl = Time line
   //el = Element
+
   const tl = useRef();
   const el = useRef();
   const tlc = useRef();
   const elc = useRef();
   const elp = useRef();
   const tlp = useRef();
+  const tlMid = useRef();
+  const elMid = useRef();
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [successEmail, setSuccessEmail] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState<string | undefined>();
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const errDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setErrorEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
+
+  const successDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setSuccessEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
 
   useLayoutEffect(() => {
     gsap.to(".containerSubHeader", {
@@ -72,7 +113,7 @@ export default () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.context(() => {
-//@ts-ignore
+      //@ts-ignore
       tl.current = gsap
         .timeline({
           scrollTrigger: {
@@ -205,6 +246,99 @@ export default () => {
     };
   }, []);
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      tlMid.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".containerImgPW",
+            scrub: true,
+            start: "top 700px",
+            end: "bottom 700px",
+          },
+        })
+        .fromTo(
+          ".containerImgPW",
+          {
+            opacity: 0,
+          },
+          { opacity: 1 }
+        )
+        .fromTo(
+          ".containerRightSideImg",
+          {
+            opacity: 0,
+          },
+          { opacity: 1 }
+        )
+        .fromTo(
+          ".containerSideImgTwo",
+          {
+            opacity: 0,
+          },
+          { opacity: 1 }
+        );
+    }, elMid);
+  }, []);
+
+  const handleEmailChange = (e: any) => {
+    e.preventDefault();
+    //@ts-ignore
+    const isValid = emailRegex.test(email);
+    console.log(name);
+    console.log(email);
+    console.log(message);
+    console.log(phone);
+    if (
+      //@ts-ignore
+      name == "" ||
+      //@ts-ignore
+      email == "" ||
+      //@ts-ignore
+      message == "" ||
+      phone == ""
+    ) {
+      setErrorEmail(true);
+      return;
+    }
+
+    const templateParams = {
+      //@ts-ignore
+      from_name: name,
+      //@ts-ignore
+      message: message,
+      //@ts-ignore
+      email: email,
+      //@ts-ignore
+
+      phone: phone,
+    };
+
+    emailjs
+      .send(
+        "service_0l77qw8",
+        "template_m2v56mh",
+        templateParams,
+        "Pb5FKFPSReEyXVUIo"
+      )
+      .then(
+        (res) => {
+          console.log("Email sent!", res.status, res.text);
+          setName("");
+          setPhone("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("ERROR:", err);
+        }
+      );
+
+    setSuccessEmail(true);
+  };
+
   return (
     <div className="containerServicesPage">
       <Header />
@@ -218,7 +352,7 @@ export default () => {
       </div>
       {/* @ts-ignore */}
       <div className="containerPaintingService" ref={el}>
-      {/* @ts-ignore */}
+        {/* @ts-ignore */}
         <div className="resume-interior-painting" ref={elp}>
           <div className="title-painting">
             <span>Painting Services</span>
@@ -269,7 +403,8 @@ export default () => {
             <img src={SliceImg} alt="sliceImg.png" />
           </div>
         </div>
-        <div className="containerPressureWashing">
+        {/* @ts-ignore */}
+        <div className="containerPressureWashing" ref={elMid}>
           <div className="containerImgPW">
             <img src={PressureImg} alt="PressureImg.png" />
           </div>
@@ -284,7 +419,7 @@ export default () => {
         </div>
         <div className="containerTxtPressureW">
           <span>
-            Pressure washing or power washing is
+            Pressure washing or power washing is{" "}
             <b>
               the use of high-pressure water spray to remove loose paint, mold,
               grime, dust, mud, and dirt from surfaces and objects such as
@@ -313,7 +448,7 @@ export default () => {
         </div>
         <div className="containerDividArea">
           <div className="containerImgDivideArea">
-            <img src={ImgDivide} alt="separateService.png" />
+            <img id="imgDivide" src={ImgDivide} alt="separateService.png" />
           </div>
         </div>
       </div>
@@ -361,7 +496,7 @@ export default () => {
               <div className="containerTitleRight">
                 <span>Desk and Cubicle Areas</span>
               </div>
-              <div className="containerRightDesc">
+              <div className="containerRightDescServices">
                 <span>
                   1. Cleaning carpets as needed. <br></br>
                   2. Cleaning computer screens and dusting keyboards. <br></br>
@@ -397,7 +532,7 @@ export default () => {
               <div className="second-line">
                 <div className="img-left">
                   <div className="left-title">
-                    <span>Carpet Cleaning/Vacuum</span>
+                    <span>Recycling Bins/Trash Cans</span>
                   </div>
                   <div className="img-first-line">
                     <img src={Trash} alt="trash" />
@@ -405,7 +540,7 @@ export default () => {
                 </div>
                 <div className="img-right">
                   <div className="right-title">
-                    <span>Cleaning desks and sreens</span>
+                    <span>Cleaning Window</span>
                   </div>
                   <div className="img-first-line">
                     <img src={Window} alt="window" />
@@ -422,31 +557,61 @@ export default () => {
           <div className="request-service">
             <span id="desktop">REQUEST A SERVICE</span>
           </div>
-          <div className="contact-form">
+          <form className="contact-form">
             <div className="contact-form-title">
               <span>CONTACT US</span>
             </div>
             <div className="contact-questions">
               <div className="first-square">
-                <input placeholder="Name..." id="name" type="text"></input>
+                <input
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  placeholder="Name..."
+                  id="name"
+                  type="text"
+                ></input>
                 <div className="email-phone">
-                  <input placeholder="E-mail..." id="email" type="text"></input>
-
                   <input
-                    placeholder="Phone number..."
-                    id="phone"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    placeholder="E-mail..."
+                    id="email"
                     type="text"
                   ></input>
+
+                  <div className="containerInputMask">
+                    <InputMask
+                      value={phone}
+                      onChange={(e: InputMaskChangeEvent) =>
+                        //@ts-ignore
+                        setPhone(e.target.value)
+                      }
+                      mask="(999) 999-9999"
+                      placeholder="(999) 999-9999"
+                      className="inputMaskServ"
+                      //@ts-ignore
+                    />
+                  </div>
                 </div>
               </div>
               <div className="second-square">
-                <textarea placeholder="Message..."></textarea>
+                <textarea
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  value={message}
+                  placeholder="Message..."
+                ></textarea>
               </div>
-              <div className="btn-send">
+              <div onClick={handleEmailChange} className="btn-send">
                 <button>Send</button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
         <div className="contact-form-device">
           <div className="request-service">
@@ -454,13 +619,48 @@ export default () => {
           </div>
           <span>Get a Quote</span>
           <div className="form-device">
-            <input placeholder="Name..." type="text" />
-            <input placeholder="E-mail..." type="text" />
-            <input placeholder="Phone..." type="text" />
-            <textarea placeholder="Message..."></textarea>
+            <input
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              placeholder="Name..."
+              type="text"
+            />
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="E-mail..."
+              type="text"
+            />
+            <div className="containerInputMaskPhone">
+              <InputMask
+                value={phone}
+                onChange={(e: InputMaskChangeEvent) =>
+                  //@ts-ignore
+                  setPhone(e.target.value)
+                }
+                mask="(999) 999-9999"
+                placeholder="(999) 999-9999"
+                className="inputMaskServ"
+                //@ts-ignore
+              />
+            </div>
+            <textarea
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+              value={message}
+              placeholder="Message..."
+            ></textarea>
           </div>
-          <button>Send</button>
+          <div onClick={handleEmailChange} className="btn-send">
+            <button>Send</button>
+          </div>
         </div>
+
         {/* <div className="certified">
           <div className="img-certified">
             <img src={Certified} alt="certified" />
@@ -468,6 +668,31 @@ export default () => {
         </div> */}
         <Footer />
       </div>
+
+      <Dialog
+        header="Warning"
+        visible={errorEmail}
+        className="dialogWarn"
+        onHide={() => setErrorEmail(false)}
+        footer={errDialog}
+      >
+        <p className="m-0">
+          Kindly complete all the required fields to submit your inquiry to the
+          company.
+        </p>
+      </Dialog>
+      <Dialog
+        header="Success"
+        visible={successEmail}
+        className="dialogSuccess"
+        onHide={() => setSuccessEmail(false)}
+        footer={successDialog}
+      >
+        <p className="m-0">
+          Your inquiry has been forwarded to the company. We will be in touch
+          with you shortly.
+        </p>
+      </Dialog>
     </div>
   );
 };

@@ -1,0 +1,214 @@
+.container-forms{
+    height: 100%;
+}
+.reviews-header{
+    height: 40vh;
+    width: 100%;
+}
+
+.reviews-backgroundimg-area{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.reviews-backgroundimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7)
+}
+
+.reviews-title-page{
+    position: absolute;
+    top:inherit;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1vh;
+}
+
+
+.reviews-thx-feedback{
+    height: 20rem;
+    background-color:#0aa3d6;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    
+}
+
+.reviews-title{
+    font-weight: bold;
+    font-size:2em;
+    width: 60rem;
+    text-align: center;
+}
+
+ .reviews-subtitle{
+    font-weight:normal;
+    width: 82rem;
+    padding:20px;
+    font-size:1.3em;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+
+.reviews-content{
+    margin-top:20rem;
+    height: 55rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-box{
+    border:1px solid rgb(202, 202, 202);
+    width: 40%;
+    height: 50rem;
+    border-radius:0.4rem;
+    box-shadow: -4px 3px 4px 2px grey;
+    position: relative;
+    padding:3rem;
+}
+
+
+.reviews-tilte-content{
+    height: 4rem;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(207, 207, 207, 0.74);
+    
+}
+
+.reviews-tilte-content span{
+   margin-left:.6rem;
+   color:#0aa3d6;
+}
+
+.reviews-question-background{
+    background-color: rgb(63, 63, 63);
+    border-radius:2rem;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-icon-question{
+    color:white;
+}
+
+.reviews-leaveus-feedback{
+    height: 35.5rem;
+    margin-top:3rem;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+}
+
+.reviews-submit-button {
+  text-align: center;
+
+}
+
+.reviews-submit-button button{
+    all:unset;
+    padding:1em;
+    width: 10rem;
+    border-radius:0.4rem;
+    cursor:pointer;
+    font-weight: 800;
+    position: relative;
+    background:linear-gradient(90deg, rgb(14, 194, 253), rgb(139, 226, 255),rgb(158, 231, 255),rgb(201, 241, 255));
+    transition: all .5s;
+}
+
+.reviews-submit-button button:hover{
+    transform: skew(-10deg)
+}
+
+
+.reviews-title-feedback{
+    height: 5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5em;
+    text-align: center;
+    line-height: 1.5em;
+    font-weight: 800;
+    font-size:1.4em;
+}
+
+.reviews-your-feedback{
+    margin-top:3rem;
+    height: 24rem;
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-name{
+    height: 4rem;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.reviews-name span{
+    font-weight: 600;
+}
+
+
+.reviews-name input{
+    padding:0.5rem;
+    transition: all 1s;
+    margin-top:0.5rem;
+    background-color: rgba(241, 241, 241, 0.589);
+}
+
+
+.reviews-name input:focus,.reviews-message textarea:focus{
+    border-color: #0aa3d6;
+}
+
+.reviews-name input:hover,.reviews-message textarea:hover{
+    border-color: #0aa3d6;
+    transition: all 1s;
+}
+
+.reviews-message{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top:3rem;
+}
+
+.reviews-message span{
+    font-weight: 600;
+}
+
+.reviews-message textarea{
+    all:unset;
+    resize: none;
+    padding:0.5rem;
+    transition: all 1s;
+    height: 5rem;
+    margin-top:0.5rem;
+    border:1px solid gray;
+    border-radius:0.4rem;
+    background-color: rgba(241, 241, 241, 0.589);
+}
