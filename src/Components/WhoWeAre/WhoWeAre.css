@@ -33,6 +33,10 @@
 @media(max-width:1357px){
     .containerWho{
         height:30vw;
+    }.containerDescription{
+        
+        height: 60rem;
+        line-height: 1.7em;
     }
 }
 
@@ -47,8 +51,7 @@
     }
 
     .containerDescription{
-        width: 80vw;
-        line-height: 1.8vw;
+        line-height: 2em;
     }
 
 }
@@ -64,10 +67,6 @@
         width: 100vw;
     }
 
-    .containerDescription{
-        width: 80vw;
-        line-height: 1.8vw;
-    }
 
 }
 
@@ -79,8 +78,7 @@
     }
     .containerDescription{
         width: 90vw;
-        height: 30vw;
-        line-height: 3vw;
+        line-height: 2.3em;
     }
     .containerWho{
         height: 45vw;
@@ -93,16 +91,8 @@
         font-size: 24px;
     }
 
-    .containerDescription{
-        line-height: 3.5vw;
-    }
-
     .containerWho{
         height: 70vw;
-    }
-
-    .containerDescription{
-        height: 55vw;
     }
 
 }
@@ -114,9 +104,7 @@
         font-size: 20px;
     }
 
-    .containerDescription{
-        font-size:15px;
-    }
+
 }
 
 
@@ -146,12 +134,8 @@
     }
 
     .containerDescription{
-        height: 155vw;
-        line-height: 5.5vw;
-    }
-
-    .containerDescription{
-        font-size:15px;
+        height: 70rem;
+        line-height: 2.3em;
     }
 
 }
@@ -167,10 +151,6 @@
         font-size:20px;
     }
 
-    .containerDescription{
-        height: 155vw;
-        line-height: 5.5vw;
-    }
 
     .containerDescription{
         font-size:18px;
@@ -180,13 +160,12 @@
 
 
 @media (max-width:414px) {
-   
     .containerDescription{
-        margin-top:5vh;
+        margin-top:3rem;
+        height: 80rem;
     }
 
 }
-
 
 @media (max-width:375px) {
     .containerWho {
@@ -200,8 +179,7 @@
     }
 
     .containerDescription{
-        height: 155vw;
-        line-height: 5.5vw;
+        line-height: 2.5em;
     }
 
     .containerDescription{
@@ -220,11 +198,6 @@
     .containerWhoTitle span{
         height:15vw;
         font-size:15px;
-    }
-
-    .containerDescription{
-        height: 155vw;
-        line-height: 5.5vw;
     }
 
     .containerDescription{

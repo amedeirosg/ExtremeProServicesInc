@@ -49,7 +49,7 @@ import Window from "../../assets/windowcleaning.png";
 import Certified from "../../assets/Certified.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 import Footer from "../Footer/Footer.tsx";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -99,6 +99,26 @@ export default () => {
     </div>
   );
 
+  const [sizeOfScreen, setSizeOfSCreen] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSizeOfSCreen({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useLayoutEffect(() => {
     gsap.to(".containerSubHeader", {
       opacity: 1,
@@ -144,7 +164,7 @@ export default () => {
     return () => {
       gsap.killTweensOf(".containerPaintingService");
     };
-  }, []);
+  }, [sizeOfScreen]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -170,127 +190,220 @@ export default () => {
     return () => {
       gsap.killTweensOf(".containerCleaningServices");
     };
-  }, []);
+  }, [sizeOfScreen]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.context(() => {
-      //@ts-ignore
-      tlp.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".interior-img-painting",
-            scrub: true,
-            start: "top 920px",
-            end: "bottom 700px",
-          },
-        })
-        .fromTo(
-          ".interior-left-img",
-          {
-            opacity: 0,
-            x: -260,
-          },
-          { opacity: 1, x: 0 }
-        )
-        .fromTo(
-          ".interior-right-img",
-          {
-            opacity: 0,
-            x: 260,
-          },
-          { opacity: 1, x: 0 }
-        );
-    }, elp);
+    if (sizeOfScreen.width > 900) {
+      gsap.context(() => {
+        //@ts-ignore
+        tlp.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".interior-img-painting",
+              scrub: true,
+              start: "top 920px",
+              end: "bottom 700px",
+            },
+          })
+          .fromTo(
+            ".interior-left-img",
+            {
+              opacity: 0,
+              x: -260,
+            },
+            { opacity: 1, x: 0 }
+          )
+          .fromTo(
+            ".interior-right-img",
+            {
+              opacity: 0,
+              x: 260,
+            },
+            { opacity: 1, x: 0 }
+          );
+      }, elp);
+    } else {
+      gsap.context(() => {
+        //@ts-ignore
+        tlp.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".interior-img-painting",
+              scrub: true,
+              start: "top 200px",
+              end: "bottom 350px",
+            },
+          })
+          .fromTo(
+            ".interior-left-img",
+            {
+              opacity: 0,
+              x: -260,
+            },
+            { opacity: 1, x: 0 }
+          )
+          .fromTo(
+            ".interior-right-img",
+            {
+              opacity: 0,
+              x: 260,
+            },
+            { opacity: 1, x: 0 }
+          );
+      }, elp);
+    }
 
     return () => {
       gsap.killTweensOf(".resume-interior-painting");
     };
-  }, []);
+  }, [sizeOfScreen]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.context(() => {
-      //@ts-ignore
-      tlp.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".exterior-img-painting",
-            scrub: true,
-            start: "top 920px",
-            end: "bottom 700px",
-          },
-        })
-        .fromTo(
-          ".exterior-left-img",
-          {
-            opacity: 0,
-            y: 260,
-          },
-          { opacity: 1, y: 0 }
-        )
-        .fromTo(
-          ".exterior-right-img",
-          {
-            opacity: 0,
-            x: 260,
-          },
-          { opacity: 1, x: 0 }
-        );
-    }, elp);
+    if (sizeOfScreen.width > 900) {
+      gsap.context(() => {
+        //@ts-ignore
+        tlp.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".exterior-img-painting",
+              scrub: true,
+              start: "top 920px",
+              end: "bottom 700px",
+            },
+          })
+          .fromTo(
+            ".exterior-left-img",
+            {
+              opacity: 0,
+              y: 260,
+            },
+            { opacity: 1, y: 0 }
+          )
+          .fromTo(
+            ".exterior-right-img",
+            {
+              opacity: 0,
+              x: 260,
+            },
+            { opacity: 1, x: 0 }
+          );
+      }, elp);
+    } else {
+      gsap.context(() => {
+        //@ts-ignore
+        tlp.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".exterior-img-painting",
+              scrub: true,
+              start: "top 300px",
+              end: "bottom 400px",
+            },
+          })
+          .fromTo(
+            ".exterior-left-img",
+            {
+              opacity: 0,
+              y: 260,
+            },
+            { opacity: 1, y: 0 }
+          )
+          .fromTo(
+            ".exterior-right-img",
+            {
+              opacity: 0,
+              x: 260,
+            },
+            { opacity: 1, x: 0 }
+          );
+      }, elp);
+    }
 
     return () => {
       gsap.killTweensOf(".resume-exterior-painting");
     };
-  }, []);
+  }, [sizeOfScreen]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      tlMid.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".containerImgPW",
-            scrub: true,
-            start: "top 700px",
-            end: "bottom 700px",
-          },
-        })
-        .fromTo(
-          ".containerImgPW",
-          {
-            opacity: 0,
-          },
-          { opacity: 1 }
-        )
-        .fromTo(
-          ".containerRightSideImg",
-          {
-            opacity: 0,
-          },
-          { opacity: 1 }
-        )
-        .fromTo(
-          ".containerSideImgTwo",
-          {
-            opacity: 0,
-          },
-          { opacity: 1 }
-        );
-    }, elMid);
-  }, []);
+    if (sizeOfScreen.width > 900) {
+      gsap.context(() => {
+        //@ts-ignore
+        tlMid.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".containerImgPW",
+              scrub: true,
+              start: "top 700px",
+              end: "bottom 700px",
+            },
+          })
+          .fromTo(
+            ".containerImgPW",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          )
+          .fromTo(
+            ".containerRightSideImg",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          )
+          .fromTo(
+            ".containerSideImgTwo",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          );
+      }, elMid);
+    } else {
+      gsap.context(() => {
+        //@ts-ignore
+        tlMid.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".containerImgPW",
+              scrub: true,
+              start: "top 500px",
+              end: "bottom 100px",
+            },
+          })
+          .fromTo(
+            ".containerImgPW",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          )
+          .fromTo(
+            ".containerRightSideImg",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          )
+          .fromTo(
+            ".containerSideImgTwo",
+            {
+              opacity: 0,
+            },
+            { opacity: 1 }
+          );
+      }, elMid);
+    }
+  }, [sizeOfScreen]);
 
   const handleEmailChange = (e: any) => {
     e.preventDefault();
     //@ts-ignore
     const isValid = emailRegex.test(email);
-    console.log(name);
-    console.log(email);
-    console.log(message);
-    console.log(phone);
+
     if (
       //@ts-ignore
       name == "" ||
@@ -318,10 +431,10 @@ export default () => {
 
     emailjs
       .send(
-        "service_0l77qw8",
-        "template_m2v56mh",
+        "service_blnwoe5",
+        "template_7bjrdzd",
         templateParams,
-        "Pb5FKFPSReEyXVUIo"
+        "9AWbd-Dofntnu35lF"
       )
       .then(
         (res) => {
@@ -608,7 +721,7 @@ export default () => {
                 ></textarea>
               </div>
               <div onClick={handleEmailChange} className="btn-send">
-                <button>Send</button>
+                <button>Get a quote</button>
               </div>
             </div>
           </form>

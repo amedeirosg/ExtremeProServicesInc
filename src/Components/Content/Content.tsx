@@ -46,7 +46,7 @@ export default () => {
             serviceTitle="Painting Service"
             sourceImg={PaintingAfter}
             sourceImgT={PaingintBefore}
-            desc1={"- Paint Services"}
+            desc1={"- Painting Services"}
             desc2={"- Commercial and Residential Painting"}
             desc3={"- Exterior Painting"}
             desc4={"- Drywall Repair "}
@@ -65,7 +65,7 @@ export default () => {
           <div className="containerDesc">
             <div className="containerLeftDesc">
               <div className="containerLeftTitle">
-                <span>Extreme Pro Services Inc is a Cleaning Company</span>
+                <span>Extreme Pro Services Inc </span>
               </div>
               <div className="containerLeftDescTxt">
                 <span>

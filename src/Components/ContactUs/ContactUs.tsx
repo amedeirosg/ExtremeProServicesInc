@@ -6,7 +6,8 @@ import emailjs from "@emailjs/browser";
 import "primeflex/primeflex.css";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-
+import { useContext } from "react";
+import Contexts from "../../Contexts/Context.tsx";
 //@ts-ignore
 import LeftImgContact from "../../assets/BackgroundContact2.png";
 //@ts-ignore
@@ -19,6 +20,9 @@ export default () => {
   const [phone, setPhone] = useState<string | undefined>();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  //@ts-ignore
+  const { contentRef } = useContext(Contexts);
 
   const errDialog = (
     <div>
@@ -74,14 +78,13 @@ export default () => {
 
     emailjs
       .send(
-        "service_0l77qw8",
-        "template_m2v56mh",
+        "service_blnwoe5",
+        "template_7bjrdzd",
         templateParams,
-        "Pb5FKFPSReEyXVUIo"
+        "9AWbd-Dofntnu35lF"
       )
       .then(
-        (res) => {
-          console.log("Email sent!", res.status, res.text);
+        () => {
           setName("");
           setPhone("");
           setEmail("");
@@ -97,7 +100,7 @@ export default () => {
 
   return (
     <div className="containerContactService">
-      <div className="containerShowImg">
+      <div ref={contentRef} className="containerShowImg">
         <div className="containerImgLeft">
           <img src={LeftImgContact} alt="leftImg" />
         </div>
@@ -157,7 +160,7 @@ export default () => {
               ></textarea>
             </div>
             <div onClick={handleEmailChange} className="containerBtnSend">
-              <button>Send</button>
+              <button>Get a quote</button>
             </div>
           </div>
         </div>

@@ -67,6 +67,7 @@
     font-size:22px;
     margin-top:5vh;
     color:black;
+    line-height: 2em;
 }
 
 .interior-img-painting, .exterior-img-painting{
@@ -113,6 +114,7 @@
 
  .containerTxtPressureW{
     font-weight:normal;
+    line-height: 2em;
 }
 
 
@@ -125,7 +127,6 @@
 .containerPressureWashing{
     left:0;
     height: 85vh;
-    width: 170vh;
     display:flex;
     margin-top:-80vh;
 }
@@ -229,7 +230,7 @@
 }
 
 .containerImgDivideArea{
-    width: 100vw;
+    width: 100%;
     height: 80vh;
 
 }
@@ -462,8 +463,6 @@
     justify-content: space-evenly;
     flex-direction: column;
     display:none;
-    
-
 }
 
 .contact-form-device span{
@@ -596,6 +595,16 @@
     cursor:pointer;
     background-color:rgb(10, 163, 214);
     transition:ease-in-out 0.3s;
+}
+
+.btn-send button{
+    animation: animar ;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 20px 5px rgba(10, 163, 214, 0.5);
+
 }
 
 .btn-send button:hover, .contact-form-device button:hover{
@@ -1127,7 +1136,7 @@
     }
 
     .contact-form-device{
-        margin-top: 70vh;
+        margin-top: 50rem;
     }
 
     .interior-left-img,.interior-right-img, .exterior-left-img, .exterior-right-img{
@@ -1137,16 +1146,23 @@
 
 @media(max-width:390px){
 
+    .containerPressureWashing{
+        margin-top:0rem;
+    }
 
-    
+    .containerCleaningServices{
+        margin-top:35rem;
+    }
+
+    .area-img{
+        margin-top:5rem;
+    }
 
     .form-device{
         width: 40vh;
         
     }
-
    
-
     #phoneServices2{
         display:none;
     }
@@ -1192,18 +1208,19 @@
 
 }
 
-
-
 @media(max-width:375px){
     .containerRightDescServices span{
         margin-top:20vh;
-
+        
     }
 
     .area-img{
-        margin-top:13vh;
+        margin-top:20rem;
     }
 
+    .containerPressureWashing{
+        margin-top:3rem;
+    }
 
 }
 
@@ -1216,4 +1233,37 @@
     .area-img{
         margin-top:13vh;
     }
+}
+
+
+@media(max-height:500px){
+    .form-device{
+        width: 90%;
+        height: 20rem;
+        display:flex;
+        justify-content: space-between;
+        padding:1rem;
+    }
+
+    .area-img{
+        margin-top:35rem;
+    }
+
+    .contact-form-device{
+        margin-top:45rem;
+    }
+
+    .area-img span{
+        font-size:0.8em;
+    }
+    
+    .containerCleaningServices{
+        margin-top:25rem;
+    }
+
+    .containerTxtPressureW{
+        margin-top:5rem;
+    }
+
+
 }

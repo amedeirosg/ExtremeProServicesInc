@@ -1,13 +1,17 @@
 import "./Reviews.css";
 import Header from "../Header/Header.tsx";
-import BackgroundReviews from "../../assets/background-reviews.png";
+//@ts-ignore
+import BackgroundReviews from "../../assets/bcgLogoCompany.jpg";
 import Question from "@mui/icons-material/QuestionAnswer";
 import Footer from "../Footer/Footer.tsx";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+
 import emailjs from "@emailjs/browser";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
+//@ts-ignore
 import FeedbackImg from "../../assets/Feedbackpng.png";
 export default () => {
   const [message, setMessage] = useState("");
@@ -23,24 +27,21 @@ export default () => {
 
   const showErrorForm = (e: any) => {
     e.preventDefault();
-
+    console.log(name);
     const isValid = emailRegex.test(email);
-    console.log(name, email, phone, custom, message);
-    if (isValid) {
-      if (name === "") {
-        setErrorName(true);
-      } else {
-        setErrorName(false);
-      }
-      if (message === "") {
-        setErrorMessage(true);
-      } else {
-        setErrorMessage(false);
-      }
 
+    if (name == "") {
+      setErrorName(true);
+    } else {
+      setErrorName(false);
+    }
+    if (message == "") {
+      setErrorMessage(true);
+    } else {
+      setErrorMessage(false);
+    }
+    if (isValid) {
       if (name !== "" && message !== "") {
-        console.log(name);
-        console.log(message);
         const templateParams = {
           //@ts-ignore
           from_name: name,
@@ -54,10 +55,10 @@ export default () => {
 
         emailjs
           .send(
-            "service_0l77qw8",
-            "template_1nipcho",
+            "service_blnwoe5",
+            "template_m4gj64j",
             templateParams,
-            "Pb5FKFPSReEyXVUIo"
+            "9AWbd-Dofntnu35lF"
           )
           .then(
             (res) => {
@@ -85,6 +86,12 @@ export default () => {
     </div>
   );
 
+  useLayoutEffect(() => {
+    gsap.to(".container-forms", {
+      opacity: 1,
+    });
+  }, []);
+
   return (
     <div className="container-forms">
       <Header />
@@ -100,20 +107,11 @@ export default () => {
           </div>
         </div>
         <section className="reviews-thx-feedback">
-          <section className="reviews-title">
-            <span>
-              Thank you in advance for choosing our services Extreme Pro
-              Services Inc, I hope you enjoyed it and can also recommend it
-              to your friends!
-            </span>
-          </section>
           <section className="reviews-subtitle">
             <span>
-              We take immense pride in delivering exceptional results while
-              creating a positive experience for homeowners like you. Your
-              review will not only help us understand how we can further enhance
-              our services but also assist other homeowners in making an
-              informed decision.
+              How was your experience with Extreme Pro Services Inc ? We are
+              always happy to get feedback from our valued customers so that we
+              can continue to improve our service.
             </span>
           </section>
         </section>
@@ -133,9 +131,7 @@ export default () => {
             <span>Feedback</span>
           </div>
           <div className="reviews-leaveus-feedback">
-            <div className="reviews-title-feedback">
-              <span>FILL THE GAPS BELOW TO LEAVE US A FEEDBACK</span>
-            </div>
+           
             <div className="reviews-your-feedback">
               <section className="reviews-name">
                 <span>Name *</span>
@@ -176,17 +172,7 @@ export default () => {
                   //@ts-ignore
                 />
               </section>
-              <section className="reviews-cust-amount">
-                <span>Custom Amount </span>
-                <input
-                  placeholder="Type your text..."
-                  value={custom}
-                  onChange={(e) => {
-                    setCustom(e.target.value);
-                  }}
-                  type="text"
-                />
-              </section>
+
               <section className="reviews-message">
                 <span>Message *</span>
                 <textarea

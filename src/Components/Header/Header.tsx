@@ -1,6 +1,6 @@
 import "./Header.css";
 import { useNavigate, Link } from "react-router-dom";
-import { useContext, useEffect, useState, useRef } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
@@ -10,16 +10,22 @@ import TikTokIcon from "../../assets/TiktokIcon";
 //@ts-ignore
 import HomeIcon from "@mui/icons-material/Home";
 import CleaningIcon from "@mui/icons-material/CleaningServices";
+import Facebook from "@mui/icons-material/Facebook";
 import Contact from "@mui/icons-material/RecentActors";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
+import Phone from "@mui/icons-material/Phone";
+import Mail from "@mui/icons-material/Mail";
+//@ts-ignore
+import LogoHeader from '../../assets/LogoIcoHeader.png'
 //@ts-ignore
 import { slide as Menu } from "react-burger-menu";
 
 export default () => {
   const goTo = useNavigate();
   //@ts-ignore
-  const { instagramLink, tiktokLink } = useContext(Contexts);
+  const { facebookLink, instagramLink, tiktokLink, contentRef } =
+    useContext(Contexts);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -47,7 +53,31 @@ export default () => {
   return (
     <div className={isScrolled ? "containerHeaderScrolled" : "containerHeader"}>
       <div className="containerNavLeft">
+        <div className="header-nav-socialmedia">
+          <div className="header-fb-insta-tiktok">
+            <Link target="_blank" to={instagramLink}>
+              <Instagram style={{ fontSize: "2rem" }} className="instIco" />
+            </Link>
+            <Link target="_blank" to={facebookLink}>
+              <Facebook style={{ fontSize: "2rem" }} className="fbIco" />
+            </Link>
+          </div>
+          <div className="header-telephone">
+            <Phone style={{ fontSize: "2rem" }} className="phoneIco" />
+            <span>+1 (978) 328-8859</span>
+          </div>
+          <div className="header-email-contact">
+            <Mail style={{ fontSize: "2rem" }} className="mailIco" />
+            <span>extremeproservicesinc@gmail.com</span>
+          </div>
+          <div className="header-get-a-quote">
+            <button>GET A FREE ESTIMATE</button>
+          </div>
+        </div>
         <div className="navLeftTxt">
+          <div className="header-nav-logo-company">
+            <img src={LogoHeader} alt="logoCompany.png"/>
+          </div>
           <h3
             onClick={() => {
               window.scroll({ top: 0, left: 0, behavior: "smooth" });
@@ -66,27 +96,35 @@ export default () => {
           </h3>
           <h3
             onClick={() => {
-              window.scroll({ top: 1920, left: 0, behavior: "smooth" });
+              goTo("/");
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: "smooth" });
+              }, 100);
+
+              // window.scrollTo({ top: 2050, left: 0, behavior: "smooth" });
             }}
           >
             CONTACT US
           </h3>
           <h3
             onClick={() => {
-              goTo('/reviews')
+              goTo("/reviews");
             }}
           >
             REVIEWS
           </h3>
           <h3
             onClick={() => {
-              window.scroll({ top: 3200, left: 0, behavior: "smooth" });
+              goTo("/");
+              setTimeout(() => {
+                window.scroll({ top: 3200, left: 0, behavior: "smooth" });
+              }, 100);
             }}
           >
             ABOUT
           </h3>
         </div>
-        <div className="containerNavRight">
+        {/* <div className="containerNavRight">
           <div className="navRightTxt">
             <Link target="_blank" to={instagramLink}>
               <div className="containerMedias">
@@ -105,7 +143,7 @@ export default () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="containerHeaderSmall">

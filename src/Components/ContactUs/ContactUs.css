@@ -156,15 +156,13 @@ textarea:focus{
     justify-content: center;
     cursor:pointer;
     font-weight: bold;
-}
-
-.containerBtnSend:hover{
     animation: animar ;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-    box-shadow: 0 0 20px 5px rgba(10, 163, 214, 0.5);;
+    box-shadow: 0 0 20px 5px rgba(10, 163, 214, 0.5);
+
 }
 
 .containerBtnSend button{
@@ -175,16 +173,7 @@ textarea:focus{
     width: 50vw;
 }
 
-@keyframes animar {
 
-    0% {
-        transform: scale(1);
-        
-    }
-    100%{
-        transform: scale(1.1);
-    } 
-}
 
 
 
@@ -447,4 +436,29 @@ textarea:focus{
 
 }
 
+
+@media(max-height:500px){
+    .containerAllDivs{
+        margin-top:5rem;
+    }
+
+    .containerBtnSend{
+        height: 1.5rem;
+    }
+    .containerDesc{
+        width: 100%;
+    }
+
+    .containerRightDesc{
+        width: 100%;
+        display:flex;
+        margin-top:5rem
+    }
+
+
+    .containerAboutUs{
+        height: 30rem;
+    }
+  
+}
 

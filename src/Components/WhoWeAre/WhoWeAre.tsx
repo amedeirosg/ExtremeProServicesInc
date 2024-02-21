@@ -26,7 +26,7 @@ export default () => {
           <br></br>
           <b>Our Commitment to Quality and Safety: </b>With over 5 years in the
           industry, we maintain a standard of excellence in every project. Our
-          pride in holding the OSHA 30 certification is a testament to our
+          pride in holding the OSHA 10 certification is a testament to our
           dedication to safety and quality.
         </span>
         <br></br>
@@ -42,7 +42,7 @@ export default () => {
           Offering a wide array of maintenance and enhancement services.{" "}
           <br></br>
           <b>4. Guaranteed Safety: </b>
-          Ensuring a safe environment, backed by OSHA 30 certification.
+          Ensuring a safe environment, backed by OSHA 10 certification.
         </span>
       </div>
     </div>

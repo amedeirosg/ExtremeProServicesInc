@@ -72,3 +72,10 @@
         margin-top:0;
     }
 }
+
+
+@media(max-height:500px){
+    .container-footer{
+        margin-top:10rem;
+    }
+}
