@@ -79,7 +79,7 @@
 
 .containerLeftTitle{
     height: 10vh;
-    width: 40vh;
+    width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -271,17 +271,17 @@
     }
 
     .containerLeftDesc{
-        width: 80vh;
+        width: 90%;
         margin-top:6vh;
     }
 
     .containerRightDesc{
         margin-top:6vh;
-        width: 55vh;
+        width: 100%;
     }
 
     .containerLeftDescTxt{
-        width: 50vh;
+        width: 99%;
         padding: 0vw 6vw 0vw 6vw;
     }
     .containerPhoneAndLoc{

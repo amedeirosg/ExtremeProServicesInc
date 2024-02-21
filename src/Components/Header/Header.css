@@ -110,10 +110,8 @@
 }
 
 .header-nav-logo-company{
-    left:10rem;
     width: 8rem;
     height: 7rem;
-    position: absolute;
     z-index:1;
 }
 
@@ -129,11 +127,24 @@
     justify-content: space-between;
 }
 
-
-.fbIco, .instIco,.phoneIco, .mailIco{
-    color:#10A3D6;
+.instIco, .fbIco, .tktokIco,.phoneIco,.mailIco{
     cursor:pointer;
+    height:3.5rem
 }
+
+.instIco,.mailIco{
+    width: 2rem;
+}
+
+.fbIco{
+    width: 2.8rem;
+}
+
+.tktokIco, .phoneIco{
+    width: 2.3rem;
+}
+
+
 
 .header-telephone, .header-email-contact{
     display:flex;
@@ -200,11 +211,11 @@
 }
 
 
-.navLeftTxt,.navRightTxt{
+.navLeftTxt{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    width:70%;
+    width:100%;
     height:inherit;
     font-size:12px;
 }
@@ -290,6 +301,60 @@
 }
 
 
+@media(max-width:1100px){
+
+    .header-fb-insta-tiktok,.header-telephone,
+    .header-email-contact,
+    .header-get-a-quote{
+        font-size: 0.7em;
+    }
+
+    .header-email-contact{
+        width: 15rem;
+    }
+
+    .instIco,.mailIco{
+        width: 1.5rem;
+    }
+    
+    .fbIco{
+        width: 2.2rem;
+    }
+    
+    .tktokIco, .phoneIco{
+        width: 1.8rem;
+    }
+
+}
+
+
+@media(max-width:800px){
+    .header-fb-insta-tiktok,.header-telephone,
+    .header-email-contact,
+    .header-get-a-quote{
+        font-size: 0.6em;
+    }
+
+    .header-email-contact{
+        width: 12rem;
+    }
+
+    .instIco,.mailIco{
+        width: 1.3rem;
+    }
+    
+    .fbIco{
+        width: 1.8rem;
+    }
+    
+    .tktokIco, .phoneIco{
+        width: 1.5rem;
+    }
+    .header-get-a-quote button{
+        width: 10rem;
+    }
+}
+
 @media (max-width:717px){
     .containerNavLeft, .containerNavRight{
         display:none;
@@ -325,6 +390,8 @@
         z-index: 1;
     }
 
+   
+/* 
     .containerHeaderSmall{
         z-index: 1;
         width: 96vw;
@@ -332,7 +399,7 @@
         margin-top:1vw;
         text-align: right;
         position: relative;
-    }
+    } */
 
     .containerSocialMediaSmlHeader{
         height: inherit;
@@ -345,7 +412,6 @@
 
     .containerHeaderSmall{
         z-index: 1;
-        width: 100vw;
         height:5vw;
         margin-top:1vw;
         text-align: right;
@@ -368,7 +434,6 @@
         align-items: center;
         height: inherit;
     }
-
 
 }
 
@@ -401,7 +466,7 @@
 @media (max-width:374px){
     .containerHeaderSmall{
         z-index: 1;
-        width: 100vw;
+        width: 96vw;
         height:7vw;
         margin-top:0vw;
         text-align: right;
@@ -413,7 +478,7 @@
 @media (max-width:360px){
     .containerHeaderSmall{
         z-index: 1;
-        width: 100vw;
+        width: 90vw;
         height:7vw;
         margin-top:0vw;
         text-align: right;

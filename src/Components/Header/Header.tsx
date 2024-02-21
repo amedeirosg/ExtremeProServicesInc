@@ -4,20 +4,20 @@ import { useContext, useEffect, useState } from "react";
 
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
-import Instagram from "@mui/icons-material/Instagram";
+import Instagram from "../../SVGs/InstIco.tsx";
 //@ts-ignore
-import TikTokIcon from "../../assets/TiktokIcon";
+import TikTokIcon from "../../SVGs/TiktokIco.tsx";
 //@ts-ignore
 import HomeIcon from "@mui/icons-material/Home";
 import CleaningIcon from "@mui/icons-material/CleaningServices";
-import Facebook from "@mui/icons-material/Facebook";
 import Contact from "@mui/icons-material/RecentActors";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
-import Phone from "@mui/icons-material/Phone";
-import Mail from "@mui/icons-material/Mail";
+import PhoneIco from "../../SVGs/PhoneIco.tsx";
+import MailIco from "../../SVGs/MailIco.tsx";
+import FbIco from "../../SVGs/FbIco.tsx";
 //@ts-ignore
-import LogoHeader from '../../assets/LogoIcoHeader.png'
+import LogoHeader from "../../assets/LogoIcoHeader.png";
 //@ts-ignore
 import { slide as Menu } from "react-burger-menu";
 
@@ -56,18 +56,21 @@ export default () => {
         <div className="header-nav-socialmedia">
           <div className="header-fb-insta-tiktok">
             <Link target="_blank" to={instagramLink}>
-              <Instagram style={{ fontSize: "2rem" }} className="instIco" />
+              <Instagram className="instIco" />
             </Link>
             <Link target="_blank" to={facebookLink}>
-              <Facebook style={{ fontSize: "2rem" }} className="fbIco" />
+              <FbIco className="fbIco" />
+            </Link>
+            <Link target="_blank" to={tiktokLink}>
+              <TikTokIcon className="tktokIco"/>
             </Link>
           </div>
           <div className="header-telephone">
-            <Phone style={{ fontSize: "2rem" }} className="phoneIco" />
+            <PhoneIco className="phoneIco" />
             <span>+1 (978) 328-8859</span>
           </div>
           <div className="header-email-contact">
-            <Mail style={{ fontSize: "2rem" }} className="mailIco" />
+            <MailIco className="mailIco" />
             <span>extremeproservicesinc@gmail.com</span>
           </div>
           <div className="header-get-a-quote">
@@ -76,7 +79,7 @@ export default () => {
         </div>
         <div className="navLeftTxt">
           <div className="header-nav-logo-company">
-            <img src={LogoHeader} alt="logoCompany.png"/>
+            <img src={LogoHeader} alt="logoCompany.png" />
           </div>
           <h3
             onClick={() => {

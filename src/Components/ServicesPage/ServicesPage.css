@@ -43,7 +43,7 @@
 
 .resume-interior-painting, .resume-exterior-painting{
     height: 60vh;
-    width: 140vh;
+    width: 100%;
     
     display:flex;
     flex-direction: column;
@@ -225,12 +225,12 @@
 
 .containerDividArea{
     margin-top:10vh;
-    width: 197vh;
+    width: 100%;
     height: 30vh;
 }
 
 .containerImgDivideArea{
-    width: 100%;
+    width: 100vw;
     height: 80vh;
 
 }
@@ -640,11 +640,6 @@
         width: 100%;
         height: 70vh;
     }
-
-    .containerDividArea{
-        width: 100%;
-    }
-
 
 }
 

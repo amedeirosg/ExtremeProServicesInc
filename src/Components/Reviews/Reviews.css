@@ -295,6 +295,10 @@
     .reviews-box{
         width: 40rem;
     }
+
+    .reviews-your-feedback{
+        width: 35rem;
+    }
 }
 
 
@@ -336,9 +340,28 @@
     }
 }
 
+@media(max-width:717px){
+    .reviews-backgroundimg-area{
+        height: 80%;
+    }
+}
+
+@media(max-width:650px){
+    .reviews-your-feedback{
+        width: 30rem;
+    }
+}
+
 @media(max-width:580px){
     .reviews-title-page{
         margin-top:-3rem;
+    }
+    .reviews-backgroundimg-area{
+        height: 60%;
+    }
+
+    .reviews-content{
+        margin-top:5rem;
     }
 }
 
@@ -349,14 +372,6 @@
         height: 65rem;
     }
 
-    .reviews-name{
-        width: 25rem;
-    }
-
-    .reviews-message{
-        width: 25rem;
-    }
-
     .reviews-submit-button{
         margin-top:0rem;
     }
@@ -365,8 +380,9 @@
 }
 
 @media(max-width:500px){
+
     .reviews-thx-feedback{
-        height: 25rem;
+        height: 15rem;
     }
 
     .reviews-subtitle{
@@ -394,15 +410,24 @@
     .reviews-img-feedback{
         width: 100%;
     }
-}
 
-@media(max-width: 452px){
-    .reviews-name{
-        width: 20rem;
+
+    .reviews-your-feedback{
+        width: 25rem;
     }
 
-    .reviews-message{
-        width: 20rem;
+    .reviews-title-page{
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:475px){
+    .reviews-backgroundimg-area{
+        height: 50%;
+    }
+    .reviews-content{
+        margin-top:0rem;
     }
 }
 
@@ -436,12 +461,25 @@
     }
 
 }
-@media(max-width:375px){
-    .reviews-name{
-        width: 17rem;
+
+@media(max-width:385px){
+    .reviews-backgroundimg-area{
+        height: 40%;
+    }
+}
+
+@media(max-width:379px){
+    .reviews-your-feedback{
+        width: 20rem;
+    }
+}
+
+@media(max-width:320px){
+    .reviews-content{
+       margin-top:-5rem;
     }
 
-    .reviews-message{
-        width: 17rem;
+    .reviews-title-page{
+        font-size:16px;
     }
 }
