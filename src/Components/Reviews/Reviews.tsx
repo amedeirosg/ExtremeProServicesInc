@@ -18,7 +18,6 @@ export default () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [custom, setCustom] = useState("");
   const [errorName, setErrorName] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const [successEmail, setSuccessEmail] = useState(false);
@@ -49,7 +48,7 @@ export default () => {
           message: message,
           email: email,
           phone: phone,
-          customAmount: custom,
+
           //@ts-ignore
         };
 
@@ -131,7 +130,6 @@ export default () => {
             <span>Feedback</span>
           </div>
           <div className="reviews-leaveus-feedback">
-           
             <div className="reviews-your-feedback">
               <section className="reviews-name">
                 <span>Name *</span>

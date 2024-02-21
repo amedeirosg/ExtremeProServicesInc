@@ -100,7 +100,6 @@
 
 
 .header-nav-socialmedia{
-    
     height: 4rem;
     width: 100%;
     background-color: rgb(241, 241, 241);
@@ -321,6 +320,7 @@
         position: fixed ;
         display:flex;
         top:0;
+        background: none;
         transition: ease-in-out 0.5s;
         z-index: 1;
     }
