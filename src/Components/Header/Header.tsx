@@ -16,6 +16,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import PhoneIco from "../../SVGs/PhoneIco.tsx";
 import MailIco from "../../SVGs/MailIco.tsx";
 import FbIco from "../../SVGs/FbIco.tsx";
+import LogoIco from "../../SVGs/LogoIco.tsx";
 //@ts-ignore
 import LogoHeader from "../../assets/LogoIcoHeader.png";
 //@ts-ignore
@@ -24,7 +25,7 @@ import { slide as Menu } from "react-burger-menu";
 export default () => {
   const goTo = useNavigate();
   //@ts-ignore
-  const { facebookLink, instagramLink, tiktokLink, contentRef } =
+  const { facebookLink, instagramLink, tiktokLink, contentRef, quoteRef } =
     useContext(Contexts);
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,7 @@ export default () => {
               <FbIco className="fbIco" />
             </Link>
             <Link target="_blank" to={tiktokLink}>
-              <TikTokIcon className="tktokIco"/>
+              <TikTokIcon className="tktokIco" />
             </Link>
           </div>
           <div className="header-telephone">
@@ -70,11 +71,22 @@ export default () => {
             <span>+1 (978) 328-8859</span>
           </div>
           <div className="header-email-contact">
-            <MailIco className="mailIco" />
+            <a href="mailto:extremeproservicesinc@gmail.com">
+              <MailIco className="mailIco" />
+            </a>
             <span>extremeproservicesinc@gmail.com</span>
           </div>
           <div className="header-get-a-quote">
-            <button>GET A FREE ESTIMATE</button>
+            <button
+              onClick={() => {
+                goTo("/services");
+                setTimeout(() => {
+                  quoteRef.current.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              GET A FREE ESTIMATE
+            </button>
           </div>
         </div>
         <div className="navLeftTxt">
@@ -119,38 +131,33 @@ export default () => {
           <h3
             onClick={() => {
               goTo("/");
-              setTimeout(() => {
-                window.scroll({ top: 3200, left: 0, behavior: "smooth" });
-              }, 100);
+              setTimeout(() => {}, 100);
             }}
           >
             ABOUT
           </h3>
         </div>
-        {/* <div className="containerNavRight">
-          <div className="navRightTxt">
-            <Link target="_blank" to={instagramLink}>
-              <div className="containerMedias">
-                <div className="containerInstagramIcon">
-                  <Instagram className="instIcon" />
-                </div>
-                <span>Instagram</span>
-              </div>
-            </Link>
-            <Link target="_blank" to={tiktokLink}>
-              <div className="containerMedias">
-                <div className="imgTiktok">
-                  <TikTokIcon />
-                </div>
-                <span>Tiktok</span>
-              </div>
-            </Link>
-          </div>
-        </div> */}
       </div>
 
       <div className="containerHeaderSmall">
+        <div className="header-small-top-info">
+          <div className="header-small-button">
+            <button
+              onClick={() => {
+                goTo("/services");
+                setTimeout(() => {
+                  quoteRef.current.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              GET A FREE ESTIMATE
+            </button>
+          </div>
+        </div>
         <Menu className="menuBurger">
+          <div className="menu-burger-logo-company">
+            <LogoIco />
+          </div>
           <div
             style={{
               display: "flex",
@@ -159,8 +166,15 @@ export default () => {
             }}
           >
             <HomeIcon className="material-icons" />
-            <a href="/">
-              <span>Home</span>
+            <a>
+              <span
+                onClick={() => {
+                  goTo("/");
+                  window.scroll({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Home
+              </span>
             </a>
           </div>
           <div
@@ -171,9 +185,13 @@ export default () => {
             }}
           >
             <CleaningIcon className="material-icons" />
-            <a id="services" href="/services">
+            <span
+              onClick={() => {
+                goTo("/services");
+              }}
+            >
               Services
-            </a>
+            </span>
           </div>
           <div
             style={{
@@ -183,9 +201,17 @@ export default () => {
             }}
           >
             <Contact className="material-icons" />
-            <a id="contact" href="/">
+
+            <span
+              onClick={() => {
+                goTo("/");
+                setTimeout(() => {
+                  contentRef.current.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
               Contact
-            </a>
+            </span>
           </div>
           <div
             style={{
@@ -195,9 +221,13 @@ export default () => {
             }}
           >
             <ReviewsIcon className="material-icons" />
-            <a id="reviews" href="/reviews">
+            <span
+              onClick={() => {
+                goTo("/reviews");
+              }}
+            >
               Reviews
-            </a>
+            </span>
           </div>
           <div
             style={{
@@ -207,51 +237,16 @@ export default () => {
             }}
           >
             <InfoIcon className="material-icons" />
-            <a id="reviews" href="/">
+            <span
+              onClick={() => {
+                goTo("/");
+                setTimeout(() => {}, 100);
+              }}
+            >
               About
-            </a>
+            </span>
           </div>
         </Menu>
-        {/* <div>
-          <nav>
-            <div className="burger-menu" onClick={updateMenu}>
-              <div className={burger_class}></div>
-              <div className={burger_class}></div>
-              <div className={burger_class}></div>
-            </div>
-          </nav>
-          <div className={menu_class}>
-            <div className="navSite">
-              <span>
-                <a href="/">HOME</a>
-              </span>
-              <span>
-                <a href="/services">SERVICES</a>
-              </span>
-              <span>
-                <a href="/services">CONTACT</a>
-              </span>
-              <span>
-                <a href="/services">REVIEWS</a>
-              </span>
-              <span>
-                <a href="/services">ABOUT</a>
-              </span>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className="containerSocialMediaSmlHeader">
-          <Link target="_blank" to={instagramLink}>
-            <div className="containerHInst">
-              <Instagram style={{ width: "30px", height: "20px" }} />
-            </div>
-          </Link>
-          <Link target="_blank" to={tiktokLink}>
-            <div className="containerHTiktok">
-              <TikTokIcon />
-            </div>
-          </Link>
-        </div> */}
       </div>
     </div>
   );

@@ -11,10 +11,11 @@ function App() {
   var facebookLink =
     "https://www.facebook.com/people/Extreme-Pro-Services-Inc/61555781556888/?mibextid=LQQJ4d";
   var contentRef = useRef(null);
+  var quoteRef = useRef(null);
   return (
     <>
       <Contexts.Provider
-        value={{ facebookLink, instagramLink, tiktokLink, contentRef }}
+        value={{ facebookLink, instagramLink, tiktokLink, contentRef,quoteRef }}
       >
         <Router>
           <Routes>

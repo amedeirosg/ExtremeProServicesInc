@@ -9,7 +9,7 @@
     width: 36px;
     height: 30px;
     left: 36px;
-    top: 36px;
+    top: 17px;
   }
   
   /* Color/shape of burger icon bars */
@@ -177,6 +177,7 @@
     animation-timing-function: ease-in-out;
 }
 
+
 .containerHeader{
     height:20.5vh;
     display:flex;
@@ -186,7 +187,7 @@
 
 } 
 .containerHeaderScrolled {
-    height:16.5vh;
+    height:21.5vh;
     display:flex;
     top:0;
     z-index: 1;
@@ -384,6 +385,7 @@
     .containerHeader{
         position: fixed ;
         display:flex;
+        height: 0;
         top:0;
         background: none;
         transition: ease-in-out 0.5s;
@@ -399,7 +401,7 @@
         margin-top:1vw;
         text-align: right;
         position: relative;
-    } */
+    }  */
 
     .containerSocialMediaSmlHeader{
         height: inherit;
@@ -408,6 +410,7 @@
         align-items: center;
         position: absolute;
         right:0;
+        z-index: 999;
     }
 
     .containerHeaderSmall{
@@ -433,6 +436,35 @@
         justify-content: center;
         align-items: center;
         height: inherit;
+    }
+
+    .header-small-top-info{
+        width: 99.9vw;
+        height: 3rem;
+    }
+
+    .header-small-button{
+        height: inherit;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-small-button button{
+        all:unset;
+        text-align: center;
+        padding:0.4rem;
+        width: 15rem;
+        background-color: #0aa3d6;
+        border-radius:0.4rem;
+        font-weight: bold;
+        box-shadow: 1px 1px 10px 1px #0aa3d6 ;
+        cursor:pointer;
+        animation: animar;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
     }
 
 }

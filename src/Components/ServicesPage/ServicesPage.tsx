@@ -1,7 +1,7 @@
 import "./ServicesPage.css";
 import Header from "../Header/Header.tsx";
 //@ts-ignore
-import ServicesPImg from "../../assets/ServicePageSH.png";
+import ServicesPImg from "../../assets/bcServicesImg.png";
 //@ts-ignore
 import BeforeIntImg from "../../assets/b.png";
 //@ts-ignore
@@ -49,18 +49,20 @@ import Window from "../../assets/windowcleaning.png";
 import Certified from "../../assets/Certified.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef, useEffect } from "react";
+import { useLayoutEffect, useRef, useEffect, useContext } from "react";
 import Footer from "../Footer/Footer.tsx";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
+import Contexts from "../../Contexts/Context.tsx";
 
 export default () => {
   //tl = Time line
   //el = Element
-
+  //@ts-ignore
+  const { quoteRef } = useContext(Contexts);
   const tl = useRef();
   const el = useRef();
   const tlc = useRef();
@@ -231,8 +233,8 @@ export default () => {
             scrollTrigger: {
               trigger: ".interior-img-painting",
               scrub: true,
-              start: "top 200px",
-              end: "bottom 350px",
+              start: "top 550px",
+              end: "bottom 650px",
             },
           })
           .fromTo(
@@ -298,8 +300,8 @@ export default () => {
             scrollTrigger: {
               trigger: ".exterior-img-painting",
               scrub: true,
-              start: "top 300px",
-              end: "bottom 400px",
+              start: "top 550px",
+              end: "bottom 650px",
             },
           })
           .fromTo(
@@ -663,7 +665,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="contact-area">
+        <div ref={quoteRef} className="contact-area">
           <div className="callus-today">
             <span>Call us today to get started</span>
           </div>
