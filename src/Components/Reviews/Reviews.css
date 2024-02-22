@@ -344,6 +344,10 @@
     .reviews-backgroundimg-area{
         height: 80%;
     }
+    .reviews-backgroundimg-area{
+ 
+        margin-top:10.5rem;
+    }
 }
 
 @media(max-width:650px){

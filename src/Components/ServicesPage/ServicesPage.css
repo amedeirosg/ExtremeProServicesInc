@@ -72,7 +72,7 @@
 
 .interior-img-painting, .exterior-img-painting{
     margin-top:5vh;
-    width: 100%;
+    width: 60rem;
     height: 30vh;
     display:flex;
     justify-content: space-between;
@@ -359,11 +359,10 @@
     width: 100%;
     height: 100vh;
     margin-top:5vh;
-    background-image: url('../../assets/wave.png');
+    background-image: url('../../assets/wave.png') ;
     display:flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
 }
 
 .area-img{
@@ -393,11 +392,11 @@
     position: absolute;
     margin-top:15vh;
     color: #ffffff;
+    z-index:999;
 }
 
 .img-first-line{
     height: 30vh;
-    z-index:-1;
     margin-top:3vh;
     width: 100%;
     filter:brightness(50%);
@@ -409,7 +408,7 @@
     transform:scale(1.05);
     cursor:pointer;
     transition: ease-in-out 0.3s;
-    
+    z-index:998;
 }
 
 .img-first-line img {
@@ -854,7 +853,7 @@
     }
 
     .contact-questions{
-        height: 55vh;
+        height: 35rem;
     }
 
     .contact-form{
@@ -897,9 +896,8 @@
 }
 
 @media(max-width:717px){
-    .containerSubHeaderImg{
-        position: absolute;
-        top: 130px;
+    .containerSubHeader{
+        margin-top:7.5rem;
     }
     .containerTitleSH{
         margin-top:-35vh;
@@ -1229,6 +1227,10 @@
 
     .area-img{
         margin-top:13vh;
+    }
+
+    .form-device{
+        width: 30vh;
     }
 }
 

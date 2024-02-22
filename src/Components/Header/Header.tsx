@@ -77,16 +77,7 @@ export default () => {
             <span>extremeproservicesinc@gmail.com</span>
           </div>
           <div className="header-get-a-quote">
-            <button
-              onClick={() => {
-                goTo("/services");
-                setTimeout(() => {
-                  quoteRef.current.scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              }}
-            >
-              GET A FREE ESTIMATE
-            </button>
+            <button>GET A FREE ESTIMATE</button>
           </div>
         </div>
         <div className="navLeftTxt">
@@ -140,8 +131,9 @@ export default () => {
       </div>
 
       <div className="containerHeaderSmall">
-        <div className="header-small-top-info">
-          <div className="header-small-button">
+        <div className="header-small-logo-img">
+          <LogoIco />
+          <div className="header-small-get-free-quote">
             <button
               onClick={() => {
                 goTo("/services");
@@ -150,7 +142,7 @@ export default () => {
                 }, 100);
               }}
             >
-              GET A FREE ESTIMATE
+              GET FREE ESTIMATE
             </button>
           </div>
         </div>

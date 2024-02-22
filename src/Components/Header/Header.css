@@ -19,7 +19,7 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #0aa3d6;
+    background: #4f6268;
   }
   
   /* Position and sizing of clickable cross button */
@@ -357,6 +357,12 @@
 }
 
 @media (max-width:717px){
+
+    
+
+    .bm-burger-bars-hover{
+        background-color: #fff;
+    }
     .containerNavLeft, .containerNavRight{
         display:none;
     }
@@ -392,17 +398,6 @@
         z-index: 1;
     }
 
-   
-/* 
-    .containerHeaderSmall{
-        z-index: 1;
-        width: 96vw;
-        height:2.3vw;
-        margin-top:1vw;
-        text-align: right;
-        position: relative;
-    }  */
-
     .containerSocialMediaSmlHeader{
         height: inherit;
         width: 15vw;
@@ -415,10 +410,50 @@
 
     .containerHeaderSmall{
         z-index: 1;
-        height:5vw;
-        margin-top:1vw;
+        height:10.5rem;
         text-align: right;
         position: relative;
+        width: 100vw;
+        background-color: #0aa3d6;
+        box-shadow: 0px 1px 10px 2px black;
+    }
+
+
+    .header-small-logo-img{
+        height: inherit;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header-small-get-free-quote{
+        height: 5rem;
+        width: 15rem;
+    }
+
+    .header-small-get-free-quote{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-small-get-free-quote button{
+        all:unset;
+        text-align: center;
+        padding:0.4rem;
+        width: 15rem;
+        background-color: #0aa3d6;
+        border-radius:0.4rem;
+        font-weight: bold;
+        box-shadow: 1px 1px 10px rgb(0, 0, 0) ;
+        cursor:pointer;
+        animation: animar;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+
     }
 
     .containerHInst{
@@ -438,34 +473,8 @@
         height: inherit;
     }
 
-    .header-small-top-info{
-        width: 99.9vw;
-        height: 3rem;
-    }
 
-    .header-small-button{
-        height: inherit;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .header-small-button button{
-        all:unset;
-        text-align: center;
-        padding:0.4rem;
-        width: 15rem;
-        background-color: #0aa3d6;
-        border-radius:0.4rem;
-        font-weight: bold;
-        box-shadow: 1px 1px 10px 1px #0aa3d6 ;
-        cursor:pointer;
-        animation: animar;
-        animation-duration: 0.5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
 
 }
 
@@ -479,41 +488,8 @@
 @media(max-width:428px){
     .navSite span a{
         font-size: 15px;
-
-    }
-}
-
-@media (max-width:374px){
-    .containerHeaderSmall{
-        z-index: 1;
-        width: 96vw;
-        height:7vw;
-        margin-top:2vw;
-        text-align: right;
-        position: relative;
     }
 }
 
 
-@media (max-width:374px){
-    .containerHeaderSmall{
-        z-index: 1;
-        width: 96vw;
-        height:7vw;
-        margin-top:0vw;
-        text-align: right;
-        position: relative;
-    }
-}
 
-
-@media (max-width:360px){
-    .containerHeaderSmall{
-        z-index: 1;
-        width: 90vw;
-        height:7vw;
-        margin-top:0vw;
-        text-align: right;
-        position: relative;
-    }
-}
