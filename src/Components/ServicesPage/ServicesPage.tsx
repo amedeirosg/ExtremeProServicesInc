@@ -620,7 +620,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div ref={formDeviceRef}className="type-cleaning">
+          <div ref={formDeviceRef} className="type-cleaning">
             <div className="area-img">
               <div className="first-line">
                 <div className="img-left">

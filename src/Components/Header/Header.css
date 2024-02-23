@@ -375,6 +375,7 @@
     }
     
     .containerHeaderSmall{
+        
         display:inline;
     }
 
@@ -387,7 +388,7 @@
         height:0vh;
         display:flex;
         top:0;
-        z-index: 1;
+        z-index: 999;
         background: transparent;
         transition: ease-in-out 0.5s;
     }

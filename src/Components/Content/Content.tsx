@@ -19,7 +19,8 @@ import PaingintBefore from "../../assets/after.png";
 export default () => {
   //@ts-ignore
   const { tiktokLink, instagramLink } = useContext(Contexts);
-
+  //@ts-ignore
+  const { aboutRef } = useContext(Contexts);
   return (
     <div className="containerWhoWeArea">
       <WhoWeAre />
@@ -58,7 +59,7 @@ export default () => {
         </div>
 
         <ContactUs />
-        <div className="containerAboutUs">
+        <div ref={aboutRef} className="containerAboutUs">
           <div className="containerAboutUsTitle">
             <span>About us</span>
           </div>

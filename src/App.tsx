@@ -13,6 +13,7 @@ function App() {
   var contentRef = useRef<HTMLDivElement | null>(null);
   var quoteRef = useRef<HTMLDivElement | null>(null);
   var formDeviceRef = useRef<HTMLDivElement | null>(null);
+  var aboutRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <Contexts.Provider
@@ -22,7 +23,8 @@ function App() {
           tiktokLink,
           contentRef,
           quoteRef,
-          formDeviceRef
+          formDeviceRef,
+          aboutRef,
         }}
       >
         <Router>

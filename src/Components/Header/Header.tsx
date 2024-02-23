@@ -38,6 +38,8 @@ export default () => {
     quoteRef,
     //@ts-ignore
     formDeviceRef,
+    //@ts-ignore
+    aboutRef,
   } = useContext(Contexts);
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -143,7 +145,9 @@ export default () => {
           <h3
             onClick={() => {
               goTo("/");
-              setTimeout(() => {}, 100);
+              setTimeout(() => {
+                aboutRef.current.scrollIntoView({ behavior: "smooth" });
+              }, 100);
             }}
           >
             ABOUT
@@ -159,7 +163,7 @@ export default () => {
               onClick={() => {
                 goTo("/services");
                 setTimeout(() => {
-                  console.log(formDeviceRef)
+                  console.log(formDeviceRef);
                   formDeviceRef.current?.scrollIntoView({ behavior: "smooth" });
                 }, 100);
               }}
@@ -254,7 +258,9 @@ export default () => {
             <span
               onClick={() => {
                 goTo("/");
-                setTimeout(() => {}, 100);
+                setTimeout(() => {
+                  aboutRef.current.scrollIntoView({ behavior: "smooth" });
+                }, 100);
               }}
             >
               About
