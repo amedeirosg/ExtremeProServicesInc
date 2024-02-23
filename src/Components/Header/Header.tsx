@@ -25,8 +25,20 @@ import { slide as Menu } from "react-burger-menu";
 export default () => {
   const goTo = useNavigate();
   //@ts-ignore
-  const { facebookLink, instagramLink, tiktokLink, contentRef, quoteRef } =
-    useContext(Contexts);
+  const {
+    //@ts-ignore
+    facebookLink,
+    //@ts-ignore
+    instagramLink,
+    //@ts-ignore
+    tiktokLink,
+    //@ts-ignore
+    contentRef,
+    //@ts-ignore
+    quoteRef,
+    //@ts-ignore
+    formDeviceRef,
+  } = useContext(Contexts);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -77,7 +89,16 @@ export default () => {
             <span>extremeproservicesinc@gmail.com</span>
           </div>
           <div className="header-get-a-quote">
-            <button>GET A FREE ESTIMATE</button>
+            <button
+              onClick={() => {
+                goTo("/services");
+                setTimeout(() => {
+                  quoteRef.current?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              GET A FREE ESTIMATE
+            </button>
           </div>
         </div>
         <div className="navLeftTxt">
@@ -138,7 +159,8 @@ export default () => {
               onClick={() => {
                 goTo("/services");
                 setTimeout(() => {
-                  quoteRef.current.scrollIntoView({ behavior: "smooth" });
+                  console.log(formDeviceRef)
+                  formDeviceRef.current?.scrollIntoView({ behavior: "smooth" });
                 }, 100);
               }}
             >

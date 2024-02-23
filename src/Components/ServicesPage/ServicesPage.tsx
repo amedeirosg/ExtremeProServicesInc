@@ -62,7 +62,7 @@ export default () => {
   //tl = Time line
   //el = Element
   //@ts-ignore
-  const { quoteRef } = useContext(Contexts);
+  const { quoteRef, formDeviceRef } = useContext(Contexts);
   const tl = useRef();
   const el = useRef();
   const tlc = useRef();
@@ -233,15 +233,14 @@ export default () => {
             scrollTrigger: {
               trigger: ".interior-img-painting",
               scrub: true,
-              start: "top 550px",
-              end: "bottom 650px",
+              start: "top 800px",
+              end: "bottom 750px",
             },
           })
           .fromTo(
             ".interior-left-img",
             {
               opacity: 0,
-              x: -260,
             },
             { opacity: 1, x: 0 }
           )
@@ -249,7 +248,6 @@ export default () => {
             ".interior-right-img",
             {
               opacity: 0,
-              x: 260,
             },
             { opacity: 1, x: 0 }
           );
@@ -279,7 +277,7 @@ export default () => {
             ".exterior-left-img",
             {
               opacity: 0,
-              y: 260,
+              x: 0,
             },
             { opacity: 1, y: 0 }
           )
@@ -287,7 +285,7 @@ export default () => {
             ".exterior-right-img",
             {
               opacity: 0,
-              x: 260,
+              x: -260,
             },
             { opacity: 1, x: 0 }
           );
@@ -300,15 +298,14 @@ export default () => {
             scrollTrigger: {
               trigger: ".exterior-img-painting",
               scrub: true,
-              start: "top 550px",
-              end: "bottom 650px",
+              start: "top 800px",
+              end: "bottom 750px",
             },
           })
           .fromTo(
             ".exterior-left-img",
             {
               opacity: 0,
-              y: 260,
             },
             { opacity: 1, y: 0 }
           )
@@ -316,7 +313,6 @@ export default () => {
             ".exterior-right-img",
             {
               opacity: 0,
-              x: 260,
             },
             { opacity: 1, x: 0 }
           );
@@ -372,8 +368,8 @@ export default () => {
             scrollTrigger: {
               trigger: ".containerImgPW",
               scrub: true,
-              start: "top 500px",
-              end: "bottom 100px",
+              start: "top 800px",
+              end: "bottom 750px",
             },
           })
           .fromTo(
@@ -624,7 +620,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="type-cleaning">
+          <div ref={formDeviceRef}className="type-cleaning">
             <div className="area-img">
               <div className="first-line">
                 <div className="img-left">
@@ -728,7 +724,7 @@ export default () => {
             </div>
           </form>
         </div>
-        <div className="contact-form-device">
+        <div ref={formDeviceRef} className="contact-form-device">
           <div className="request-service">
             <span id="mobilerequest">REQUEST A SERVICE</span>
           </div>

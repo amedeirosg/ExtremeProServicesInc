@@ -10,12 +10,20 @@ function App() {
   var tiktokLink = "https://www.tiktok.com/@extremeproservicesinc";
   var facebookLink =
     "https://www.facebook.com/people/Extreme-Pro-Services-Inc/61555781556888/?mibextid=LQQJ4d";
-  var contentRef = useRef(null);
-  var quoteRef = useRef(null);
+  var contentRef = useRef<HTMLDivElement | null>(null);
+  var quoteRef = useRef<HTMLDivElement | null>(null);
+  var formDeviceRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <Contexts.Provider
-        value={{ facebookLink, instagramLink, tiktokLink, contentRef,quoteRef }}
+        value={{
+          facebookLink,
+          instagramLink,
+          tiktokLink,
+          contentRef,
+          quoteRef,
+          formDeviceRef
+        }}
       >
         <Router>
           <Routes>

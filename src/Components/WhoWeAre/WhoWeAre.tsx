@@ -21,7 +21,7 @@ export default () => {
         <br></br>
         <span>
           <b>Innovation in 2024:</b> Starting in 2024, we not only offer
-          impeccable cleaning but also transform spaces with high-quality
+          impecable cleaning but also transform spaces with high-quality
           interior and exterior painting. <br></br>
           <br></br>
           <b>Our Commitment to Quality and Safety: </b>With over 5 years in the

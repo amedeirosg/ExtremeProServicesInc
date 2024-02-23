@@ -1,6 +1,7 @@
 .container-forms{
     height: 100%;
     opacity: 0;
+    overflow-x: hidden;
 }
 .reviews-header{
     height: 30rem;

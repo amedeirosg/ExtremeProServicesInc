@@ -10,6 +10,7 @@
     height: 30px;
     left: 36px;
     top: 17px;
+    
   }
   
   /* Color/shape of burger icon bars */
@@ -27,6 +28,7 @@
     height: 24px;
     width: 24px;
     left:15vh;
+    margin-top:-10rem;
   }
   
   /* Color/shape of close button cross */
@@ -39,17 +41,20 @@
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
   .bm-menu-wrap {
-    position: fixed;
     height: 100%;
+    
   }
   
   /* General sidebar styles */
   .bm-menu {
+    position: absolute;
+    top:-11rem;
     background:  linear-gradient(to bottom, rgba(10, 163, 214) 10%,  40%, #ffffff );
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
     width: 20vh;
     border-radius:1vh;
+    
   }
   
   /* Morph shape necessary with bubble or elastic */
@@ -358,7 +363,6 @@
 
 @media (max-width:717px){
 
-    
 
     .bm-burger-bars-hover{
         background-color: #fff;
@@ -416,6 +420,7 @@
         width: 100vw;
         background-color: #0aa3d6;
         box-shadow: 0px 1px 10px 2px black;
+      
     }
 
 
@@ -427,15 +432,13 @@
         flex-direction: column;
     }
 
-    .header-small-get-free-quote{
-        height: 5rem;
-        width: 15rem;
-    }
 
     .header-small-get-free-quote{
         display:flex;
         align-items: center;
         justify-content: center;
+        height: 5rem;
+        width: 15rem;
     }
 
     .header-small-get-free-quote button{
@@ -453,7 +456,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
-
     }
 
     .containerHInst{
