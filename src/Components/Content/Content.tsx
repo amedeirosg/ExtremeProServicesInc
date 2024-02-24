@@ -38,7 +38,7 @@ export default () => {
             desc3={" - Windows cleaning "}
             desc4={"- Spring cleaning "}
             desc5={"- Customized Services"}
-            desc6={"- Move in/out Cleaning Services "}
+            desc6={""}
             desc7={" "}
             desc8={""}
           />

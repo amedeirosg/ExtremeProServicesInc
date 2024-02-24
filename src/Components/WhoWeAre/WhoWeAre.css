@@ -66,6 +66,9 @@
     .containerWhoTitle{
         width: 100vw;
     }
+    .containerDescription{
+        margin-top:5rem;
+    }
 
 
 }

@@ -114,6 +114,9 @@
     border-bottom: 1px solid rgba(155, 155, 155, 0.473);
 }
 
+
+
+
 .header-nav-logo-company{
     width: 8rem;
     height: 7rem;
@@ -494,5 +497,9 @@
     }
 }
 
-
-
+@media (max-height: 800px){
+    
+    .containerHeader{
+        height: 12rem;
+    }
+}

@@ -12,23 +12,13 @@ export default () => {
       <div className="containerDescription">
         <div className="containerFirstTxt">
           <span>
-            Since our founding in 2018, <b>Extreme Pro Services Inc</b> has
-            established itself as a leading provider of both cleaning and
-            painting services. Our mission is to make your spaces more special
-            and welcoming.
+            Since our founding in 2018 , Extreme Pro Services Inc has
+            established itself as a leading provider of both Painting and
+            Cleaning Services . Our mission is to make your spaces more
+            especial and welcoming .
           </span>
         </div>
-        <br></br>
-        <span>
-          <b>Innovation in 2024:</b> Starting in 2024, we not only offer
-          impecable cleaning but also transform spaces with high-quality
-          interior and exterior painting. <br></br>
-          <br></br>
-          <b>Our Commitment to Quality and Safety: </b>With over 5 years in the
-          industry, we maintain a standard of excellence in every project. Our
-          pride in holding the OSHA 10 certification is a testament to our
-          dedication to safety and quality.
-        </span>
+        
         <br></br>
         <br></br>
         <span>
@@ -43,6 +33,12 @@ export default () => {
           <br></br>
           <b>4. Guaranteed Safety: </b>
           Ensuring a safe environment, backed by OSHA 10 certification.
+          <br></br>
+          <b>5. Free Estimate </b>
+          <br></br>
+          <b>6. Fully Insured</b>
+          <br></br>
+          <b>7. Punctual & Reliable</b>
         </span>
       </div>
     </div>

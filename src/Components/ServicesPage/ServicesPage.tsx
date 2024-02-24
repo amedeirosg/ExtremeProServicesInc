@@ -277,15 +277,15 @@ export default () => {
             ".exterior-left-img",
             {
               opacity: 0,
-              x: 0,
+              x: -260,
             },
-            { opacity: 1, y: 0 }
+            { opacity: 1, x: 0 }
           )
           .fromTo(
             ".exterior-right-img",
             {
               opacity: 0,
-              x: -260,
+              x: 260,
             },
             { opacity: 1, x: 0 }
           );
