@@ -1,7 +1,7 @@
 import "./ServicesPage.css";
 import Header from "../Header/Header.tsx";
 //@ts-ignore
-import ServicesPImg from "../../assets/bcServicesImg.png";
+import bcgServicePaintingImg from "../../assets/bcgServicePaintingImg.jpg";
 //@ts-ignore
 import BeforeIntImg from "../../assets/b.png";
 //@ts-ignore
@@ -242,14 +242,14 @@ export default () => {
             {
               opacity: 0,
             },
-            { opacity: 1, x: 0 }
+            { opacity: 1 }
           )
           .fromTo(
             ".interior-right-img",
             {
               opacity: 0,
             },
-            { opacity: 1, x: 0 }
+            { opacity: 1 }
           );
       }, elp);
     }
@@ -455,7 +455,7 @@ export default () => {
       <Header />
       <div className="containerSubHeader">
         <div className="containerSubHeaderImg">
-          <img src={ServicesPImg} alt="serviceImage" />
+          <img src={bcgServicePaintingImg} alt="serviceImage" />
         </div>
         <div className="containerTitleSH">
           <span>Services</span>
