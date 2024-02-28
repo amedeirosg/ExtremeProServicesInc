@@ -192,15 +192,15 @@
     transition: ease-in-out 0.5s;
     z-index: 1;
     background: #10A3D6 ;
-
 } 
+
 .containerHeaderScrolled {
     height:21.5vh;
     display:flex;
     top:0;
     z-index: 1;
     position: sticky;
-    background: rgba(10, 163, 214, 0.8) ;
+    background: #10A3D6 ;
     transition: ease-in-out 0.5s;
 }
 
@@ -333,6 +333,11 @@
     .tktokIco, .phoneIco{
         width: 1.8rem;
     }
+
+    .containerSubHeader{
+        margin-top:-1.4rem;
+    }
+   
 
 }
 
@@ -497,9 +502,11 @@
     }
 }
 
-@media (max-height: 800px){
-    
+@media(max-height:820px){
     .containerHeader{
-        height: 12rem;
+        height: 11.5rem;
     }
 }
+
+
+

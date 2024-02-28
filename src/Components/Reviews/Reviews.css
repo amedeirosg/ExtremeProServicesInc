@@ -27,6 +27,7 @@
 .reviews-title-page{
     position: absolute;
     top:inherit;
+    margin-top:20rem;
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 1vh;

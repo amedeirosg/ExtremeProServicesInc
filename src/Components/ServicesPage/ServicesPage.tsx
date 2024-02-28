@@ -457,9 +457,6 @@ export default () => {
         <div className="containerSubHeaderImg">
           <img src={bcgServicePaintingImg} alt="serviceImage" />
         </div>
-        <div className="containerTitleSH">
-          <span>Services</span>
-        </div>
       </div>
       {/* @ts-ignore */}
       <div className="containerPaintingService" ref={el}>
@@ -492,7 +489,7 @@ export default () => {
             </div>
             <div className="subtitle-exterior-painting">
               <span>
-                Quality exeterior paint and the right exterior painting services
+                Quality exterior paint and the right exterior painting services
                 work as an added layer of protection from the elements, helping
                 to keep your home safe from weather damage, insects and dust.
                 The paint can even prevent exterior wood from rotting. Certain
