@@ -59,7 +59,7 @@ import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import Contexts from "../../Contexts/Context.tsx";
-
+import MobileServices from "../MobileServices/MobileServices.tsx";
 export default () => {
   //tl = Time line
   //el = Element
@@ -452,264 +452,339 @@ export default () => {
     setSuccessEmail(true);
   };
 
+  const [isLargeScreen, setIsLargeScreen] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (window.innerWidth > 1000) {
+      setIsLargeScreen(true);
+    } else {
+      setIsLargeScreen(false);
+    }
+  }, [window.innerWidth]);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
   return (
-    <div className="containerServicesPage">
-      <Header />
-      <div className="containerSubHeader">
-        <div className="containerSubHeaderImg">
-          <img src={bcgServicePaintingImg} alt="serviceImage" />
-        </div>
-      </div>
-      {/* @ts-ignore */}
-      <div className="containerPaintingService" ref={el}>
-        {/* @ts-ignore */}
-        <div className="resume-interior-painting" ref={elp}>
-          <div className="title-painting">
-            <span>Painting Services</span>
-          </div>
-          <div className="title-interior-painting">
-            <span>Interior Painting</span>
-          </div>
-          <div className="subtitle-interior-painting">
-            <span>
-              If you want your walls to look fantastic, it is best to hire a
-              professional painter. The Painting Pros always does proper surface
-              prep, including repairing drywall before we apply any paint.
-            </span>
-          </div>
-          <div className="interior-img-painting">
-            <div className="interior-left-img">
-              <img src={BeforeIntImg} alt="painting-image" />
-            </div>
-            <div className="interior-right-img">
-              <img src={AfterIntImg} alt="painting-image" />
+    <>
+      {isLargeScreen ? (
+        <div className="containerServicesPage">
+          <Header />
+          <div className="containerSubHeader">
+            <div className="containerSubHeaderImg">
+              <img src={bcgServicePaintingImg} alt="serviceImage" />
             </div>
           </div>
-          <div className="resume-exterior-painting">
-            <div className="title-exterior-painting">
-              <span>Exterior Painting</span>
+          {/* @ts-ignore */}
+          <div className="containerPaintingService" ref={el}>
+            {/* @ts-ignore */}
+            <div className="resume-interior-painting" ref={elp}>
+              <div className="title-painting">
+                <span>Painting Services</span>
+              </div>
+              <div className="title-interior-painting">
+                <span>Interior Painting</span>
+              </div>
+              <div className="subtitle-interior-painting">
+                <span>
+                  If you want your walls to look fantastic, it is best to hire a
+                  professional painter. The Painting Pros always does proper
+                  surface prep, including repairing drywall before we apply any
+                  paint.
+                </span>
+              </div>
+              <div className="interior-img-painting">
+                <div className="interior-left-img">
+                  <img src={BeforeIntImg} alt="painting-image" />
+                </div>
+                <div className="interior-right-img">
+                  <img src={AfterIntImg} alt="painting-image" />
+                </div>
+              </div>
+              <div className="resume-exterior-painting">
+                <div className="title-exterior-painting">
+                  <span>Exterior Painting</span>
+                </div>
+                <div className="subtitle-exterior-painting">
+                  <span>
+                    Quality exterior paint and the right exterior painting
+                    services work as an added layer of protection from the
+                    elements, helping to keep your home safe from weather
+                    damage, insects and dust. The paint can even prevent
+                    exterior wood from rotting. Certain types of paint can
+                    protect from specific element.
+                  </span>
+                </div>
+                <div className="exterior-img-painting">
+                  <div className="exterior-left-img">
+                    <img src={BeforeExtImg} alt="painting-image" />
+                  </div>
+                  <div className="exterior-right-img">
+                    <img src={AfterExtImg} alt="painting-image" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="subtitle-exterior-painting">
+            <div className="containerImgStyle">
+              <div className="containerImgSlice">
+                <img src={SliceImg} alt="sliceImg.png" />
+              </div>
+            </div>
+            {/* @ts-ignore */}
+            <div className="containerPressureWashing" ref={elMid}>
+              <div className="containerImgPW">
+                <img
+                  src={PressureImg}
+                  id="pressureImagePc"
+                  alt="PressureImg.png"
+                />
+                <img
+                  src={PressureImg2}
+                  id="pressureImagePhone"
+                  alt="PressureImg.png"
+                />
+              </div>
+              <div className="containerRightSideImg">
+                <div id="firstimgside" className="containerSideImgFirst">
+                  <img src={ExamplePressure} alt="PressureImg" />
+                </div>
+                <div className="containerSideImgTwo">
+                  <img src={ExamplePressure2} alt="PressureImg2" />
+                </div>
+              </div>
+            </div>
+            <div className="containerTxtPressureW">
               <span>
-                Quality exterior paint and the right exterior painting services
-                work as an added layer of protection from the elements, helping
-                to keep your home safe from weather damage, insects and dust.
-                The paint can even prevent exterior wood from rotting. Certain
-                types of paint can protect from specific element.
+                Pressure washing or power washing is{" "}
+                <b>
+                  the use of high-pressure water spray to remove loose paint,
+                  mold, grime, dust, mud, and dirt from surfaces and objects
+                  such as buildings, vehicles and concrete surfaces
+                </b>
               </span>
             </div>
-            <div className="exterior-img-painting">
-              <div className="exterior-left-img">
-                <img src={BeforeExtImg} alt="painting-image" />
+            <div className="containerDryWall">
+              <span>DRYWALL REPAIR</span>
+            </div>
+            <div className="containerDryWallContent">
+              <div className="containerImgDrywall">
+                <img src={Drywall} alt="drywallimg.jpg" />
               </div>
-              <div className="exterior-right-img">
-                <img src={AfterExtImg} alt="painting-image" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="containerImgStyle">
-          <div className="containerImgSlice">
-            <img src={SliceImg} alt="sliceImg.png" />
-          </div>
-        </div>
-        {/* @ts-ignore */}
-        <div className="containerPressureWashing" ref={elMid}>
-          <div className="containerImgPW">
-            <img src={PressureImg} id="pressureImagePc"alt="PressureImg.png" />
-            <img src={PressureImg2} id="pressureImagePhone"alt="PressureImg.png" />
-          </div>
-          <div className="containerRightSideImg">
-            <div id="firstimgside" className="containerSideImgFirst">
-              <img src={ExamplePressure} alt="PressureImg" />
-            </div>
-            <div className="containerSideImgTwo">
-              <img src={ExamplePressure2} alt="PressureImg2" />
-            </div>
-          </div>
-        </div>
-        <div className="containerTxtPressureW">
-          <span>
-            Pressure washing or power washing is{" "}
-            <b>
-              the use of high-pressure water spray to remove loose paint, mold,
-              grime, dust, mud, and dirt from surfaces and objects such as
-              buildings, vehicles and concrete surfaces
-            </b>
-          </span>
-        </div>
-        <div className="containerDryWall">
-          <span>DRYWALL REPAIR</span>
-        </div>
-        <div className="containerDryWallContent">
-          <div className="containerImgDrywall">
-            <img src={Drywall} alt="drywallimg.jpg" />
-          </div>
-          <div className="containerDrywallTxt">
-            <span>
-              Our team provides drywall repair services to restore the beauty
-              and integrity of the walls in your home or office. Drywall is a
-              common feature in constructions, but it can suffer damage over
-              time. Our experts are trained to address cracks, holes, and other
-              imperfections, using techniques such as applying joint compound
-              and sanding to achieve flawless results. Count on us to ensure
-              that your walls are smooth and beautiful once again.
-            </span>
-          </div>
-        </div>
-        <div className="containerDividArea">
-          <div className="containerImgDivideArea">
-            <img id="imgDivide" src={ImgDivide} alt="separateService.png" />
-          </div>
-        </div>
-      </div>
-      {/* @ts-ignore */}
-      <div className="containerCleaningServices" ref={elc}>
-        <div className="containerCleaningTitle">
-          <span>Cleaning Services</span>
-        </div>
-        <div className="containerSubTitleCleaning">
-          <span>RELIABLE AND EFFICIENT CLEANING SERVICES</span>
-        </div>
-        <div className="containerCleaningMakeShine">
-          <span>Make Your Space Shine Today</span>
-        </div>
-        <div className="containerServicesCleaningImg">
-          <div className="containerImgServices">
-            <img id="pc" src={ImgServices} alt="imgServicesTxt" />
-            <img
-              id="phoneServices"
-              src={ImgServicesPhone}
-              alt="imgServicesTxt"
-            />
-            <img
-              id="phoneServices2"
-              src={ImgServicesPhone2}
-              alt="imgServicesTxt"
-            />
-
-            <img
-              id="phoneServices3"
-              src={ImgServicesPhone3}
-              alt="imgServicesTxt"
-            />
-          </div>
-        </div>
-        <div className="containerCommercialCleaning">
-          <div className="containerTitleCommCleaning">
-            <img src={CleaningTitle} alt="CommercialCleaning" />
-          </div>
-          <div className="containerTxtCommCleaning">
-            <div className="containerLeftContentCleaning">
-              <img src={LeftClean} alt="imgClean" />
-            </div>
-            <div className="containerRightContentCleaning">
-              <div className="containerTitleRight">
-                <span>Desk and Cubicle Areas</span>
-              </div>
-              <div className="containerRightDescServices">
+              <div className="containerDrywallTxt">
                 <span>
-                  1. Cleaning carpets as needed. <br></br>
-                  2. Cleaning computer screens and dusting keyboards. <br></br>
-                  3. Cleaning windows and mirrors. <br></br>
-                  4. Disinfecting high-touch surfaces. <br></br>
-                  5. Dusting desks, shelves, and other surfaces. <br></br>
-                  6. Emptying recycling bins and trash cans. <br></br>
-                  7. Vacuuming carpets daily.
+                  Our team provides drywall repair services to restore the
+                  beauty and integrity of the walls in your home or office.
+                  Drywall is a common feature in constructions, but it can
+                  suffer damage over time. Our experts are trained to address
+                  cracks, holes, and other imperfections, using techniques such
+                  as applying joint compound and sanding to achieve flawless
+                  results. Count on us to ensure that your walls are smooth and
+                  beautiful once again.
                 </span>
               </div>
             </div>
+            <div className="containerDividArea">
+              <div className="containerImgDivideArea">
+                <img id="imgDivide" src={ImgDivide} alt="separateService.png" />
+              </div>
+            </div>
           </div>
-          <div ref={formDeviceRef} className="type-cleaning">
-            <div className="area-img">
-              <div className="first-line">
-                <div className="img-left">
-                  <div className="left-title">
-                    <span>Carpet Cleaning/Vacuum</span>
-                  </div>
-                  <div className="img-first-line">
-                    <img src={Carpet} alt="carpet" />
-                  </div>
+          {/* @ts-ignore */}
+          <div className="containerCleaningServices" ref={elc}>
+            <div className="containerCleaningTitle">
+              <span>Cleaning Services</span>
+            </div>
+            <div className="containerSubTitleCleaning">
+              <span>RELIABLE AND EFFICIENT CLEANING SERVICES</span>
+            </div>
+            <div className="containerCleaningMakeShine">
+              <span>Make Your Space Shine Today</span>
+            </div>
+            <div className="containerServicesCleaningImg">
+              <div className="containerImgServices">
+                <img id="pc" src={ImgServices} alt="imgServicesTxt" />
+                <img
+                  id="phoneServices"
+                  src={ImgServicesPhone}
+                  alt="imgServicesTxt"
+                />
+                <img
+                  id="phoneServices2"
+                  src={ImgServicesPhone2}
+                  alt="imgServicesTxt"
+                />
+
+                <img
+                  id="phoneServices3"
+                  src={ImgServicesPhone3}
+                  alt="imgServicesTxt"
+                />
+              </div>
+            </div>
+            <div className="containerCommercialCleaning">
+              <div className="containerTitleCommCleaning">
+                <img src={CleaningTitle} alt="CommercialCleaning" />
+              </div>
+              <div className="containerTxtCommCleaning">
+                <div className="containerLeftContentCleaning">
+                  <img src={LeftClean} alt="imgClean" />
                 </div>
-                <div className="img-right">
-                  <div className="right-title">
-                    <span>Cleaning desks and sreens</span>
+                <div className="containerRightContentCleaning">
+                  <div className="containerTitleRight">
+                    <span>Desk and Cubicle Areas</span>
                   </div>
-                  <div className="img-first-line">
-                    <img src={Desk} alt="desk" />
+                  <div className="containerRightDescServices">
+                    <span>
+                      1. Cleaning carpets as needed. <br></br>
+                      2. Cleaning computer screens and dusting keyboards.{" "}
+                      <br></br>
+                      3. Cleaning windows and mirrors. <br></br>
+                      4. Disinfecting high-touch surfaces. <br></br>
+                      5. Dusting desks, shelves, and other surfaces. <br></br>
+                      6. Emptying recycling bins and trash cans. <br></br>
+                      7. Vacuuming carpets daily.
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className="second-line">
-                <div className="img-left">
-                  <div className="left-title">
-                    <span>Recycling Bins/Trash Cans</span>
+              <div ref={formDeviceRef} className="type-cleaning">
+                <div className="area-img">
+                  <div className="first-line">
+                    <div className="img-left">
+                      <div className="left-title">
+                        <span>Carpet Cleaning/Vacuum</span>
+                      </div>
+                      <div className="img-first-line">
+                        <img src={Carpet} alt="carpet" />
+                      </div>
+                    </div>
+                    <div className="img-right">
+                      <div className="right-title">
+                        <span>Cleaning desks and sreens</span>
+                      </div>
+                      <div className="img-first-line">
+                        <img src={Desk} alt="desk" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="img-first-line">
-                    <img src={Trash} alt="trash" />
-                  </div>
-                </div>
-                <div className="img-right">
-                  <div className="right-title">
-                    <span>Cleaning Window</span>
-                  </div>
-                  <div className="img-first-line">
-                    <img src={Window} alt="window" />
+                  <div className="second-line">
+                    <div className="img-left">
+                      <div className="left-title">
+                        <span>Recycling Bins/Trash Cans</span>
+                      </div>
+                      <div className="img-first-line">
+                        <img src={Trash} alt="trash" />
+                      </div>
+                    </div>
+                    <div className="img-right">
+                      <div className="right-title">
+                        <span>Cleaning Window</span>
+                      </div>
+                      <div className="img-first-line">
+                        <img src={Window} alt="window" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div ref={quoteRef} className="contact-area">
-          <div className="callus-today">
-            <span>Call us today to get started</span>
-          </div>
-          <div className="request-service">
-            <span id="desktop">REQUEST A SERVICE</span>
-          </div>
-          <form className="contact-form">
-            <div className="contact-form-title">
-              <span>CONTACT US</span>
+            <div ref={quoteRef} className="contact-area">
+              <div className="callus-today">
+                <span>Call us today to get started</span>
+              </div>
+              <div className="request-service">
+                <span id="desktop">REQUEST A SERVICE</span>
+              </div>
+              <form className="contact-form">
+                <div className="contact-form-title">
+                  <span>CONTACT US</span>
+                </div>
+                <div className="contact-questions">
+                  <div className="first-square">
+                    <input
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                      placeholder="Name..."
+                      id="name"
+                      type="text"
+                    ></input>
+                    <div className="email-phone">
+                      <input
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                        }}
+                        placeholder="E-mail..."
+                        id="email"
+                        type="text"
+                      ></input>
+
+                      <div className="containerInputMask">
+                        <InputMask
+                          value={phone}
+                          onChange={(e: InputMaskChangeEvent) =>
+                            //@ts-ignore
+                            setPhone(e.target.value)
+                          }
+                          mask="(999) 999-9999"
+                          placeholder="(999) 999-9999"
+                          className="inputMaskServ"
+                          //@ts-ignore
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="second-square">
+                    <textarea
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                      }}
+                      value={message}
+                      placeholder="Message..."
+                    ></textarea>
+                  </div>
+                  <div onClick={handleEmailChange} className="btn-send">
+                    <button>Get a quote</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div className="contact-questions">
-              <div className="first-square">
+            <div ref={formDeviceRef} className="contact-form-device">
+              <div className="request-service">
+                <span id="mobilerequest">REQUEST A SERVICE</span>
+              </div>
+              <span>Get a Quote</span>
+              <div className="form-device">
                 <input
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
                   }}
                   placeholder="Name..."
-                  id="name"
                   type="text"
-                ></input>
-                <div className="email-phone">
-                  <input
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    placeholder="E-mail..."
-                    id="email"
-                    type="text"
-                  ></input>
-
-                  <div className="containerInputMask">
-                    <InputMask
-                      value={phone}
-                      onChange={(e: InputMaskChangeEvent) =>
-                        //@ts-ignore
-                        setPhone(e.target.value)
-                      }
-                      mask="(999) 999-9999"
-                      placeholder="(999) 999-9999"
-                      className="inputMaskServ"
+                />
+                <input
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  placeholder="E-mail..."
+                  type="text"
+                />
+                <div className="containerInputMaskPhone">
+                  <InputMask
+                    value={phone}
+                    onChange={(e: InputMaskChangeEvent) =>
                       //@ts-ignore
-                    />
-                  </div>
+                      setPhone(e.target.value)
+                    }
+                    mask="(999) 999-9999"
+                    placeholder="(999) 999-9999"
+                    className="inputMaskServ"
+                    //@ts-ignore
+                  />
                 </div>
-              </div>
-              <div className="second-square">
                 <textarea
                   onChange={(e) => {
                     setMessage(e.target.value);
@@ -719,91 +794,46 @@ export default () => {
                 ></textarea>
               </div>
               <div onClick={handleEmailChange} className="btn-send">
-                <button>Get a quote</button>
+                <button>Send</button>
               </div>
             </div>
-          </form>
-        </div>
-        <div ref={formDeviceRef} className="contact-form-device">
-          <div className="request-service">
-            <span id="mobilerequest">REQUEST A SERVICE</span>
-          </div>
-          <span>Get a Quote</span>
-          <div className="form-device">
-            <input
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-              placeholder="Name..."
-              type="text"
-            />
-            <input
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              placeholder="E-mail..."
-              type="text"
-            />
-            <div className="containerInputMaskPhone">
-              <InputMask
-                value={phone}
-                onChange={(e: InputMaskChangeEvent) =>
-                  //@ts-ignore
-                  setPhone(e.target.value)
-                }
-                mask="(999) 999-9999"
-                placeholder="(999) 999-9999"
-                className="inputMaskServ"
-                //@ts-ignore
-              />
-            </div>
-            <textarea
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              value={message}
-              placeholder="Message..."
-            ></textarea>
-          </div>
-          <div onClick={handleEmailChange} className="btn-send">
-            <button>Send</button>
-          </div>
-        </div>
 
-        {/* <div className="certified">
-          <div className="img-certified">
-            <img src={Certified} alt="certified" />
+            {/* <div className="certified">
+        <div className="img-certified">
+          <img src={Certified} alt="certified" />
+        </div>
+      </div> */}
+            <Footer />
           </div>
-        </div> */}
-        <Footer />
-      </div>
 
-      <Dialog
-        header="Warning"
-        visible={errorEmail}
-        className="dialogWarn"
-        onHide={() => setErrorEmail(false)}
-        footer={errDialog}
-      >
-        <p className="m-0">
-          Kindly complete all the required fields to submit your inquiry to the
-          company.
-        </p>
-      </Dialog>
-      <Dialog
-        header="Success"
-        visible={successEmail}
-        className="dialogSuccess"
-        onHide={() => setSuccessEmail(false)}
-        footer={successDialog}
-      >
-        <p className="m-0">
-          Your inquiry has been forwarded to the company. We will be in touch
-          with you shortly.
-        </p>
-      </Dialog>
-    </div>
+          <Dialog
+            header="Warning"
+            visible={errorEmail}
+            className="dialogWarn"
+            onHide={() => setErrorEmail(false)}
+            footer={errDialog}
+          >
+            <p className="m-0">
+              Kindly complete all the required fields to submit your inquiry to
+              the company.
+            </p>
+          </Dialog>
+          <Dialog
+            header="Success"
+            visible={successEmail}
+            className="dialogSuccess"
+            onHide={() => setSuccessEmail(false)}
+            footer={successDialog}
+          >
+            <p className="m-0">
+              Your inquiry has been forwarded to the company. We will be in
+              touch with you shortly.
+            </p>
+          </Dialog>
+        </div>
+      ) : (
+        <MobileServices />
+      )}
+    </>
   );
 };

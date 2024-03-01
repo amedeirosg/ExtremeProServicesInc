@@ -1,0 +1,232 @@
+.mobile-subheader{
+    width: 100%;
+    height: 15rem;
+}
+
+.mobile-subheader img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-painting-services{
+    height: auto;
+    padding:1rem;
+    border:1px solid red;
+}
+
+.mobile-painting-title{
+    text-align: center;
+    font-size:1.4em;
+    font-weight: bold;
+}
+
+.mobile-interior-painting,.mobile-exterior-painting{
+    text-align: center;
+    padding:1rem;
+    font-size:1.2em;
+    color:#0aa3d6 ;
+    font-weight: bold;
+}
+
+.mobile-about-interior-painting,.mobile-about-exterior-painting{
+    text-align: center;
+    line-height: 2rem;
+}
+
+.mobile-images-interior-painting,.mobile-images-exterior-painting{
+    height: 30rem;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-before-img-painting,.mobile-after-img-painting{
+    height: 12rem;
+}
+
+.mobile-before-img-painting img, .mobile-after-img-painting img{
+    width: 100%;
+    height: 100%;
+    border-radius:1rem;
+}
+
+.mobile-pw img{
+    width: 100%;
+}
+
+.mobile-title-pw{
+    text-align: center;
+    font-weight: bold;
+}
+
+#washingcolor{
+    color:#0aa3d6;
+    font-weight: bold;
+}
+
+#servicecolor-font{
+    font-family: Allura;
+    font-size:2em;
+}
+
+.mobile-about-pw{
+    text-align: center;
+    line-height: 2rem;
+}
+
+.mobile-about-obspw{
+    padding:1rem;
+}
+
+#obspw{
+    font-size:1.3em;
+    font-weight: bold;
+}
+
+.mobile-ul-li-pw{
+    line-height: 2rem;
+    padding:1rem;
+}
+
+.mobile-imgs-pw{
+    height: 30rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mobile-whatis-pw{
+    text-align: center;
+    line-height: 2rem;
+}
+
+.mobile-drywall-repair{
+    padding:1rem;
+}
+
+.mobile-dw-title{
+    text-align: center;
+    font-size:1.4em;
+    font-weight: bold;
+    margin-top:2rem;
+}
+
+.mobile-dw-repair-info{
+    height: 15rem;
+    padding:1rem;
+}
+
+.mobile-dw-repair-info img{
+    width: 100%;
+    height: 100%;
+    border-radius:1em;
+}
+
+.mobile-dw-about-dw{
+    text-align: center;
+    line-height: 2em;
+    margin-top:1rem;
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+.mobile-CS img{
+    width: 100%;
+}
+
+.mobile-cs-title{
+    text-align: center;
+    font-size:1.4em;
+    font-weight: bold;
+}
+
+.mobile-cs-subtitle{
+    text-align: center;
+    font-size:1.2em;
+    font-weight: 600;
+    padding:1.5rem;
+    line-height: 2rem;
+}
+
+.mobile-do-cs{
+    text-align: center;
+    font-size:1.4em;
+    font-weight: bold;
+}
+
+.mobile-explanation-cs{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding:1rem;
+    margin-top:3rem;
+    text-align: center;
+}
+
+.mobile-regular-cleaning,.mobile-deep-cleaning,.mobile-mio-cleaning,.mobile-postc-cleaning{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding:1rem;
+    margin-top:3rem;
+    text-align: center;
+
+}
+
+#regularcleaning{
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+.mobile-cleaning{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#0aa3d6;
+    margin-top:1rem;
+}
+
+.cleaning{
+    width: 4rem;
+    height: 4rem;
+}
+
+.mobile-cs-subexp{
+    margin-top:1.5rem;
+    line-height: 2rem;
+}
+
+.mobile-comm-cleaning{
+    font-size: 1.4em;
+}
+
+.mobile-title-comm-cleaning{
+    text-align: center;
+    font-weight: bold;
+}
+
+#commcleaning{
+    color:#0aa3d6;
+    font-family: Allura;
+    font-size:1.8em;
+}
+
+.mobile-comm-cleaning-img img{
+    border-radius: 1em;
+}
+
+.mobile-deskc-areas{
+    padding:0 0 0 1rem;
+    margin-top:2rem;
+    line-height: 3rem;
+    display:flex;
+    flex-direction: column;
+}
+
