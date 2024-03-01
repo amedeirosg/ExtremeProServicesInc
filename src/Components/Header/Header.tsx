@@ -4,14 +4,14 @@ import { useContext, useEffect, useState } from "react";
 
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
-import Instagram from "../../SVGs/InstIco.tsx";
+import Instagram from "../../assets/SVGs/InstIco.tsx";
 //@ts-ignore
-import TikTokIcon from "../../SVGs/TiktokIco.tsx";
+import TikTokIcon from "../../assets/SVGs/TiktokIco.tsx";
 //@ts-ignore
 import HomeIcon from "@mui/icons-material/Home";
-import PhoneIco from "../../SVGs/PhoneIco.tsx";
-import MailIco from "../../SVGs/MailIco.tsx";
-import FbIco from "../../SVGs/FbIco.tsx";
+import PhoneIco from "../../assets/SVGs/PhoneIco.tsx";
+import MailIco from "../../assets/SVGs/MailIco.tsx";
+import FbIco from "../../assets/SVGs/FbIco.tsx";
 //@ts-ignore
 import LogoHeader from "../../assets/LogoIcoHeader.png";
 //@ts-ignore

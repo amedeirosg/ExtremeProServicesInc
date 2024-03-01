@@ -20,13 +20,111 @@ import ExamplePressure2 from "../../assets/pw.jpg";
 import DWRepair from "../../assets/DRYWALLREPAIR.JPG";
 //@ts-ignore
 import CSDivisor from "../../assets/water.png";
-import Cleaning from "../../SVGs/Cleaning.tsx";
-import DeepCleaning from "../../SVGs/DeepCleaning.tsx";
-import Truck from "../../SVGs/Truck.tsx";
-import PostConstruct from "../../SVGs/PostConstruct.tsx";
+import Cleaning from "../../assets/SVGs/Cleaning.tsx";
+import DeepCleaning from "../../assets/SVGs/DeepCleaning.tsx";
+import Truck from "../../assets/SVGs/Truck.tsx";
+import PostConstruct from "../../assets/SVGs/PostConstruct.tsx";
 //@ts-ignore
+import Carpet from "../../assets/carpetcleaning.png";
+//@ts-ignore
+import Desk from "../../assets/deskcleaning.png";
+//@ts-ignore
+import Trash from "../../assets/trash.png";
+//@ts-ignore
+import Window from "../../assets/windowcleaning.png";
+//@ts-ignore
+
 import CommCleaning from "../../assets/commercialCleaning2.png";
+import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
+import { useState } from "react";
+import { Button } from "primereact/button";
+import { Dialog } from "primereact/dialog";
+import Footer from "../Footer/Footer.tsx";
+import emailjs from "@emailjs/browser";
 export default () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string | undefined>();
+  const [message, setMessage] = useState<string>("");
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [successEmail, setSuccessEmail] = useState(false);
+
+  const errDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setErrorEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
+
+  const successDialog = (
+    <div>
+      <Button
+        label="Ok"
+        icon="pi pi-check"
+        onClick={() => setSuccessEmail(false)}
+        autoFocus
+      />
+    </div>
+  );
+
+  const handleEmailChange = (e: any) => {
+    e.preventDefault();
+    //@ts-ignore
+    const isValid = emailRegex.test(email);
+    console.log(name, email, message, phone);
+    if (
+      //@ts-ignore
+      name == "" ||
+      //@ts-ignore
+      email == "" ||
+      //@ts-ignore
+      message == "" ||
+      phone == ""
+    ) {
+      setErrorEmail(true);
+      return;
+    }
+
+    const templateParams = {
+      //@ts-ignore
+      from_name: name,
+      //@ts-ignore
+      message: message,
+      //@ts-ignore
+      email: email,
+      //@ts-ignore
+
+      phone: phone,
+    };
+
+    emailjs
+      .send(
+        "service_blnwoe5",
+        "template_7bjrdzd",
+        templateParams,
+        "9AWbd-Dofntnu35lF"
+      )
+      .then(
+        (res) => {
+          console.log("Email sent!", res.status, res.text);
+          setName("");
+          setPhone("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("ERROR:", err);
+        }
+      );
+
+    setSuccessEmail(true);
+  };
+
   return (
     <div className="mobile-services">
       <HeaderSmall />
@@ -217,17 +315,136 @@ export default () => {
               <img src={CommCleaning} alt="CommCleaning" />
             </div>
             <div className="mobile-deskc-areas">
-                <span><b>1.</b> Cleaning carpets as needed.</span>
-                <span><b>2.</b> Cleaning computer screens and dusting keyboards.</span>
-                <span><b>3.</b> Cleaning windows and mirrors.</span>
-                <span><b>4.</b> Disinfecting high-touch surfaces.</span>
-                <span><b>5.</b> Dusting desks, shelves, and other surfaces.</span>
-                <span><b>6.</b> Emptying recycspanng bins and trash cans.</span>
-                <span><b>7.</b> Vacuuming carpets daily.</span>
+              <span>
+                <b>1.</b> Cleaning carpets as needed.
+              </span>
+              <span>
+                <b>2.</b> Cleaning computer screens and dusting keyboards.
+              </span>
+              <span>
+                <b>3.</b> Cleaning windows and mirrors.
+              </span>
+              <span>
+                <b>4.</b> Disinfecting high-touch surfaces.
+              </span>
+              <span>
+                <b>5.</b> Dusting desks, shelves, and other surfaces.
+              </span>
+              <span>
+                <b>6.</b> Emptying recycspanng bins and trash cans.
+              </span>
+              <span>
+                <b>7.</b> Vacuuming carpets daily.
+              </span>
             </div>
           </div>
         </div>
+        <div className="mobile-imgs-services-above">
+          <div className="mobile-css-img">
+            <span>Carpet Cleaning/Vacuum</span>
+            <div className="mobile-each-imgs">
+              <img src={Carpet} alt="Carpet" />
+            </div>
+          </div>
+          <div className="mobile-css-img">
+            <span>Cleaning desks and sreens</span>
+            <div className="mobile-each-imgs">
+              <img src={Desk} alt="Carpet" />
+            </div>
+          </div>
+          <div className="mobile-css-img">
+            <span>Recycling Bins/Trash Cans</span>
+            <div className="mobile-each-imgs">
+              <img src={Trash} alt="Carpet" />
+            </div>
+          </div>
+          <div className="mobile-css-img">
+            <span>Cleaning Window</span>
+            <div className="mobile-each-imgs">
+              <img src={Window} alt="Carpet" />
+            </div>
+          </div>
+        </div>
+        <div className="mobile-contact-us">
+          <div className="mobile-get-started">
+            <span>Call us today to get started</span>
+          </div>
+          <div className="mobile-contact-form">
+            <div className="mobile-area-insert">
+              <div className="mobile-name">
+                <input
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  type="text"
+                  placeholder="Name..."
+                ></input>
+              </div>
+              <div className="mobile-mail-input">
+                <input
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  type="text"
+                  placeholder="Email..."
+                ></input>
+              </div>
+              <div className="mobile-phone-input">
+                <InputMask
+                  value={phone}
+                  onChange={(e: InputMaskChangeEvent) =>
+                    //@ts-ignore
+                    setPhone(e.target.value)
+                  }
+                  mask="(999) 999-9999"
+                  placeholder="(999) 999-9999"
+                  className="mobileInputMaskComp"
+                  //@ts-ignore
+                />
+              </div>
+              <div className="mobile-message-text">
+                <textarea
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  placeholder="Message..."
+                ></textarea>
+              </div>
+              <div className="mobile-send-button">
+                <button onClick={handleEmailChange}>Get free estimate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
       </section>
+      <Dialog
+        header="Warning"
+        visible={errorEmail}
+        className="dialogWarn"
+        onHide={() => setErrorEmail(false)}
+        footer={errDialog}
+      >
+        <p className="m-0">
+          Kindly complete all the required fields to submit your inquiry to the
+          company.
+        </p>
+      </Dialog>
+      <Dialog
+        header="Success"
+        visible={successEmail}
+        className="dialogSuccess"
+        onHide={() => setSuccessEmail(false)}
+        footer={successDialog}
+      >
+        <p className="m-0">
+          Your inquiry has been forwarded to the company. We will be in touch
+          with you shortly.
+        </p>
+      </Dialog>
     </div>
   );
 };

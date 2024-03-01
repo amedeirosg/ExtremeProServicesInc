@@ -12,7 +12,6 @@
 .mobile-painting-services{
     height: auto;
     padding:1rem;
-    border:1px solid red;
 }
 
 .mobile-painting-title{
@@ -91,7 +90,7 @@
 }
 
 .mobile-imgs-pw{
-    height: 30rem;
+    height: 37rem;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -230,3 +229,161 @@
     flex-direction: column;
 }
 
+.mobile-imgs-services-above{
+    height: 70rem;
+}
+
+.mobile-each-imgs {
+    padding:1rem;
+    margin-top:1rem;
+    filter:brightness(50%)
+}
+
+.mobile-each-imgs img{
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-css-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-css-img span{
+    position: absolute;
+    z-index:1;
+    padding:1rem;
+    color:white;
+    font-weight: bold;
+    font-size:1.4em;
+}
+
+.mobile-contact-us{
+    border:1px solid #0aa3d6;
+    height: 60rem;
+    padding:1rem;
+    margin-bottom:1.5rem;
+}
+
+.mobile-get-started{
+    padding:1rem;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.mobile-contact-form{
+    border:1px solid #0aa3d6;
+    height: 52rem;
+    border-radius:0.4rem;
+    padding:1rem;
+}
+
+.mobile-name,.mobile-mail-input,.mobile-phone-input,.mobile-message-text{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-name input,.mobile-mail-input input,.mobileInputMaskComp{
+    all:unset;
+    border:1px solid #5795aa;
+    padding:1rem;
+    width: 100vw;
+    border-radius:0.4rem;
+}
+
+.mobile-area-insert{
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.mobile-message-text{
+    height: 15rem;
+    display:flex;
+}
+
+.mobile-message-text textarea{
+    all:unset;
+    border:1px solid #0aa3d6;
+    padding:1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+.mobile-send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-send-button button {
+    all:unset;
+    width: 100vw;
+    padding:1rem;
+    border-radius:1rem;
+    border: 1px solid #0aa3d6;
+    text-align: center;
+    font-weight: bold;
+    font-size:1.3em;
+    background: #0aa3d6;
+    box-shadow: 1px 1px 10px 2px #0aa3d6;
+    animation: animar ;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 20px 5px rgba(10, 163, 214, 0.5);
+}
+
+::-webkit-input-placeholder { 
+    font-size: 1.1rem; 
+  }
+
+
+@media  (min-width:767px) {
+    .mobile-images-interior-painting,.mobile-images-exterior-painting{
+        align-items: center;
+    }
+
+    .mobile-before-img-painting,.mobile-after-img-painting,.mobile-before{
+        width: 50%;
+    }
+
+    .mobile-pw{
+        height: 100rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .mobile-imgs-pw{
+        width: 30rem;
+        height: 45rem;
+    }
+    
+
+    .mobile-drywall-repair,.mobile-comm-cleaning,.mobile-imgs-services-above{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-dw-repair-info,.mobile-comm-cleaning-img,.mobile-css-img{
+        justify-content: center;
+        width: 30rem;
+    }
+    
+    .mobile-contact-us{
+        margin-top:20rem;
+    }
+
+
+}

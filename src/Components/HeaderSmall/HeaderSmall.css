@@ -2,12 +2,14 @@
     position: absolute;
     top:1rem;
     left: 1rem;
+}
+
+.wrapper{
     width: 2.5rem;
     height: 2rem;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .options{
@@ -46,7 +48,6 @@
 .burger-menu[data-state="close"] .burger-menu-options{
     display:none;
 }
-
 
 .containerHeaderSmall{
     width: 100vw;

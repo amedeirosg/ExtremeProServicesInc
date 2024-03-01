@@ -1,26 +1,30 @@
 import "./HeaderSmall.css";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-
+import { useContext, useRef } from "react";
 import Contexts from "../../Contexts/Context";
 //@ts-ignore
-import Instagram from "../../SVGs/InstIco.tsx";
+import Instagram from "../../assets/SVGs/InstIco.tsx";
 //@ts-ignore
-import TikTokIcon from "../../SVGs/TiktokIco.tsx";
+import TikTokIcon from "../../assets/SVGs/TiktokIco.tsx";
 //@ts-ignore
 import HomeIcon from "@mui/icons-material/Home";
 import CleaningIcon from "@mui/icons-material/CleaningServices";
 import Contact from "@mui/icons-material/RecentActors";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
-import LogoIco from "../../SVGs/LogoIco.tsx";
+import LogoIco from "../../assets/SVGs/LogoIco.tsx";
 //@ts-ignore
 import LogoHeader from "../../assets/LogoIcoHeader.png";
+import useOutsideClick from "../../Hooks/UseOutsideClick.tsx";
 //@ts-ignore
 import { slide as Menu } from "react-burger-menu";
 export default () => {
   const goTo = useNavigate();
-  //@ts-ignore
+
+  const burgerMenuRef = useRef(null);
+
+  useOutsideClick(burgerMenuRef);
+
   const {
     //@ts-ignore
     facebookLink,
@@ -41,8 +45,6 @@ export default () => {
   const handleMenuClick = () => {
     const burgerMenu = document.getElementById("burgermenu");
     const currentState = burgerMenu?.getAttribute("data-state");
-
-    console.log("acessou");
 
     if (currentState == "close") burgerMenu?.setAttribute("data-state", "open");
     if (currentState == "open") burgerMenu?.setAttribute("data-state", "close");
@@ -67,17 +69,19 @@ export default () => {
         </div>
       </div>
       <div
+        ref={burgerMenuRef}
         className="burger-menu"
         id="burgermenu"
         data-state="close"
-        onClick={() => handleMenuClick()}
       >
-        <div className="bar-burger-menu"></div>
-        <div className="bar-burger-menu"></div>
-        <div className="bar-burger-menu"></div>
+        <div className="wrapper" onClick={() => handleMenuClick()}>
+          <div className="bar-burger-menu"></div>
+          <div className="bar-burger-menu"></div>
+          <div className="bar-burger-menu"></div>
+        </div>
         <div className="burger-menu-options">
           <div className="options">
-            <LogoIco/>
+            <LogoIco />
             <div className="eachoption">
               <HomeIcon />
               <span>Home</span>
