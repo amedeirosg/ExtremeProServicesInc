@@ -1,0 +1,82 @@
+.burger-menu{
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    width: 2.5rem;
+    height: 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.options{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25rem;
+    justify-content: space-between;
+}
+
+.eachoption{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7rem;
+}
+
+.bar-burger-menu{
+    width: 100%;
+    border:0.2rem solid black;
+    position: block;
+}
+
+.burger-menu-options{
+    position: absolute;
+    top:3rem;
+    padding:1rem;
+    left:-1rem;
+    border-radius: 0.4rem;
+    background:  linear-gradient(to bottom, rgba(10, 163, 214),  20%, #ffffff );
+    height: 100vh;
+    width: 10rem;
+    z-index:1;
+}
+
+.burger-menu[data-state="close"] .burger-menu-options{
+    display:none;
+}
+
+
+.containerHeaderSmall{
+    width: 100vw;
+    height: 15rem;
+    background-color: #0aa3d6;;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-small-logo-img{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-small-get-free-quote button {
+    all:unset;
+    text-align: center;
+    padding:0.4rem;
+    width: 15rem;
+    background-color: #0aa3d6;
+    border-radius:0.4rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px 1px #087da3 ;
+    cursor:pointer;
+    animation: animar;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}

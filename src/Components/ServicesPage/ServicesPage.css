@@ -635,728 +635,185 @@
 }
 
 
-@media(max-width:1530px){
-    .containerImgServices{
+#pressureImagePc{
+    display:relative;
+}
+
+#pressureImagePhone{
+    display:none;
+}
+
+/* Celulares */
+
+@media screen and (max-width: 1000px){
+
+    /* Subheader of header */
+    .containerSubHeader{
+        height: 15rem;
         width: 100%;
-        height: 70vh;
     }
-
-}
-
-@media(max-width:1490px){
- 
-    .containerRightContentCleaning{
-        margin-bottom: 15vh;
-    }
-
-    .containerPressureWashing{
-        justify-content: center;    
-    }
-}
-
-
-@media(max-width:1310px){
-    .containerDryWallContent{
-        width: 100vw;
-        justify-content: space-evenly;
-    }
-
-    .containerDrywallTxt{
-        width: 50vw;
-    }
-}
-
-@media (max-width:1290px){
-    .containerRightSideImg{
-        margin-left:0;
-    }
-    .containerTxtCommCleaning{
-        width: 100vh;
-        height: 50vh;
-  
-    }
-  
-}
-
-@media(max-width:1150px){
-    .containerTxtCommCleaning{
-        width: 115vh;
-        height: 50vh;
-       
-    }
-
-    .containerRightContentCleaning{
-        justify-content: center;
-        width: 29.5rem;
-    }
-
-    .containerRightDescServices{
-        font-size:18px;
-        margin-left:0vh;
-    }
-}
-
-
-@media(max-width:1100px){
     .containerSubHeaderImg{
-        height: 50vh;
-    }
-    .containerTitleSH{
-        font-size:40px;
+        width: 100%;
     }
 
-    .containerTxtCommCleaning{
-        width: 100vh;
-        height: 50vh;
+    .subtitle-interior-painting,.subtitle-exterior-painting{
+        width: 100%;
+        text-align: center;
     }
-}
 
-@media(max-width:1055px){
-    .containerPressureWashing{
+    .interior-img-painting,.exterior-img-painting{
         flex-direction: column;
+        width: 100%;
+        height: 70rem;
         justify-content: center;
         align-items: center;
-    }
-    .containerSideImgFirst{
-        margin-bottom: 6vh;
-    }
-
-    #firstimgside{
-        margin-top:6vh;
-    }
-    .containerTxtPressureW{
-        margin-top:20vh;
-        text-align: center;
-        width: 100vw;
-        font-size:22px;
-        color:black;
-    }
-
-    .containerImgServices{
-        height: 60vh;
-    }
-    .area-img{
-        width: 110vh;
-    }
-    .img-left, .img-right{
-        width: 40vh;
-        height: 20vh;
-    }
-}
-
-@media(max-width:1000px){
-    .containerDryWallContent{
-        flex-direction: column;
-        align-items: center;
-    }
-    .containerDrywallTxt{
-        width: 90%;
-    }
-    .containerCleaningServices{
-        margin-top:0;
-    }
-    #phoneServices{
-        visibility: visible;
-    }
-    #pc{
-        display: none;
-    }
-    .containerImgServices{
-        text-align: center;
-        width: 70vh;
-        height: 75vh;
-        margin-top:-10vh;
-    }
-
-    .containerTxtCommCleaning{
-        flex-direction: column;
-        height: 100vh;
-        width: 80vh;
-        align-items: center;
-    }
-
-  
-
-    .containerTitleRight{
-        width: 50vh;
-    }
-}
-
-@media(max-width:910px){
-
-
-    .resume-interior-painting, .resume-exterior-painting{
-        height: 95vh;
-    }
-    .subtitle-interior-painting,.subtitle-exterior-painting{
-        width: 90vh;
-    }
-    .interior-img-painting, .exterior-img-painting{
-        flex-direction: column;
-        align-items: center;
-        height: 60vh;
     }
 
     .interior-left-img, .interior-right-img, .exterior-left-img, .exterior-right-img{
-        width: 40vh;
-        height: 25vh;
-        margin-bottom: 10vh;
+        width: 20rem;
+        height: 14rem;
+        box-shadow: none;
     }
 
-    .containerImgSlice{
-        margin-top:40vh;
+    .containerImgStyle{
+        z-index:-1;
     }
 
     .containerPressureWashing{
-        margin-top:-15vh;
-    }
-    
-    .containerTxtPressureW{
-        margin-top:20vh;
-        text-align: center;
-        width: 100vw;
-        font-size:16px;
-        color:black;
-    }
-
-    .containerCleaningServices{
-        margin-top:50vh;
-    }
-    .containerImgDrywall{
-        width: 30vw;
-        height: 30vw;
-    }
-
-    .containerDrywallTxt{
-        font-size:16px;
-        
-    }
-    .containerDryWallContent{
-        height: 400vh;
-    }
-
-    .containerImgServices{
-        width: 60vh;
-        height: 70vh;
-    }
-
-}
-
-
-@media(max-width:900px){
-    .interior-img-painting,.exterior-img-painting{
         width: 100%;
-    }
-}
-
-@media(max-width:810px){
-    .subtitle-interior-painting,.subtitle-exterior-painting{
-        width: 80vh;
-    }
-    .containerImgSlice{
-        height: 45vw;
-        margin-top:50vh;
-    }
-
-    .contact-questions{
-        height: 35rem;
-    }
-
-    .contact-form{
-        height: 1220vh;
-        width: 70vh;
-    }
-
-    .inputMaskServ{
-        width: 26vh;
-    }
-}
-
-
-@media(max-width: 745px){
-
-   
-
-    .img-left, .img-right{
-        width: 35vh;
-        height: 20vh;
-    }
-    .left-title, .right-title{
-        margin-top:12.8vh;
-    }
-
-    .containerSubHeaderImg{
-        height: 30vh;
-        margin-top:-15vh;
-    }
-    .containerTitleSH{
-        margin-top:-25vh;
-        font-size:30px;
-    }
-    .containerPaintingService{
-        margin-top:-15vh;
-    }
-    
- 
-
-}
-
-@media(max-width:717px){
-    .containerSubHeader{
-        margin-top:7.5rem;
-    }
-    .containerTitleSH{
-        margin-top:-35vh;
-    }
-
-    .containerRightSideImg{
-        width: 100%;
-    }
-
-}
-
-
-@media(max-width: 700px){
-   
-    .subtitle-interior-painting,.subtitle-exterior-painting{
-        width: 70vh;
-        font-size:16px;
-    }
-
-    .containerTxtCommCleaning{
-        width: 60vh;
-    }
-
-    .containerLeftContentCleaning{
-        width: 40vh;
-    }
-
-    .area-img{
-        height: 110vh;
-    }
-
-    .first-line,.second-line{
+        margin-top:25rem;
         flex-direction: column;
-        align-items: center;
-        height: 60vh;
     }
 
-    .contact-area{
-        margin-top:55vh;
-        height: 90vh;
-    }
-
-    .contact-questions{
-        height: 60vh;
-    }
-
-  
-   
-    .containerServicesPage{
-        height: 958vh;
-    }
-
-    .img-certified{
-        width: 40vh;
-        margin-top:70vh;
-    }
-    
-
-
-}
-
-@media(max-width:635px){
-
-  
-    .left-title, .right-title{
-        font-size:15px;
-    }
-
-    .containerImgPW{
-        width:80vw;
-        height: 45vw;
-    }
     .containerRightSideImg{
+        width: 100%;
+        margin-left:0;
+        justify-content: center;
         align-items: center;
     }
+
 
     .containerSideImgFirst, .containerSideImgTwo{
-        width: 60vw;
-    }
-
-    #phoneServices{
-        display:none;
-    }
-    #phoneServices2{
-        visibility: visible;
-    }
-  
-
-}
-
-@media(max-width: 610px){
-    .form-device{
-        width: 50vh;
-    }
-    .subtitle-interior-painting,.subtitle-exterior-painting{
-        width: 80vw;
-    }
-    .containerTxtPressureW{
-        margin-top:10vh;
-    }
-
-    .containerImgServices{
-        width: 55vh;
-        height: 65vh;
-    }
-
-    .contact-form{
-        width: 100%;
-    }
-
-    .contact-area{
-        display:none;
-    }
-
-    .contact-form-device{
-        display:flex;
-        margin-top: 50vh;
-    }
-
-    .containerInputMaskPhone .inputMaskServ{
-        width: 93.5%;
-    }
-
-}
-
-@media(max-width:530px){
-    .containerTxtCommCleaning{
-        align-items: center;
-        justify-content: center;
-        width: 50vh;
-    }
-    .form-device{
-        width: 45vh;
-    }
-    
-   
-
-    .containerRightContentCleaning{
-        width: 50vh;
-    }
-    #mobilerequest {
-        font-size:22px;
-        font-weight: bold;
-    }
-
-    .form-device{
-        align-items: center;
-        height: 50vh;
-    }
-    
-    
-    .form-device input{
-      width: 70%;
-    }
-    
-    .form-device textarea{
-      width: 80%;
-      height: 20vh;
-        
-    }
-    
-    .contact-form-device button{
-        margin-top:-8vh;
-    }
-
-    .request-service #desktop{
-        display: none;
-    }
-
-    .containerInputMaskPhone .inputMaskServ{
-        width:30vh;
-    }
-}
-
-
-@media(max-width:480px){
-    .containerRightContentCleaning{
-        width: 40vh;
-    }
-    .containerTxtCommCleaning{
-        width: 50vh;
-    }
-
-
-}
-
-@media(max-width:465px){
-    .exterior-left-img,.exterior-right-img, .interior-left-img, .interior-right-img{
         width: 20rem;
+    
     }
-}
+    .containerSideImgFirst img{
+        width: 100%;
+    }
 
-@media(max-width:440px){
+    .containerTxtPressureW{
+        margin-top:4rem;
+    }
 
- 
-    .containerRightContentCleaning{
+    #pressureImagePc{
+        display:none;
+    }
+    
+    #pressureImagePhone{
+        display:flex;
+    }
+    .containerCleaningServices{
+        margin-top:75rem;
+    }
+
+    .containerDryWallContent{
+        width: 100%;
+        height: 50rem;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-    .containerCleaningTitle{
-        font-size:28px;
-    }
-
-
-    .containerSubTitleCleaning,.containerCleaningMakeShine{
-       font-size:18px;
-    }
-
-    .containerRightDescServices{
-        width: 100%;
-        margin-left:5vh;
-    }
-
-    .containerTxtCommCleaning{
-        width: 100%;
-        height:120vh;
-    }
-    .containerTitleRight{
-        font-size:24px;
-        width: 100%;
-    }
-    .containerImgServices{
-        padding:5vh;
-        height: 70vh;
-    }
-
-    .containerTitleSH{
-        margin-top:-25vh;
-    }
-    .containerImgDrywall{
-        width: 100%;
-        height: 25vh;
     }
 
     .containerDrywallTxt{
-        margin-top:5vh;
+        width: 100%;
+        text-align: center;
+        margin-top:2rem;
     }
 
-    .containerTxtPressureW{
-        margin-top:5vh;
+
+    
+    .containerServicesCleaningImg{
+        width: 100%;
+        height: 55rem;
     }
 
-    .contact-form-device{
-        margin-top: 50rem;
-    }
-
-    .interior-left-img,.interior-right-img, .exterior-left-img, .exterior-right-img{
-        box-shadow: -10px -5px 0px 2px;
-    }
-}
-
-@media(max-width:390px){
-
-    .containerPressureWashing{
-        margin-top:0rem;
-    }
-
-    .containerCleaningServices{
-        margin-top:35rem;
-    }
-
-    .area-img{
-        margin-top:5rem;
-    }
-
-    .form-device{
-        width: 40vh;
-        
-    }
-   
-    #phoneServices2{
-        display:none;
+    #pc,#phoneServices,#phoneServices2{
+        display: none;
     }
 
     #phoneServices3{
         visibility: visible;
-    }
-    .containerImgServices{
-        height: 100vh;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        margin-top:-1vh;
+        height: 50rem;
     }
 
     .containerCommercialCleaning{
-        margin-top:4vh;
-    }
-
-    .containerImgServices img{
-       width: 100%;
-       height: 100vh;
-    }
-
-    .containerRightDescServices{
-        justify-content: center;
-        align-items: center;
-        width: 30vh;
-    }
-
-    .containerRightDescServices span{
-        margin-top:10vh;
-
-    }
-    
-    .containerInputMaskPhone .inputMaskServ{
-        width: 26vh;
-    }
-
-    .containerRightDescServices{
-        margin-left:1vh;
-    }
-
-}
-
-@media(max-width:375px){
-    .containerRightDescServices span{
-        margin-top:20vh;
-        
-    }
-
-    .area-img{
-        margin-top:20rem;
-    }
-
-    .containerPressureWashing{
-        margin-top:3rem;
-    }
-
-}
-
-@media(max-width:360px){
-    .containerRightDescServices span{
-        margin-top:20vh;
-    }
-
-    .area-img{
-        margin-top:13vh;
-    }
-
-    .form-device{
-        width: 30vh;
-    }
-
-
-    .exterior-left-img,.exterior-right-img, .interior-left-img, .interior-right-img{
-        width: 17rem;
-    }
-
-}
-
-
-@media(max-height: 900px){
-    .interior-img-painting,.exterior-img-painting{
-        width: 55rem;
-    }
-
-
-    .containerPressureWashing{
-        width: 100%;
-        display:flex;
-        justify-content: space-evenly;
-    }
-    
-    .containerCleaningServices{
-        margin-top:0rem;
-    }
-}
-
-
-@media(max-height: 850px){
-    .type-cleaning{
-        margin-top:5rem;
-    }
-
-    .contact-area{
         margin-top:10rem;
-    }
-
-    .containerHeaderScrolled{
-        height: 11.4rem;
-        transition: ease .5s;
-    }
-
- 
-    .containerImgStyle{
-        z-index:-999;
-    }
-
-    .containerPressureWashing{
-        margin-top:-22rem;
+        
     }
 
     .containerTxtCommCleaning{
         width: 100%;
-        height: 25rem;
+        flex-direction: column;
+        height: 50rem;
     }
 
-
-    .callus-today{
+    .containerRightContentCleaning{
         width: 100%;
     }
 
-
-}
-
-@media(max-height:780px){
-    .type-cleaning{
-        margin-top:10rem;
+    .containerLeftContentCleaning{
+        width: 100%;
     }
 
-    .interior-img-painting,.exterior-img-painting{
-        width: 50rem;
-    }
-}
-
-@media(max-height:676px){
-    .type-cleaning{
-        margin-top:0rem;
+    .containerRightDescServices{
+        margin-left:0;
     }
 
-    
-}
-
-@media(max-height:500px){
-    .form-device{
-        width: 90%;
-        height: 20rem;
-        display:flex;
-        justify-content: space-between;
+    .containerImgPW{
+        width: 100%;
         padding:1rem;
     }
 
+    .type-cleaning,.first-line,.second-line{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .first-line,.second-line{
+        height: 40rem;
+    }
+
+    .img-left,.img-right{
+        width: 100%;
+    }
+
     .area-img{
-        margin-top:35rem;
+        width: 100%;
+        margin-top:15rem;
     }
 
-    .contact-form-device{
-        margin-top:45rem;
+    .img-first-line{
+        width: 90vw;
     }
 
-    .area-img span{
-        font-size:0.8em;
-    }
-    
-    .containerCleaningServices{
-        margin-top:25rem;
+    .contact-area{
+        margin-top:63rem;
     }
 
-    .containerTxtPressureW{
-        margin-top:5rem;
+    .contact-form{
+        width:90vw;
+        height: 80vh;
     }
 
+}
 
+@media screen and (max-width: 390px){
+    .containerPressureWashing{
+        margin-top:36rem;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .containerPressureWashing{
+        margin-top:40rem;
+    }
 }

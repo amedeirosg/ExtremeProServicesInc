@@ -13,6 +13,8 @@ import BeforeExtImg from "../../assets/exteriorpainting.jpg";
 //@ts-ignore
 import PressureImg from "../../assets/PressureWashing.png";
 //@ts-ignore
+import PressureImg2 from "../../assets/pwashing2.png";
+//@ts-ignore
 import ExamplePressure from "../../assets/pw3.jpg";
 //@ts-ignore
 import ExamplePressure2 from "../../assets/pw.jpg";
@@ -514,7 +516,8 @@ export default () => {
         {/* @ts-ignore */}
         <div className="containerPressureWashing" ref={elMid}>
           <div className="containerImgPW">
-            <img src={PressureImg} alt="PressureImg.png" />
+            <img src={PressureImg} id="pressureImagePc"alt="PressureImg.png" />
+            <img src={PressureImg2} id="pressureImagePhone"alt="PressureImg.png" />
           </div>
           <div className="containerRightSideImg">
             <div id="firstimgside" className="containerSideImgFirst">

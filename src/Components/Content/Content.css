@@ -97,7 +97,6 @@
 }
 
 .containerPhoneAndLoc{
-    width: 12vw;
     height: 25vh;
     margin-top:9vh;
 }
@@ -108,7 +107,6 @@
     font-weight: 600;
     width: 8vh;
     justify-content: space-between;
-
 }
 
 
@@ -363,10 +361,11 @@
     .containerPhoneAndLoc{
         display:flex;
         flex-direction: row;
-        width: 10rem;
+        width: 25rem;
     }
     .containerLoc{
         margin-top:0;
+        width: 9rem;
     }
  
  }
