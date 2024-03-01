@@ -33,6 +33,10 @@
     position: block;
 }
 
+#bar1, #bar3{
+    transition: all ease-in .3s ;
+}
+
 .burger-menu-options{
     position: absolute;
     top:3rem;
@@ -45,7 +49,11 @@
     z-index:1;
 }
 
-.burger-menu[data-state="close"] .burger-menu-options{
+.burger-menu[data-state="open"] .burger-menu-options{
+    display:block;
+}
+
+.burger-menu-options{
     display:none;
 }
 
@@ -80,4 +88,39 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+}
+
+.burger-menu[data-state="open"] .wrapper #bar1{
+    transform: rotate(45deg);
+    transform-origin: top left ;
+}
+
+.burger-menu[data-state="open"] .wrapper #bar2{
+    visibility: hidden;
+}
+
+.burger-menu[data-state="close"] .wrapper #bar2{
+    /* animation: showBar ease-in .3s ; */
+    animation-name: showBar;
+    animation-duration: 0s;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.burger-menu[data-state="open"] .wrapper #bar3{
+    transform: rotate(-45deg) ;
+    transform-origin: bottom left ;
+}
+
+
+
+@keyframes showBar {
+    from{
+        filter: brightness(0%)
+    }
+    to{
+        filter: brightness(100%)
+    }
+
 }

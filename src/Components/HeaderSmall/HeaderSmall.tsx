@@ -25,28 +25,14 @@ export default () => {
 
   useOutsideClick(burgerMenuRef);
 
-  const {
-    //@ts-ignore
-    facebookLink,
-    //@ts-ignore
-    instagramLink,
-    //@ts-ignore
-    tiktokLink,
-    //@ts-ignore
-    contentRef,
-    //@ts-ignore
-    quoteRef,
-    //@ts-ignore
-    formDeviceRef,
-    //@ts-ignore
-    aboutRef,
-  } = useContext(Contexts);
+  const { contactMobileRef } = useContext<any>(Contexts);
 
   const handleMenuClick = () => {
     const burgerMenu = document.getElementById("burgermenu");
     const currentState = burgerMenu?.getAttribute("data-state");
 
-    if (currentState == "close") burgerMenu?.setAttribute("data-state", "open");
+    if (currentState == "close" || currentState == "init")
+      burgerMenu?.setAttribute("data-state", "open");
     if (currentState == "open") burgerMenu?.setAttribute("data-state", "close");
   };
 
@@ -59,8 +45,7 @@ export default () => {
             onClick={() => {
               goTo("/services");
               setTimeout(() => {
-                console.log(formDeviceRef);
-                formDeviceRef.current?.scrollIntoView({ behavior: "smooth" });
+                contactMobileRef.current?.scrollIntoView({ behavior: "smooth" });
               }, 100);
             }}
           >
@@ -72,12 +57,12 @@ export default () => {
         ref={burgerMenuRef}
         className="burger-menu"
         id="burgermenu"
-        data-state="close"
+        data-state="init"
       >
         <div className="wrapper" onClick={() => handleMenuClick()}>
-          <div className="bar-burger-menu"></div>
-          <div className="bar-burger-menu"></div>
-          <div className="bar-burger-menu"></div>
+          <div id="bar1" className="bar-burger-menu"></div>
+          <div id="bar2" className="bar-burger-menu"></div>
+          <div id="bar3" className="bar-burger-menu"></div>
         </div>
         <div className="burger-menu-options">
           <div className="options">

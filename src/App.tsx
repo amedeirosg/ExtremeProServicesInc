@@ -14,6 +14,7 @@ function App() {
   var quoteRef = useRef<HTMLDivElement | null>(null);
   var formDeviceRef = useRef<HTMLDivElement | null>(null);
   var aboutRef = useRef<HTMLDivElement | null>(null);
+  var contactMobileRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <Contexts.Provider
@@ -25,6 +26,7 @@ function App() {
           quoteRef,
           formDeviceRef,
           aboutRef,
+          contactMobileRef
         }}
       >
         <Router>

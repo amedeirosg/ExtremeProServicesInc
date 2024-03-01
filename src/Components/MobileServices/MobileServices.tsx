@@ -36,11 +36,12 @@ import Window from "../../assets/windowcleaning.png";
 
 import CommCleaning from "../../assets/commercialCleaning2.png";
 import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import Footer from "../Footer/Footer.tsx";
 import emailjs from "@emailjs/browser";
+import contexts from "../../Contexts/Context.tsx";
 export default () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -124,6 +125,8 @@ export default () => {
 
     setSuccessEmail(true);
   };
+
+  const { contactMobileRef } = useContext<any>(contexts);
 
   return (
     <div className="mobile-services">
@@ -365,7 +368,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="mobile-contact-us">
+        <div ref={contactMobileRef} className="mobile-contact-us">
           <div className="mobile-get-started">
             <span>Call us today to get started</span>
           </div>
