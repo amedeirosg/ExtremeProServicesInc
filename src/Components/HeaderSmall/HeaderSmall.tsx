@@ -9,7 +9,6 @@ import TikTokIcon from "../../assets/SVGs/TiktokIco.tsx";
 //@ts-ignore
 import HomeIcon from "@mui/icons-material/Home";
 import CleaningIcon from "@mui/icons-material/CleaningServices";
-import Contact from "@mui/icons-material/RecentActors";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
 import LogoIco from "../../assets/SVGs/LogoIco.tsx";
@@ -25,7 +24,7 @@ export default () => {
 
   useOutsideClick(burgerMenuRef);
 
-  const { contactMobileRef } = useContext<any>(Contexts);
+  const { contactMobileRef, aboutRef } = useContext<any>(Contexts);
 
   const handleMenuClick = () => {
     const burgerMenu = document.getElementById("burgermenu");
@@ -45,7 +44,9 @@ export default () => {
             onClick={() => {
               goTo("/services");
               setTimeout(() => {
-                contactMobileRef.current?.scrollIntoView({ behavior: "smooth" });
+                contactMobileRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
               }, 100);
             }}
           >
@@ -67,23 +68,27 @@ export default () => {
         <div className="burger-menu-options">
           <div className="options">
             <LogoIco />
-            <div className="eachoption">
+            <div onClick={() => goTo("/")} className="eachoption">
               <HomeIcon />
               <span>Home</span>
             </div>
-            <div className="eachoption">
+            <div onClick={() => goTo("/services")} className="eachoption">
               <CleaningIcon />
               <span>Services</span>
             </div>
-            <div className="eachoption">
+            <div onClick={() => goTo("/reviews")} className="eachoption">
               <ReviewsIcon />
               <span>Reviews</span>
             </div>
-            <div className="eachoption">
-              <Contact />
-              <span>Contact</span>
-            </div>
-            <div className="eachoption">
+            <div
+              onClick={() => {
+                goTo("/");
+                setTimeout(() => {
+                  aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+              className="eachoption"
+            >
               <InfoIcon />
               <span>About</span>
             </div>

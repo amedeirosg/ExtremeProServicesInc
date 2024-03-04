@@ -327,14 +327,14 @@ textarea:focus{
 
 
     .containerContactName input, .containerContactPhone .inputMask, .containerContactEmail input{
-        height:0vw;
+        height:1rem;
         font-size:10px;
         width: 100%;
     }
 
     .containerContactTxtService textarea{
         all:unset;
-        height:10vw;
+        height:5rem;
         font-size:10px;
         padding:0.5vw;
         border:1px solid gray;
@@ -345,9 +345,13 @@ textarea:focus{
     }
 
     .containerBtnSend{
-       width: 25vw;
-       height:3vh;
+       width: 10rem;
        font-size:12px;
+       padding:1rem;
+    }
+
+    .containerBtnSend button{
+        text-align: center;
     }
 
     .containerContactArea{
@@ -401,14 +405,13 @@ textarea:focus{
 
 
     .containerContactName input, .containerContactPhone .inputMask, .containerContactEmail input{
-        height:0vw;
         font-size:10px;
         width: 100%;
     }
 
     .containerContactTxtService textarea{
         all:unset;
-        height:10vw;
+        height:5rem;
         font-size:10px;
         padding:0.5vw;
         border:1px solid gray;
@@ -420,7 +423,6 @@ textarea:focus{
 
     .containerBtnSend{
        width: 25vw;
-       height:3vh;
        font-size:12px;
     }
 

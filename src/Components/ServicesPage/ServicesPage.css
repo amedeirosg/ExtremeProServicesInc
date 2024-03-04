@@ -72,7 +72,7 @@
 
 .interior-img-painting, .exterior-img-painting{
     margin-top:5vh;
-    width: 60rem;
+    width: 75rem;
     height: 30vh;
     display:flex;
     justify-content: space-between;
@@ -815,5 +815,12 @@
 @media screen and (max-width: 370px){
     .containerPressureWashing{
         margin-top:40rem;
+    }
+}
+
+
+@media screen and (width:1280px){
+    .interior-img-painting,.exterior-img-painting{
+        width: 52rem;
     }
 }

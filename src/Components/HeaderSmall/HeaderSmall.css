@@ -25,6 +25,12 @@
     align-items: center;
     justify-content: space-evenly;
     width: 7rem;
+    cursor: pointer;
+    transition: ease-out .3s ;
+}
+
+.eachoption:hover{
+    color:red;
 }
 
 .bar-burger-menu{

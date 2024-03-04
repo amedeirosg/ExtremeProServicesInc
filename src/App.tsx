@@ -26,7 +26,7 @@ function App() {
           quoteRef,
           formDeviceRef,
           aboutRef,
-          contactMobileRef
+          contactMobileRef,
         }}
       >
         <Router>

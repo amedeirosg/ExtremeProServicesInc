@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import { useEffect } from "react";
 
-export default function useOutsideClick(ref:any) {
+export default function useOutsideClick(ref: any) {
   useEffect(() => {
-    function handleClickOutside(event:any) {
+    function handleClickOutside(event: any) {
       if (ref.current && !ref.current.contains(event.target)) {
         const burgerMenu = document.getElementById("burgermenu");
         if (burgerMenu?.getAttribute("data-state") == "open")

@@ -32,6 +32,7 @@
     font-weight: 800;
     letter-spacing: 1vh;
     color:white;
+    
 }
 
 
@@ -346,10 +347,7 @@
     .reviews-backgroundimg-area{
         height: 80%;
     }
-    .reviews-backgroundimg-area{
- 
-        margin-top:10.5rem;
-    }
+
 }
 
 @media(max-width:650px){
@@ -360,7 +358,7 @@
 
 @media(max-width:580px){
     .reviews-title-page{
-        margin-top:-3rem;
+        margin-top:11.5rem;
     }
     .reviews-backgroundimg-area{
         height: 60%;
@@ -471,6 +469,9 @@
 @media(max-width:385px){
     .reviews-backgroundimg-area{
         height: 40%;
+    }
+    .reviews-title-page{
+        margin-top:7rem;
     }
 }
 

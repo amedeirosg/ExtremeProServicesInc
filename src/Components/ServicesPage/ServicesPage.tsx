@@ -462,8 +462,6 @@ export default () => {
     }
   }, [window.innerWidth]);
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
   return (
     <>
       {isLargeScreen ? (

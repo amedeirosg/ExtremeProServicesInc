@@ -106,14 +106,6 @@
 
 }
 
-
-@media(max-width:717px){
-    .containerImg{
-        margin-top:10.5rem;
-    }
-}
-
-
 @media (max-width:694px){
 
     .txtTitle .title{
