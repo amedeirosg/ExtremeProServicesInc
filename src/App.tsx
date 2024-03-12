@@ -5,6 +5,7 @@ import Reviews from "./Components/Reviews/Reviews.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contexts from "./Contexts/Context.tsx";
 import { useRef } from "react";
+//finished
 function App() {
   var instagramLink = "https://www.instagram.com/extremeproservicesinc/";
   var tiktokLink = "https://www.tiktok.com/@extremeproservicesinc";
